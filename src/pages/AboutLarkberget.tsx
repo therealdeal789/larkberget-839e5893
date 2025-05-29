@@ -78,7 +78,7 @@ const AboutLarkberget = () => {
       role: "VD",
       image: "/lovable-uploads/9841c3ac-8e76-4b03-a4e3-861be363ac34.png",
       details: {
-        title: "CEO sedan 2023. (född 1964)",
+        title: "VD sedan 2023. (född 1964)",
         appointed: "",
         birthYear: "",
         education: "Utbildning och erfarenhet: Peter Ekolind är legitimerad sjuksköterska, diplomerad marknadsekonom samt en Executive MBA från Ekonomihögskolan vid Lunds universitet. Han har mångårig och bred erfarenhet av marknadsföring, försäljning och ledarskap från flera globala läkemedels-, bioteknik- och medicintekniska företag i olika seniora roller. Han har bland annat varit verkställande direktör för Getinge Sverige och Avidicare. Under senare år har fokus legat på arbete i mindre start-ups.",
