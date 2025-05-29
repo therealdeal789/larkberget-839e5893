@@ -1,8 +1,8 @@
-
 import React, { useState } from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
 import { Users, Target, Compass } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -203,74 +203,77 @@ const AboutLarkberget = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
               {boardMembers.map((person, index) => (
-                <Dialog key={index}>
-                  <DialogTrigger asChild>
-                    <div className="card-elevated p-6 text-center cursor-pointer hover:shadow-lg transition-shadow">
-                      <div className="w-48 h-48 mx-auto mb-4 overflow-hidden rounded-full">
-                        <img 
-                          src={person.image} 
-                          alt={person.name}
-                          className="w-full h-full object-cover"
-                        />
+                <div key={index} className="card-elevated p-6 text-center">
+                  <div className="w-48 h-48 mx-auto mb-4 overflow-hidden rounded-full flex items-center justify-center">
+                    <img 
+                      src={person.image} 
+                      alt={person.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="font-bold text-larkberget-900 mb-2">{person.name}</h3>
+                  <p className="text-trust-600 font-medium mb-3 text-sm">{person.role}</p>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" size="sm" className="mt-2">
+                        Läs mer
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl font-bold text-larkberget-900 mb-4">
+                          {person.name}
+                        </DialogTitle>
+                      </DialogHeader>
+                      <div className="space-y-4 text-larkberget-700">
+                        <div className="flex items-center space-x-4 mb-6">
+                          <div className="w-20 h-20 overflow-hidden rounded-full flex-shrink-0">
+                            <img 
+                              src={person.image} 
+                              alt={person.name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-lg">{person.details.title}</h4>
+                            {person.details.appointed && <p className="text-sm text-trust-600">{person.details.appointed}</p>}
+                            {person.details.birthYear && <p className="text-sm text-trust-600">{person.details.birthYear}</p>}
+                          </div>
+                        </div>
+                        
+                        {person.details.education && (
+                          <div>
+                            <p className="text-sm leading-relaxed">{person.details.education}</p>
+                          </div>
+                        )}
+                        
+                        {person.details.otherRoles && (
+                          <div>
+                            <p className="text-sm leading-relaxed">{person.details.otherRoles}</p>
+                          </div>
+                        )}
+                        
+                        {person.details.previousRoles && (
+                          <div>
+                            <p className="text-sm leading-relaxed">{person.details.previousRoles}</p>
+                          </div>
+                        )}
+                        
+                        {person.details.holdings && (
+                          <div>
+                            <p className="text-sm leading-relaxed">{person.details.holdings}</p>
+                          </div>
+                        )}
+                        
+                        {person.details.independence && (
+                          <div>
+                            <p className="text-sm leading-relaxed">{person.details.independence}</p>
+                          </div>
+                        )}
                       </div>
-                      <h3 className="font-bold text-larkberget-900 mb-2">{person.name}</h3>
-                      <p className="text-trust-600 font-medium mb-3 text-sm">{person.role}</p>
-                    </div>
-                  </DialogTrigger>
-                  <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-                    <DialogHeader>
-                      <DialogTitle className="text-2xl font-bold text-larkberget-900 mb-4">
-                        {person.name}
-                      </DialogTitle>
-                    </DialogHeader>
-                    <div className="space-y-4 text-larkberget-700">
-                      <div className="flex items-center space-x-4 mb-6">
-                        <div className="w-20 h-20 overflow-hidden rounded-full flex-shrink-0">
-                          <img 
-                            src={person.image} 
-                            alt={person.name}
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-lg">{person.details.title}</h4>
-                          {person.details.appointed && <p className="text-sm text-trust-600">{person.details.appointed}</p>}
-                          {person.details.birthYear && <p className="text-sm text-trust-600">{person.details.birthYear}</p>}
-                        </div>
-                      </div>
-                      
-                      {person.details.education && (
-                        <div>
-                          <p className="text-sm leading-relaxed">{person.details.education}</p>
-                        </div>
-                      )}
-                      
-                      {person.details.otherRoles && (
-                        <div>
-                          <p className="text-sm leading-relaxed">{person.details.otherRoles}</p>
-                        </div>
-                      )}
-                      
-                      {person.details.previousRoles && (
-                        <div>
-                          <p className="text-sm leading-relaxed">{person.details.previousRoles}</p>
-                        </div>
-                      )}
-                      
-                      {person.details.holdings && (
-                        <div>
-                          <p className="text-sm leading-relaxed">{person.details.holdings}</p>
-                        </div>
-                      )}
-                      
-                      {person.details.independence && (
-                        <div>
-                          <p className="text-sm leading-relaxed">{person.details.independence}</p>
-                        </div>
-                      )}
-                    </div>
-                  </DialogContent>
-                </Dialog>
+                    </DialogContent>
+                  </Dialog>
+                </div>
               ))}
             </div>
           </div>
