@@ -155,35 +155,6 @@ const AboutLarkberget = () => {
           </div>
         </section>
 
-        {/* Business idea and vision */}
-        <section className="bg-larkberget-50 py-16 md:py-24">
-          <div className="section-container">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div className="card-elevated p-8">
-                <Target className="w-12 h-12 text-trust-600 mb-6" />
-                <h3 className="text-2xl font-bold text-larkberget-900 mb-4">Affärsidé</h3>
-                <p className="text-larkberget-700 leading-relaxed">
-                  Att genom aktiva investeringar i välskötta bolag med stark marknadsposition 
-                  skapa långsiktig värdetillväxt för våra aktieägare. Vi fokuserar på bolag 
-                  som har potential för betydande tillväxt och där vi kan bidra med vår 
-                  expertis och nätverk.
-                </p>
-              </div>
-              
-              <div className="card-elevated p-8">
-                <Compass className="w-12 h-12 text-earth-600 mb-6" />
-                <h3 className="text-2xl font-bold text-larkberget-900 mb-4">Vision</h3>
-                <p className="text-larkberget-700 leading-relaxed">
-                  Att vara det ledande investmentbolaget för långsiktiga investeringar 
-                  i nordiska småbolag, känt för vår professionella förvaltning, 
-                  transparenta kommunikation och konsekventa värdeskapande för 
-                  aktieägare och portföljbolag.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Management team */}
         <section className="py-16 md:py-24">
           <div className="section-container">
