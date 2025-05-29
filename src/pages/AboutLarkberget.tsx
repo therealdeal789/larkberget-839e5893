@@ -33,14 +33,14 @@ const AboutLarkberget = () => {
       role: "Styrelseledamot",
       image: "/lovable-uploads/b2ec0676-30bc-4199-8351-ce99495635fa.png",
       details: {
-        title: "Styrelseledamot",
+        title: "Styrelseledamot sedan 2024",
         appointed: "",
-        birthYear: "",
-        education: "15+ års erfarenhet inom equity research",
-        otherRoles: "",
-        previousRoles: "",
-        holdings: "",
-        independence: ""
+        birthYear: "Födelseår: 1972",
+        education: "Utbildning och erfarenhet: Marcus har en akademisk utbildning i företagsekonomi med inriktning mot finans från Stockholms universitet. Han har över 25 års gedigen erfarenhet inom bank- och riskkapitalsektorn, med erfarenhet från både stora börsnoterade företag från arbeten på Nordea och startups genom sin roll på Partnerinvest. Markus är vd, delägare och styrelseledamot i Thoren Tillväxt AB. Från 2010 till 2016 arbetade Marcus som investment manager på Partnerinvest, där han specialiserade sig på investeringar, kapitalanskaffning och avyttringar i ägarledda startups inom olika branscher.",
+        otherRoles: "Övriga styrelseuppdrag: Styrelseledamot i Thoren Tillväxt AB och Ledyer AB. Styrelseordförande i NELAB Invest AB.",
+        previousRoles: "Tidigare styrelseuppdrag/övriga befattningar: Styrelseledamot i Tanomed AB (förvärvat av Karo Bio) och Evosport AB (förvärvat av WeSport).",
+        holdings: "Innehav i CombiGene AB: Indirekt innehav genom Thoren Tillväxt AB 494 894 aktier.",
+        independence: "Oberoende i förhållande till bolaget och bolagsledningen och till bolagets större aktieägare."
       }
     },
     {
