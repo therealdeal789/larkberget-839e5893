@@ -1,11 +1,10 @@
-
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const LarkbergetHero = () => {
   return (
-    <section className="relative bg-gradient-to-br from-larkberget-50 to-white overflow-hidden pt-20 pb-16 md:pb-20">
+    <section className="relative bg-gradient-to-br from-larkberget-50 to-white overflow-hidden pt-16 pb-12 md:pb-16">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-32 h-32 bg-trust-400 rounded-full blur-3xl"></div>
@@ -32,14 +31,14 @@ const LarkbergetHero = () => {
               to="/investerare"
               className="button-primary group"
             >
-              För investerare
+              Investerare
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link 
               to="/om-larkberget"
               className="button-secondary"
             >
-              Läs mer om oss
+              Om Lärkberget
             </Link>
           </div>
         </div>

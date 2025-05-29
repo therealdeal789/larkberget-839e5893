@@ -1,4 +1,3 @@
-
 import React from "react";
 import { TrendingUp, FileText, Calendar, PieChart } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -43,8 +42,7 @@ const LarkbergetInvestorHighlights = () => {
             Information för investerare
           </h2>
           <p className="section-subtitle mx-auto">
-            Få tillgång till all finansiell information, rapporter och 
-            nyckeltal som hjälper dig att följa Lärkbergets utveckling.
+            Följ Lärkbergets utveckling.
           </p>
         </div>
 

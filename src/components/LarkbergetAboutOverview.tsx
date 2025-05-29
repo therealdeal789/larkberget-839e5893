@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Target, Award, Compass, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -69,7 +68,7 @@ const LarkbergetAboutOverview = () => {
 
           <div className="relative">
             <div className="bg-gradient-to-br from-trust-500 to-earth-500 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">Senaste resultat</h3>
+              <h3 className="text-2xl font-bold mb-6">Senaste rapporten</h3>
               
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-3 border-b border-white/20">
@@ -94,7 +93,7 @@ const LarkbergetAboutOverview = () => {
                 to="/investerare"
                 className="inline-block w-full text-center bg-white text-trust-600 font-medium py-3 px-6 rounded-lg mt-6 hover:bg-trust-50 transition-colors"
               >
-                Se alla nyckeltal
+                Läs rapporten
               </Link>
             </div>
           </div>
