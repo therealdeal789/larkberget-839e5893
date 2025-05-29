@@ -78,13 +78,13 @@ const AboutLarkberget = () => {
       role: "VD och Koncernchef",
       image: "/lovable-uploads/9841c3ac-8e76-4b03-a4e3-861be363ac34.png",
       details: {
-        title: "VD och Koncernchef",
+        title: "CEO sedan 2023. (född 1964)",
         appointed: "",
         birthYear: "",
-        education: "25+ års erfarenhet inom investment banking",
-        otherRoles: "",
-        previousRoles: "",
-        holdings: "",
+        education: "Utbildning och erfarenhet: Peter Ekolind är legitimerad sjuksköterska, diplomerad marknadsekonom samt en Executive MBA från Ekonomihögskolan vid Lunds universitet. Han har mångårig och bred erfarenhet av marknadsföring, försäljning och ledarskap från flera globala läkemedels-, bioteknik- och medicintekniska företag i olika seniora roller. Han har bland annat varit verkställande direktör för Getinge Sverige och Avidicare. Under senare år har fokus legat på arbete i mindre start-ups.",
+        otherRoles: "Pågående uppdrag: Styrelseledamot Panion Animal Health AB och CombiGene Personal AB.",
+        previousRoles: "Tidigare uppdrag under de senaste fem åren: COO i Xintela AB, Styrelsemedlem Nordic Gamekeeper Holding AB, senior ledarskapskonsult i NordiCare AB, VD Targinta AB och COO i CombiGene. Ägare och verksam i följande bolag: Pekoli AB.",
+        holdings: "Eget och/eller närstående personers innehav i Bolaget: 43 811",
         independence: ""
       }
     }
