@@ -23,10 +23,7 @@ const App = () => (
           <Route path="/om-larkberget" element={<AboutLarkberget />} />
           <Route path="/investerare" element={<InvestorsOverview />} />
           <Route path="/investerare/finansiella-rapporter" element={<FinancialReports />} />
-          {/* Placeholder routes for investor subsections */}
-          <Route path="/investerare/substansvarde" element={<InvestorsOverview />} />
           <Route path="/investerare/aktieagare" element={<InvestorsOverview />} />
-          <Route path="/investerare/radgivare" element={<InvestorsOverview />} />
           <Route path="/pressmeddelanden" element={<InvestorsOverview />} />
           <Route path="/press" element={<InvestorsOverview />} />
           <Route path="/kontakt" element={<InvestorsOverview />} />

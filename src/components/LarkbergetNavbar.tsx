@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -39,9 +38,7 @@ const LarkbergetNavbar = () => {
       submenu: [
         { label: "Översikt", path: "/investerare" },
         { label: "Finansiella rapporter", path: "/investerare/finansiella-rapporter" },
-        { label: "Substansvärde", path: "/investerare/substansvarde" },
-        { label: "Aktieägare", path: "/investerare/aktieagare" },
-        { label: "Certifierad rådgivare", path: "/investerare/radgivare" }
+        { label: "Aktieägare", path: "/investerare/aktieagare" }
       ]
     },
     { label: "Pressmeddelanden", path: "/pressmeddelanden" },
