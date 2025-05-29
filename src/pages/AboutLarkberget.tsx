@@ -29,7 +29,7 @@ const AboutLarkberget = () => {
       }
     },
     {
-      name: "Alexander Gustafsson",
+      name: "Alexander Gradin",
       role: "Styrelseledamot",
       image: "/lovable-uploads/30cbed23-58a1-41cb-8d4a-efa00b773941.png",
       details: {
@@ -44,11 +44,11 @@ const AboutLarkberget = () => {
       }
     },
     {
-      name: "Johan Lindqvist",
-      role: "Investeringschef",
+      name: "Marcus Isaksson",
+      role: "Styrelseledamot",
       image: "/lovable-uploads/49397f33-21f7-40cb-ab9a-b79cb382ab27.png",
       details: {
-        title: "Investeringschef",
+        title: "Styrelseledamot",
         appointed: "",
         birthYear: "",
         education: "15+ års erfarenhet inom equity research",
@@ -59,11 +59,11 @@ const AboutLarkberget = () => {
       }
     },
     {
-      name: "Maria Eriksson",
-      role: "CFO",
+      name: "Lars Thunberg",
+      role: "Styrelsesuppleant",
       image: "/lovable-uploads/b2ec0676-30bc-4199-8351-ce99495635fa.png",
       details: {
-        title: "CFO",
+        title: "Styrelsesuppleant",
         appointed: "",
         birthYear: "",
         education: "20+ års erfarenhet inom finansiell förvaltning",
@@ -74,7 +74,7 @@ const AboutLarkberget = () => {
       }
     },
     {
-      name: "Lars Andersson",
+      name: "Peter Ekolind",
       role: "VD och Koncernchef",
       image: "/lovable-uploads/9841c3ac-8e76-4b03-a4e3-861be363ac34.png",
       details: {
@@ -206,7 +206,7 @@ const AboutLarkberget = () => {
                 <Dialog key={index}>
                   <DialogTrigger asChild>
                     <div className="card-elevated p-6 text-center cursor-pointer hover:shadow-lg transition-shadow">
-                      <div className="w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
+                      <div className="w-48 h-48 mx-auto mb-4 overflow-hidden rounded-full">
                         <img 
                           src={person.image} 
                           alt={person.name}
