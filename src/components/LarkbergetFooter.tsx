@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { Mail, MapPin, Calendar } from "lucide-react";
@@ -12,10 +13,11 @@ const LarkbergetFooter = () => {
           {/* Company info */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="h-10 w-10 bg-gradient-to-br from-trust-500 to-earth-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">L</span>
-              </div>
-              <span className="text-xl font-bold">Lärkberget AB</span>
+              <img 
+                src="/lovable-uploads/2656c953-5589-4467-af02-c14392971b3d.png" 
+                alt="Lärkberget AB" 
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-larkberget-300 mb-6 max-w-md">
               Lärkberget fokuserar på långsiktiga investeringar med målet att skapa hållbar värdetillväxt för våra aktieägare.

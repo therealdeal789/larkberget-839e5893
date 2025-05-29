@@ -64,10 +64,11 @@ const LarkbergetNavbar = () => {
           className="flex items-center space-x-3"
           onClick={closeMenu}
         >
-          <div className="h-10 w-10 bg-gradient-to-br from-trust-500 to-earth-500 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-lg">L</span>
-          </div>
-          <span className="text-xl font-bold text-larkberget-900">Lärkberget AB</span>
+          <img 
+            src="/lovable-uploads/554001cd-4c36-4266-aa06-f2a9023cfa1c.png" 
+            alt="Lärkberget AB" 
+            className="h-10 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}

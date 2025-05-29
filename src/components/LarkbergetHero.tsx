@@ -30,14 +30,14 @@ const LarkbergetHero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/investerare"
-              className="bg-trust-600 hover:bg-trust-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg group"
+              className="bg-trust-600 hover:bg-trust-700 text-white font-medium py-3 px-12 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg group flex items-center justify-center"
             >
-              Investerare
+              <span>Investerare</span>
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link 
               to="/om-larkberget"
-              className="button-secondary"
+              className="button-secondary flex items-center justify-center"
             >
               Om Lärkberget
             </Link>
