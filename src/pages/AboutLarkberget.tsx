@@ -63,14 +63,14 @@ const AboutLarkberget = () => {
       role: "Styrelsesuppleant",
       image: "/lovable-uploads/30cbed23-58a1-41cb-8d4a-efa00b773941.png",
       details: {
-        title: "Styrelsesuppleant",
+        title: "Styrelsesuppleant sedan 2024",
         appointed: "",
-        birthYear: "",
-        education: "20+ års erfarenhet inom finansiell förvaltning",
-        otherRoles: "",
-        previousRoles: "",
-        holdings: "",
-        independence: ""
+        birthYear: "Födelseår: 1966",
+        education: "Utbildning och erfarenhet: Lars innehar en examen i företagsekonomi från Lunds universitet. Han har över 30 års erfarenhet inom finans och företagsutveckling. Han har arbetat för NGM Stock Market som konsult för startups. Han har också arbetslivserfarenhet som affärsutvecklare och som styrelseproffs. Lars är en av grundarna av CombiGene. Lars grundade också VA Automotive Groupe under åren 2008-2018 som var noterat på Nasdaq First North Growth Market. Lars har internationell erfarenhet från arbete i Hongkong, Kina och Europa.",
+        otherRoles: "Övriga styrelseuppdrag: Styrelseordförande och VD för VA Components i Hässleholm AB, M & L Industriförvaltning AB. Styrelseledamot PR Development AB och Casator Care AB.",
+        previousRoles: "Tidigare styrelseuppdrag/övriga befattningar: Styrelseordförande, Styrelseledamot och vd för CombiGene, aXimed, aXichem, VA Automotive Groupe och Panion Animal Health. Styrelseledamot för Kristianstad University Holding och Kristianstad University Uppdrag. Samt flera andra mindre bolag.",
+        holdings: "Innehav i CombiGene AB: Innehar via det närstående bolaget M & L Industriförvaltning AB 650 000 aktier i CombiGene.",
+        independence: "Oberoende i förhållande till bolaget och bolagsledningen och till bolagets större aktieägare."
       }
     },
     {
