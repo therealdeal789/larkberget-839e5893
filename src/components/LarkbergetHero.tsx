@@ -1,76 +1,49 @@
 
 import React from "react";
-import { ArrowDown, TrendingUp, Shield, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const LarkbergetHero = () => {
-  const scrollToNext = () => {
-    const nextSection = document.querySelector('#about-overview');
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-larkberget-50 via-white to-trust-50 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-earth-100/30 to-trust-100/30" />
-      
-      <div className="section-container relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
-          <div className="mb-8">
-            <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-larkberget-200 mb-6">
-              <div className="w-2 h-2 bg-trust-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium text-larkberget-700">Börsnoterat investmentbolag</span>
-            </div>
-          </div>
+    <section className="relative bg-gradient-to-br from-larkberget-50 to-white overflow-hidden pt-20 pb-16 md:pb-20">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-trust-400 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-earth-400 rounded-full blur-3xl"></div>
+      </div>
 
-          <h1 className="section-title mb-6">
-            Lärkberget AB
-            <span className="block text-trust-600 mt-2">Långsiktig värdetillväxt</span>
+      <div className="section-container relative">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Main Headline */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-larkberget-900 mb-6 leading-tight">
+            Lärkberget
+            <span className="block text-trust-600 mt-2">investeringsbolag</span>
           </h1>
-          
-          <p className="text-xl md:text-2xl text-larkberget-600 mb-8 leading-relaxed">
-            Vi är ett investmentbolag som fokuserar på långsiktiga investeringar 
-            med målet att skapa hållbar värdetillväxt för våra aktieägare
+
+          {/* Description */}
+          <p className="text-xl md:text-2xl text-larkberget-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Ett börsnoterat investmentbolag med fokus på långsiktiga investeringar 
+            och hållbar värdetillväxt för våra aktieägare.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <button className="button-primary">
-              Se vår portfölj
-            </button>
-            <button className="button-secondary">
-              Senaste rapporten
-            </button>
-          </div>
-
-          {/* Key metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-larkberget-200">
-              <TrendingUp className="w-8 h-8 text-trust-600 mb-3" />
-              <div className="text-2xl font-bold text-larkberget-900 mb-1">+12.4%</div>
-              <div className="text-sm text-larkberget-600">Årlig avkastning</div>
-            </div>
-            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-larkberget-200">
-              <Shield className="w-8 h-8 text-earth-600 mb-3" />
-              <div className="text-2xl font-bold text-larkberget-900 mb-1">25+ år</div>
-              <div className="text-sm text-larkberget-600">Marknadsexpertis</div>
-            </div>
-            <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-larkberget-200">
-              <Users className="w-8 h-8 text-trust-600 mb-3" />
-              <div className="text-2xl font-bold text-larkberget-900 mb-1">1,200+</div>
-              <div className="text-sm text-larkberget-600">Aktieägare</div>
-            </div>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/investerare"
+              className="button-primary group"
+            >
+              För investerare
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link 
+              to="/om-larkberget"
+              className="button-secondary"
+            >
+              Läs mer om oss
+            </Link>
           </div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <button 
-        onClick={scrollToNext}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-larkberget-600 hover:text-trust-600 transition-colors animate-bounce"
-        aria-label="Scrolla ned för mer information"
-      >
-        <ArrowDown className="w-6 h-6" />
-      </button>
     </section>
   );
 };
