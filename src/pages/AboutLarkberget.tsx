@@ -1,28 +1,92 @@
 
-import React from "react";
+import React, { useState } from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
-import { Users, Target, History, Compass } from "lucide-react";
+import { Users, Target, Compass } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const AboutLarkberget = () => {
-  const management = [
+  const boardMembers = [
     {
-      name: "Lars Andersson",
-      role: "VD och Koncernchef",
-      experience: "25+ års erfarenhet inom investment banking",
-      image: "/placeholder.svg"
+      name: "Luca Di Stefano",
+      role: "Styrelseordförande",
+      image: "/lovable-uploads/c7737b6d-fdf2-492f-9276-9ae76cdebed4.png",
+      details: {
+        title: "Styrelseordförande sedan 2024",
+        appointed: "Invald 2024",
+        birthYear: "Födelseår: 1978",
+        education: "Utbildning och erfarenhet: Luca Di Stefano har en marknadsekonomutbildning från Frans Schartaus Handelsinstitut samt studerat Internationella relationer på Stockholms universitet. Luca är investerare, styrelseproffs och grundare av flera bolag inom media och IT. Sedan 2017 även haft en aktiv roll som VD/operativ ansvarig och styrelseledamot för flera tillväxtbolag. Kommer senast från posten som delägare och VD för digitala marknadsföringsbyrån Brandson AB som senare köptes upp av Defiso Media AB. Luca är för närvarande ansvarig för det svenska investeringsföretaget Molcap och övervakar deras onoterade portfölj.",
+        otherRoles: "Övriga styrelseuppdrag: Styrelseordförande i Refine Group AB och Gavald Holdings. Styrelseledamot i Tellusgruppen AB, Upgrade Invest Nordic AB, XLNT group AB, Mresell Group AB, Hamax Holding AB och Cazzosa Capital.",
+        previousRoles: "Tidigare styrelseuppdrag/övriga befattningar: Storage 365, Spacett och Brandson.",
+        holdings: "Innehav i CombiGene AB: Innehar inga aktier eller teckningsoptioner.",
+        independence: "Oberoende i förhållande till bolaget och bolagsledningen men inte till bolagets större aktieägare."
+      }
     },
     {
-      name: "Maria Eriksson",
-      role: "CFO",
-      experience: "20+ års erfarenhet inom finansiell förvaltning",
-      image: "/placeholder.svg"
+      name: "Alexander Gustafsson",
+      role: "Styrelseledamot",
+      image: "/lovable-uploads/30cbed23-58a1-41cb-8d4a-efa00b773941.png",
+      details: {
+        title: "Styrelseledamot sedan 2025",
+        appointed: "",
+        birthYear: "Födelseår: 1989",
+        education: "Utbildning och erfarenhet: Alexander har en examen i data- och systemvetenskap och har en bred erfarenhet inom entreprenörskap, tech och finans. Han grundade marketing tech-bolaget Beatly AB år 2015, där han var VD med ansvar för produktutveckling till 2020, för att därefter vara försäljningschef till 2022. Mellan 2020 och 2022 arbetade Alexander med kapitalresning åt privata bolag, samt grundade ett e-handelsbolag, The Skincare Revolution AB, som avyttrades till Lyko 2023. Utöver detta har Alexander varit IT-konsult med fokus på IT-säkerhet, webbutveckling och cloudmiljö, primärt för bolag inom den finansiella sektorn. Sedan 2024 är han VD på AG Equity Research AB.",
+        otherRoles: "Övriga styrelseuppdrag: VD och styrelseledamot i AG Equity Research AB, Styrelseledamot i Vestona AB, Styrelseledamot i Vibe Ventures AB, Suppleant i The Socials 29660 AB, Suppleant i Ran Invest AB",
+        previousRoles: "Tidigare styrelseuppdrag/övriga befattningar: VD för Beatly AB, VD The Skincare Revolution AB",
+        holdings: "Innehav i CombiGene AB: Innehar inga aktier eller teckningsoptioner.",
+        independence: "Oberoende i förhållande till bolaget och bolagsledningen men inte i förhållande till större aktieägare."
+      }
     },
     {
       name: "Johan Lindqvist",
       role: "Investeringschef",
-      experience: "15+ års erfarenhet inom equity research",
-      image: "/placeholder.svg"
+      image: "/lovable-uploads/49397f33-21f7-40cb-ab9a-b79cb382ab27.png",
+      details: {
+        title: "Investeringschef",
+        appointed: "",
+        birthYear: "",
+        education: "15+ års erfarenhet inom equity research",
+        otherRoles: "",
+        previousRoles: "",
+        holdings: "",
+        independence: ""
+      }
+    },
+    {
+      name: "Maria Eriksson",
+      role: "CFO",
+      image: "/lovable-uploads/b2ec0676-30bc-4199-8351-ce99495635fa.png",
+      details: {
+        title: "CFO",
+        appointed: "",
+        birthYear: "",
+        education: "20+ års erfarenhet inom finansiell förvaltning",
+        otherRoles: "",
+        previousRoles: "",
+        holdings: "",
+        independence: ""
+      }
+    },
+    {
+      name: "Lars Andersson",
+      role: "VD och Koncernchef",
+      image: "/lovable-uploads/9841c3ac-8e76-4b03-a4e3-861be363ac34.png",
+      details: {
+        title: "VD och Koncernchef",
+        appointed: "",
+        birthYear: "",
+        education: "25+ års erfarenhet inom investment banking",
+        otherRoles: "",
+        previousRoles: "",
+        holdings: "",
+        independence: ""
+      }
     }
   ];
 
@@ -137,86 +201,77 @@ const AboutLarkberget = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {management.map((person, index) => (
-                <div key={index} className="card-elevated p-6 text-center">
-                  <div className="w-24 h-24 bg-gradient-to-br from-trust-200 to-earth-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-2xl font-bold text-larkberget-700">
-                      {person.name.split(' ').map(n => n[0]).join('')}
-                    </span>
-                  </div>
-                  <h3 className="font-bold text-larkberget-900 mb-2">{person.name}</h3>
-                  <p className="text-trust-600 font-medium mb-3">{person.role}</p>
-                  <p className="text-sm text-larkberget-600">{person.experience}</p>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+              {boardMembers.map((person, index) => (
+                <Dialog key={index}>
+                  <DialogTrigger asChild>
+                    <div className="card-elevated p-6 text-center cursor-pointer hover:shadow-lg transition-shadow">
+                      <div className="w-24 h-24 mx-auto mb-4 overflow-hidden rounded-full">
+                        <img 
+                          src={person.image} 
+                          alt={person.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <h3 className="font-bold text-larkberget-900 mb-2">{person.name}</h3>
+                      <p className="text-trust-600 font-medium mb-3 text-sm">{person.role}</p>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                    <DialogHeader>
+                      <DialogTitle className="text-2xl font-bold text-larkberget-900 mb-4">
+                        {person.name}
+                      </DialogTitle>
+                    </DialogHeader>
+                    <div className="space-y-4 text-larkberget-700">
+                      <div className="flex items-center space-x-4 mb-6">
+                        <div className="w-20 h-20 overflow-hidden rounded-full flex-shrink-0">
+                          <img 
+                            src={person.image} 
+                            alt={person.name}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-lg">{person.details.title}</h4>
+                          {person.details.appointed && <p className="text-sm text-trust-600">{person.details.appointed}</p>}
+                          {person.details.birthYear && <p className="text-sm text-trust-600">{person.details.birthYear}</p>}
+                        </div>
+                      </div>
+                      
+                      {person.details.education && (
+                        <div>
+                          <p className="text-sm leading-relaxed">{person.details.education}</p>
+                        </div>
+                      )}
+                      
+                      {person.details.otherRoles && (
+                        <div>
+                          <p className="text-sm leading-relaxed">{person.details.otherRoles}</p>
+                        </div>
+                      )}
+                      
+                      {person.details.previousRoles && (
+                        <div>
+                          <p className="text-sm leading-relaxed">{person.details.previousRoles}</p>
+                        </div>
+                      )}
+                      
+                      {person.details.holdings && (
+                        <div>
+                          <p className="text-sm leading-relaxed">{person.details.holdings}</p>
+                        </div>
+                      )}
+                      
+                      {person.details.independence && (
+                        <div>
+                          <p className="text-sm leading-relaxed">{person.details.independence}</p>
+                        </div>
+                      )}
+                    </div>
+                  </DialogContent>
+                </Dialog>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* History and strategy */}
-        <section className="bg-white py-16 md:py-24">
-          <div className="section-container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
-                <History className="w-12 h-12 text-trust-600 mb-6" />
-                <h2 className="text-3xl font-bold text-larkberget-900 mb-6">Vår historia</h2>
-                <div className="space-y-6">
-                  <div className="border-l-4 border-trust-200 pl-6">
-                    <div className="text-sm text-trust-600 font-medium mb-1">1999</div>
-                    <h4 className="font-semibold text-larkberget-900 mb-2">Grundande</h4>
-                    <p className="text-larkberget-700">Lärkberget AB grundas med fokus på småbolagsinvesteringar</p>
-                  </div>
-                  <div className="border-l-4 border-trust-200 pl-6">
-                    <div className="text-sm text-trust-600 font-medium mb-1">2005</div>
-                    <h4 className="font-semibold text-larkberget-900 mb-2">Börsnotering</h4>
-                    <p className="text-larkberget-700">Noteras på Nasdaq Stockholm för ökad transparens</p>
-                  </div>
-                  <div className="border-l-4 border-trust-200 pl-6">
-                    <div className="text-sm text-trust-600 font-medium mb-1">2015</div>
-                    <h4 className="font-semibold text-larkberget-900 mb-2">Expansion</h4>
-                    <p className="text-larkberget-700">Utökar till nordiska marknaden och diversifierar portföljen</p>
-                  </div>
-                  <div className="border-l-4 border-trust-200 pl-6">
-                    <div className="text-sm text-trust-600 font-medium mb-1">2024</div>
-                    <h4 className="font-semibold text-larkberget-900 mb-2">Idag</h4>
-                    <p className="text-larkberget-700">25 års framgångsrik förvaltning med över 1,200 aktieägare</p>
-                  </div>
-                </div>
-              </div>
-
-              <div>
-                <Users className="w-12 h-12 text-earth-600 mb-6" />
-                <h2 className="text-3xl font-bold text-larkberget-900 mb-6">Långsiktig strategi</h2>
-                <div className="space-y-4 text-larkberget-700">
-                  <p>
-                    Vår investeringsstrategi bygger på gedigen fundamental analys 
-                    och långsiktigt värdeinvestering. Vi söker bolag med:
-                  </p>
-                  <ul className="space-y-2 ml-6">
-                    <li className="flex items-start space-x-2">
-                      <div className="w-2 h-2 bg-trust-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Stark marknadsposition och konkurrensfördelar</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <div className="w-2 h-2 bg-trust-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Kompetent ledning med tydlig vision</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <div className="w-2 h-2 bg-trust-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Tillväxtpotential och skalbarhet</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <div className="w-2 h-2 bg-trust-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Attraktiv värdering relativt framtida potential</span>
-                    </li>
-                  </ul>
-                  <p>
-                    Genom vår aktiva ägarroll arbetar vi nära våra portföljbolag 
-                    för att stödja deras utveckling och värdeskapande initiativ.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
