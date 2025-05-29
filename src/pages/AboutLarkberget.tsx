@@ -115,18 +115,13 @@ const AboutLarkberget = () => {
                 <h2 className="text-3xl font-bold text-larkberget-900 mb-6">Vår bakgrund</h2>
                 <div className="space-y-4 text-larkberget-700">
                   <p>
-                    Lärkberget AB grundades 1999 med visionen att skapa långsiktig värdetillväxt 
-                    genom aktiva investeringar i välskötta bolag med stark marknadsposition.
+                    Lärkberget AB är ett nystartat investeringsbolag med en tydlig ambition: att skapa långsiktig värdetillväxt genom aktiva investeringar i välskötta bolag med stark marknadsposition.
                   </p>
                   <p>
-                    Sedan starten har vi byggt upp en diversifierad portfölj av kvalitetsbolag, 
-                    främst inom den nordiska marknaden, med särskilt fokus på småbolag med 
-                    betydande tillväxtpotential.
+                    Vi fokuserar främst på små och medelstora bolag inom den nordiska marknaden, särskilt de med stor tillväxtpotential. Vår investeringsstrategi bygger på noggrann analys, långsiktigt tänkande och ett starkt engagemang i våra innehav.
                   </p>
                   <p>
-                    Vårt team av erfarna investerare och analytiker arbetar kontinuerligt 
-                    med att identifiera och utveckla investeringsmöjligheter som skapar 
-                    värde för våra aktieägare på lång sikt.
+                    Bakom Lärkberget står ett team med gedigen erfarenhet från investeringar, bolagsutveckling och transaktioner.
                   </p>
                 </div>
               </div>
