@@ -75,7 +75,7 @@ const AboutLarkberget = () => {
     },
     {
       name: "Peter Ekolind",
-      role: "VD och Koncernchef",
+      role: "VD",
       image: "/lovable-uploads/9841c3ac-8e76-4b03-a4e3-861be363ac34.png",
       details: {
         title: "CEO sedan 2023. (född 1964)",
@@ -101,8 +101,7 @@ const AboutLarkberget = () => {
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="section-title mb-6">Om Lärkberget AB</h1>
               <p className="section-subtitle mx-auto">
-                Sedan 1999 har vi byggt en stark reputation som ett pålitligt investmentbolag 
-                med fokus på långsiktig värdeskapande och hållbar tillväxt.
+                Ett investeringsbolag noterat på First North som verkar för långsiktigt värdeskapande och hållbar tillväxt.
               </p>
             </div>
           </div>
@@ -195,10 +194,6 @@ const AboutLarkberget = () => {
           <div className="section-container">
             <div className="text-center mb-12">
               <h2 className="section-title mb-6">Ledning och styrelse</h2>
-              <p className="section-subtitle mx-auto">
-                Vårt erfarna team kombinerar djup branschkunskap med 
-                beprövad investeringsexpertis för att skapa värde.
-              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
