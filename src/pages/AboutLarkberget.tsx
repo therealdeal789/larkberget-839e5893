@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -15,24 +14,9 @@ import {
 const AboutLarkberget = () => {
   const boardMembers = [
     {
-      name: "Luca Di Stefano",
-      role: "Styrelseordförande",
-      image: "/lovable-uploads/c7737b6d-fdf2-492f-9276-9ae76cdebed4.png",
-      details: {
-        title: "Styrelseordförande sedan 2024",
-        appointed: "Invald 2024",
-        birthYear: "Födelseår: 1978",
-        education: "Utbildning och erfarenhet: Luca Di Stefano har en marknadsekonomutbildning från Frans Schartaus Handelsinstitut samt studerat Internationella relationer på Stockholms universitet. Luca är investerare, styrelseproffs och grundare av flera bolag inom media och IT. Sedan 2017 även haft en aktiv roll som VD/operativ ansvarig och styrelseledamot för flera tillväxtbolag. Kommer senast från posten som delägare och VD för digitala marknadsföringsbyrån Brandson AB som senare köptes upp av Defiso Media AB. Luca är för närvarande ansvarig för det svenska investeringsföretaget Molcap och övervakar deras onoterade portfölj.",
-        otherRoles: "Övriga styrelseuppdrag: Styrelseordförande i Refine Group AB och Gavald Holdings. Styrelseledamot i Tellusgruppen AB, Upgrade Invest Nordic AB, XLNT group AB, Mresell Group AB, Hamax Holding AB och Cazzosa Capital.",
-        previousRoles: "Tidigare styrelseuppdrag/övriga befattningar: Storage 365, Spacett och Brandson.",
-        holdings: "Innehav i CombiGene AB: Innehar inga aktier eller teckningsoptioner.",
-        independence: "Oberoende i förhållande till bolaget och bolagsledningen men inte till bolagets större aktieägare."
-      }
-    },
-    {
       name: "Alexander Gradin",
       role: "Styrelseledamot",
-      image: "/lovable-uploads/30cbed23-58a1-41cb-8d4a-efa00b773941.png",
+      image: "/lovable-uploads/c7737b6d-fdf2-492f-9276-9ae76cdebed4.png",
       details: {
         title: "Styrelseledamot sedan 2025",
         appointed: "",
@@ -45,14 +29,14 @@ const AboutLarkberget = () => {
       }
     },
     {
-      name: "Marcus Isaksson",
-      role: "Styrelseledamot",
-      image: "/lovable-uploads/49397f33-21f7-40cb-ab9a-b79cb382ab27.png",
+      name: "Lars Thunberg",
+      role: "Styrelsesuppleant",
+      image: "/lovable-uploads/30cbed23-58a1-41cb-8d4a-efa00b773941.png",
       details: {
-        title: "Styrelseledamot",
+        title: "Styrelsesuppleant",
         appointed: "",
         birthYear: "",
-        education: "15+ års erfarenhet inom equity research",
+        education: "20+ års erfarenhet inom finansiell förvaltning",
         otherRoles: "",
         previousRoles: "",
         holdings: "",
@@ -60,14 +44,29 @@ const AboutLarkberget = () => {
       }
     },
     {
-      name: "Lars Thunberg",
-      role: "Styrelsesuppleant",
+      name: "Luca Di Stefano",
+      role: "Styrelseordförande",
+      image: "/lovable-uploads/49397f33-21f7-40cb-ab9a-b79cb382ab27.png",
+      details: {
+        title: "Styrelseordförande sedan 2024",
+        appointed: "Invald 2024",
+        birthYear: "Födelseår: 1978",
+        education: "Utbildning och erfarenhet: Luca Di Stefano har en marknadsekonomutbildning från Frans Schartaus Handelsinstitut samt studerat Internationella relationer på Stockholms universitet. Luca är investerare, styrelseproffs och grundare av flera bolag inom media och IT. Sedan 2017 även haft en aktiv roll som VD/operativ ansvarig och styrelseledamot för flera tillväxtbolag. Kommer senast från posten som delägare och VD för digitala marknadsföringsbyrån Brandson AB som senare köptes upp av Defiso Media AB. Luca är för närvarande ansvarig för det svenska investeringsföretaget Molcap och övervakar deras onoterade portfölj.",
+        otherRoles: "Övriga styrelseuppdrag: Styrelseordförande i Refine Group AB och Gavald Holdings. Styrelseledamot i Tellusgruppen AB, Upgrade Invest Nordic AB, XLNT group AB, Mresell Group AB, Hamax Holding AB och Cazzosa Capital.",
+        previousRoles: "Tidigare styrelseuppdrag/övriga befattningar: Storage 365, Spacett och Brandson.",
+        holdings: "Innehav i CombiGene AB: Innehar inga aktier eller teckningsoptioner.",
+        independence: "Oberoende i förhållande till bolaget och bolagsledningen men inte till bolagets större aktieägare."
+      }
+    },
+    {
+      name: "Marcus Isaksson",
+      role: "Styrelseledamot",
       image: "/lovable-uploads/b2ec0676-30bc-4199-8351-ce99495635fa.png",
       details: {
-        title: "Styrelsesuppleant",
+        title: "Styrelseledamot",
         appointed: "",
         birthYear: "",
-        education: "20+ års erfarenhet inom finansiell förvaltning",
+        education: "15+ års erfarenhet inom equity research",
         otherRoles: "",
         previousRoles: "",
         holdings: "",
