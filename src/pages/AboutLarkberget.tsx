@@ -15,36 +15,6 @@ import {
 const AboutLarkberget = () => {
   const boardMembers = [
     {
-      name: "Alexander Gradin",
-      role: "Styrelseledamot",
-      image: "/lovable-uploads/30cbed23-58a1-41cb-8d4a-efa00b773941.png",
-      details: {
-        title: "Styrelseledamot sedan 2025",
-        appointed: "",
-        birthYear: "Födelseår: 1989",
-        education: "Utbildning och erfarenhet: Alexander har en examen i data- och systemvetenskap och har en bred erfarenhet inom entreprenörskap, tech och finans. Han grundade marketing tech-bolaget Beatly AB år 2015, där han var VD med ansvar för produktutveckling till 2020, för att därefter vara försäljningschef till 2022. Mellan 2020 och 2022 arbetade Alexander med kapitalresning åt privata bolag, samt grundade ett e-handelsbolag, The Skincare Revolution AB, som avyttrades till Lyko 2023. Utöver detta har Alexander varit IT-konsult med fokus på IT-säkerhet, webbutveckling och cloudmiljö, primärt för bolag inom den finansiella sektorn. Sedan 2024 är han VD på AG Equity Research AB.",
-        otherRoles: "Övriga styrelseuppdrag: VD och styrelseledamot i AG Equity Research AB, Styrelseledamot i Vestona AB, Styrelseledamot i Vibe Ventures AB, Suppleant i The Socials 29660 AB, Suppleant i Ran Invest AB",
-        previousRoles: "Tidigare styrelseuppdrag/övriga befattningar: VD för Beatly AB, VD The Skincare Revolution AB",
-        holdings: "Innehav i CombiGene AB: Innehar inga aktier eller teckningsoptioner.",
-        independence: "Oberoende i förhållande till bolaget och bolagsledningen men inte i förhållande till större aktieägare."
-      }
-    },
-    {
-      name: "Lars Thunberg",
-      role: "Styrelsesuppleant",
-      image: "/lovable-uploads/b2ec0676-30bc-4199-8351-ce99495635fa.png",
-      details: {
-        title: "Styrelsesuppleant",
-        appointed: "",
-        birthYear: "",
-        education: "20+ års erfarenhet inom finansiell förvaltning",
-        otherRoles: "",
-        previousRoles: "",
-        holdings: "",
-        independence: ""
-      }
-    },
-    {
       name: "Luca Di Stefano",
       role: "Styrelseordförande",
       image: "/lovable-uploads/c7737b6d-fdf2-492f-9276-9ae76cdebed4.png",
@@ -60,6 +30,21 @@ const AboutLarkberget = () => {
       }
     },
     {
+      name: "Alexander Gradin",
+      role: "Styrelseledamot",
+      image: "/lovable-uploads/30cbed23-58a1-41cb-8d4a-efa00b773941.png",
+      details: {
+        title: "Styrelseledamot sedan 2025",
+        appointed: "",
+        birthYear: "Födelseår: 1989",
+        education: "Utbildning och erfarenhet: Alexander har en examen i data- och systemvetenskap och har en bred erfarenhet inom entreprenörskap, tech och finans. Han grundade marketing tech-bolaget Beatly AB år 2015, där han var VD med ansvar för produktutveckling till 2020, för att därefter vara försäljningschef till 2022. Mellan 2020 och 2022 arbetade Alexander med kapitalresning åt privata bolag, samt grundade ett e-handelsbolag, The Skincare Revolution AB, som avyttrades till Lyko 2023. Utöver detta har Alexander varit IT-konsult med fokus på IT-säkerhet, webbutveckling och cloudmiljö, primärt för bolag inom den finansiella sektorn. Sedan 2024 är han VD på AG Equity Research AB.",
+        otherRoles: "Övriga styrelseuppdrag: VD och styrelseledamot i AG Equity Research AB, Styrelseledamot i Vestona AB, Styrelseledamot i Vibe Ventures AB, Suppleant i The Socials 29660 AB, Suppleant i Ran Invest AB",
+        previousRoles: "Tidigare styrelseuppdrag/övriga befattningar: VD för Beatly AB, VD The Skincare Revolution AB",
+        holdings: "Innehav i CombiGene AB: Innehar inga aktier eller teckningsoptioner.",
+        independence: "Oberoende i förhållande till bolaget och bolagsledningen men inte i förhållande till större aktieägare."
+      }
+    },
+    {
       name: "Marcus Isaksson",
       role: "Styrelseledamot",
       image: "/lovable-uploads/49397f33-21f7-40cb-ab9a-b79cb382ab27.png",
@@ -68,6 +53,21 @@ const AboutLarkberget = () => {
         appointed: "",
         birthYear: "",
         education: "15+ års erfarenhet inom equity research",
+        otherRoles: "",
+        previousRoles: "",
+        holdings: "",
+        independence: ""
+      }
+    },
+    {
+      name: "Lars Thunberg",
+      role: "Styrelsesuppleant",
+      image: "/lovable-uploads/b2ec0676-30bc-4199-8351-ce99495635fa.png",
+      details: {
+        title: "Styrelsesuppleant",
+        appointed: "",
+        birthYear: "",
+        education: "20+ års erfarenhet inom finansiell förvaltning",
         otherRoles: "",
         previousRoles: "",
         holdings: "",
@@ -202,21 +202,21 @@ const AboutLarkberget = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
               {boardMembers.map((person, index) => (
                 <div key={index} className="card-elevated p-6 text-center">
-                  <div className="w-80 h-80 mx-auto mb-4 overflow-hidden rounded-full flex items-center justify-center">
+                  <div className="w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full flex items-center justify-center">
                     <img 
                       src={person.image} 
                       alt={person.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="font-bold text-larkberget-900 mb-2">{person.name}</h3>
-                  <p className="text-trust-600 font-medium mb-3 text-sm">{person.role}</p>
+                  <h3 className="font-bold text-larkberget-900 mb-2 text-lg">{person.name}</h3>
+                  <p className="text-trust-600 font-medium mb-4 text-sm">{person.role}</p>
                   <Dialog>
                     <DialogTrigger asChild>
-                      <Button variant="outline" size="sm" className="mt-2">
+                      <Button variant="outline" size="sm" className="w-full">
                         Läs mer
                       </Button>
                     </DialogTrigger>
