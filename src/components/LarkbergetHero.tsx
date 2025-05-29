@@ -1,3 +1,4 @@
+
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -29,7 +30,7 @@ const LarkbergetHero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/investerare"
-              className="button-primary group"
+              className="bg-trust-600 hover:bg-trust-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg group"
             >
               Investerare
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
