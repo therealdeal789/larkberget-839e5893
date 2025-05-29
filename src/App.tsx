@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LarkbergetHome from "./pages/LarkbergetHome";
 import AboutLarkberget from "./pages/AboutLarkberget";
 import InvestorsOverview from "./pages/InvestorsOverview";
+import FinancialReports from "./pages/FinancialReports";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,8 +22,8 @@ const App = () => (
           <Route path="/" element={<LarkbergetHome />} />
           <Route path="/om-larkberget" element={<AboutLarkberget />} />
           <Route path="/investerare" element={<InvestorsOverview />} />
+          <Route path="/investerare/finansiella-rapporter" element={<FinancialReports />} />
           {/* Placeholder routes for investor subsections */}
-          <Route path="/investerare/finansiella-rapporter" element={<InvestorsOverview />} />
           <Route path="/investerare/substansvarde" element={<InvestorsOverview />} />
           <Route path="/investerare/aktieagare" element={<InvestorsOverview />} />
           <Route path="/investerare/radgivare" element={<InvestorsOverview />} />
