@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Target, Award, Compass, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -12,8 +13,7 @@ const LarkbergetAboutOverview = () => {
               Om Lärkberget
             </h2>
             <p className="section-subtitle mb-8">
-              Sedan 1999 har vi byggt en stark portfölj av kvalitetsbolag 
-              med fokus på långsiktig värdeskapande och hållbar tillväxt.
+              Vår ambition är att identifiera och utveckla bolag med potential att skapa värde över tid.
             </p>
             
             <div className="space-y-6 mb-8">

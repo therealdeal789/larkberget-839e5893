@@ -71,7 +71,7 @@ const LarkbergetNavbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex space-x-8">
+        <nav className="hidden lg:flex items-center space-x-8">
           {navItems.map((item) => (
             <div key={item.label} className="relative group">
               {item.hasDropdown ? (
