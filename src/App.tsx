@@ -8,6 +8,9 @@ import LarkbergetHome from "./pages/LarkbergetHome";
 import AboutLarkberget from "./pages/AboutLarkberget";
 import InvestorsOverview from "./pages/InvestorsOverview";
 import FinancialReports from "./pages/FinancialReports";
+import ShareholdersPage from "./pages/ShareholdersPage";
+import NewsPage from "./pages/NewsPage";
+import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,10 +26,9 @@ const App = () => (
           <Route path="/om-larkberget" element={<AboutLarkberget />} />
           <Route path="/investerare" element={<InvestorsOverview />} />
           <Route path="/investerare/finansiella-rapporter" element={<FinancialReports />} />
-          <Route path="/investerare/aktieagare" element={<InvestorsOverview />} />
-          <Route path="/pressmeddelanden" element={<InvestorsOverview />} />
-          <Route path="/press" element={<InvestorsOverview />} />
-          <Route path="/kontakt" element={<InvestorsOverview />} />
+          <Route path="/investerare/aktieagare" element={<ShareholdersPage />} />
+          <Route path="/pressmeddelanden" element={<NewsPage />} />
+          <Route path="/kontakt" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
