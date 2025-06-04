@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { Mail, MapPin, Calendar } from "lucide-react";
@@ -61,14 +62,6 @@ const LarkbergetFooter = () => {
           <p className="text-larkberget-300 text-sm">
             © {currentYear} Lärkberget AB. Alla rättigheter förbehållna.
           </p>
-          <div className="flex items-center space-x-4 mt-4 md:mt-0">
-            <Link to="/investerare" className="text-larkberget-300 hover:text-white text-sm transition-colors">
-              Integritetspolicy
-            </Link>
-            <Link to="/investerare" className="text-larkberget-300 hover:text-white text-sm transition-colors">
-              Cookies
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

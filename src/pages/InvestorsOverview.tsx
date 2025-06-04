@@ -1,3 +1,4 @@
+
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -30,9 +31,6 @@ const InvestorsOverview = () => {
               <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 hover:shadow-md transition-all duration-300">
                 <FileText className="w-10 h-10 text-trust-600 mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Finansiella rapporter</h3>
-                <p className="text-gray-600 mb-6">
-                  Få tillgång till våra senaste finansiella rapporter och resultat.
-                </p>
                 <Link 
                   to="/investerare/finansiella-rapporter"
                   className="inline-flex items-center text-trust-600 hover:text-trust-700 font-medium"
@@ -46,9 +44,6 @@ const InvestorsOverview = () => {
               <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 hover:shadow-md transition-all duration-300">
                 <Users className="w-10 h-10 text-trust-600 mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Aktieägare</h3>
-                <p className="text-gray-600 mb-6">
-                  Information för våra aktieägare och aktieägarservice.
-                </p>
                 <Link 
                   to="/investerare/aktieagare"
                   className="inline-flex items-center text-trust-600 hover:text-trust-700 font-medium"
@@ -62,9 +57,6 @@ const InvestorsOverview = () => {
               <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 hover:shadow-md transition-all duration-300">
                 <FileText className="w-10 h-10 text-trust-600 mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Nyheter</h3>
-                <p className="text-gray-600 mb-6">
-                  Håll dig uppdaterad med de senaste nyheterna från Lärkberget.
-                </p>
                 <Link 
                   to="/pressmeddelanden"
                   className="inline-flex items-center text-trust-600 hover:text-trust-700 font-medium"
