@@ -41,8 +41,7 @@ const LarkbergetNavbar = () => {
         { label: "Aktieägare", path: "/investerare/aktieagare" }
       ]
     },
-    { label: "Pressmeddelanden", path: "/pressmeddelanden" },
-    { label: "Press", path: "/press" },
+    { label: "Nyheter", path: "/pressmeddelanden" },
     { label: "Kontakt", path: "/kontakt" }
   ];
 
