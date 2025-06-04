@@ -1,8 +1,9 @@
 
+
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
-import { Mail, MapPin, Phone, Clock, FileText } from "lucide-react";
+import { Mail, MapPin, Phone, Clock, FileText, User } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
@@ -76,6 +77,62 @@ const ContactPage = () => {
 
             </div>
 
+            {/* Contact Persons */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Kontaktpersoner</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <Card className="p-8">
+                  <CardHeader className="pb-4 text-center">
+                    <User className="w-12 h-12 text-trust-600 mx-auto mb-4" />
+                    <CardTitle className="text-xl">Peter Ekolind</CardTitle>
+                    <p className="text-trust-600 font-medium">VD</p>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-center space-x-2">
+                        <Phone className="w-4 h-4 text-gray-600" />
+                        <a href="tel:+46703415560" className="text-gray-600 hover:text-trust-600">
+                          +46 703 415 560
+                        </a>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2">
+                        <Mail className="w-4 h-4 text-gray-600" />
+                        <a href="mailto:pe@larkberget.se" className="text-gray-600 hover:text-trust-600">
+                          pe@larkberget.se
+                        </a>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="p-8">
+                  <CardHeader className="pb-4 text-center">
+                    <User className="w-12 h-12 text-trust-600 mx-auto mb-4" />
+                    <CardTitle className="text-xl">Luca di Stefano</CardTitle>
+                    <p className="text-trust-600 font-medium">Ordförande</p>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-center space-x-2">
+                        <Phone className="w-4 h-4 text-gray-600" />
+                        <a href="tel:+46708556723" className="text-gray-600 hover:text-trust-600">
+                          +46 708 556 723
+                        </a>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2">
+                        <Mail className="w-4 h-4 text-gray-600" />
+                        <a href="mailto:lds@larkberget.se" className="text-gray-600 hover:text-trust-600">
+                          lds@larkberget.se
+                        </a>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+              </div>
+            </div>
+
             {/* Additional Information */}
             <div className="bg-gradient-to-br from-trust-50 to-larkberget-50 rounded-2xl p-8 md:p-12">
               <div className="max-w-3xl mx-auto text-center">
@@ -89,9 +146,6 @@ const ContactPage = () => {
                   <div className="bg-white rounded-lg p-6">
                     <FileText className="w-8 h-8 text-trust-600 mx-auto mb-4" />
                     <h4 className="font-semibold text-gray-900 mb-3">Finansiella rapporter</h4>
-                    <p className="text-gray-600 text-sm mb-4">
-                      Finansiella rapporter publiceras enligt fastställda datum.
-                    </p>
                     <Link 
                       to="/investerare/finansiella-rapporter"
                       className="text-trust-600 hover:text-trust-700 font-medium text-sm"
@@ -102,9 +156,6 @@ const ContactPage = () => {
                   <div className="bg-white rounded-lg p-6">
                     <Mail className="w-8 h-8 text-trust-600 mx-auto mb-4" />
                     <h4 className="font-semibold text-gray-900 mb-3">Nyheter</h4>
-                    <p className="text-gray-600 text-sm mb-4">
-                      Läs bolagets senaste nyheter här.
-                    </p>
                     <Link 
                       to="/nyheter"
                       className="text-trust-600 hover:text-trust-700 font-medium text-sm"
@@ -126,3 +177,4 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
+
