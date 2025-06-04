@@ -1,8 +1,10 @@
+
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
-import { Mail, MapPin, Phone, Clock } from "lucide-react";
+import { Mail, MapPin, Phone, Clock, FileText } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const ContactPage = () => {
   return (
@@ -57,8 +59,18 @@ const ContactPage = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-2">Lärkberget AB</p>
-                  <p className="text-gray-600 mb-2">Stockholm</p>
-                  <p className="text-gray-600">Sverige</p>
+                  <p className="text-gray-600 mb-2">c/o Aboutvalue</p>
+                  <p className="text-gray-600 mb-2">Nybrogatan 7</p>
+                  <p className="text-gray-600 mb-4">SE-114 34 Stockholm</p>
+                  
+                  <div className="mt-4 pt-4 border-t border-gray-200">
+                    <p className="text-gray-600 text-sm mb-1">
+                      <strong>Org.nummer:</strong> 556403-3818
+                    </p>
+                    <p className="text-gray-600 text-sm">
+                      <strong>Styrelsens säte:</strong> Stockholm
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
 
@@ -75,18 +87,30 @@ const ContactPage = () => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-white rounded-lg p-6">
-                    <Clock className="w-8 h-8 text-trust-600 mx-auto mb-4" />
-                    <h4 className="font-semibold text-gray-900 mb-3">Rapportdatum</h4>
-                    <p className="text-gray-600 text-sm">
+                    <FileText className="w-8 h-8 text-trust-600 mx-auto mb-4" />
+                    <h4 className="font-semibold text-gray-900 mb-3">Finansiella rapporter</h4>
+                    <p className="text-gray-600 text-sm mb-4">
                       Finansiella rapporter publiceras enligt fastställda datum.
                     </p>
+                    <Link 
+                      to="/investerare/finansiella-rapporter"
+                      className="text-trust-600 hover:text-trust-700 font-medium text-sm"
+                    >
+                      Visa rapporter →
+                    </Link>
                   </div>
                   <div className="bg-white rounded-lg p-6">
                     <Mail className="w-8 h-8 text-trust-600 mx-auto mb-4" />
-                    <h4 className="font-semibold text-gray-900 mb-3">Pressmeddelanden</h4>
-                    <p className="text-gray-600 text-sm">
-                      Prenumerera på våra pressmeddelanden för att få aktuell information.
+                    <h4 className="font-semibold text-gray-900 mb-3">Nyheter</h4>
+                    <p className="text-gray-600 text-sm mb-4">
+                      Läs bolagets senaste nyheter här.
                     </p>
+                    <Link 
+                      to="/nyheter"
+                      className="text-trust-600 hover:text-trust-700 font-medium text-sm"
+                    >
+                      Läs nyheter →
+                    </Link>
                   </div>
                 </div>
               </div>
