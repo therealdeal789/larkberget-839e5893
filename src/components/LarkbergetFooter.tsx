@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Mail, MapPin, Calendar } from "lucide-react";
@@ -20,7 +19,7 @@ const LarkbergetFooter = () => {
               />
             </div>
             <p className="text-larkberget-300 mb-6 max-w-md">
-              Lärkberget fokuserar på långsiktiga investeringar med målet att skapa hållbar värdetillväxt för våra aktieägare.
+              Bolaget är publikt och noterat på den svenska marknadsplatsen Nasdaq First North Growth Market. Bolagets Certified Adviser är Bergs Securities AB.
             </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-larkberget-300">
