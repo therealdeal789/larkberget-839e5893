@@ -1,4 +1,3 @@
-
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -49,9 +48,6 @@ const NewsPage = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Nyheter
             </h1>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Håll dig uppdaterad med de senaste nyheterna från Lärkberget AB.
-            </p>
           </div>
         </div>
       </section>

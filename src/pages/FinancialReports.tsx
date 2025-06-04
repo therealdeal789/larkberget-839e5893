@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -113,10 +112,6 @@ const FinancialReports = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Finansiella rapporter
               </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Här hittar du alla våra finansiella rapporter, delårsrapporter och årsredovisningar. 
-                Håll dig uppdaterad om Lärkbergets finansiella utveckling och prestationer.
-              </p>
             </div>
           </div>
         </section>

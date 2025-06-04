@@ -1,4 +1,3 @@
-
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -17,9 +16,6 @@ const AboutLarkberget = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Om Lärkberget
             </h1>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Vi är ett börsnoterat investmentbolag med djup erfarenhet av att skapa långsiktig värdetillväxt genom strategiska investeringar.
-            </p>
           </div>
         </div>
       </section>
