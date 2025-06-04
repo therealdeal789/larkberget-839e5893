@@ -84,7 +84,7 @@ const ProspektPage = () => {
                     </p>
                     <a 
                       href={doc.pdfUrl}
-                      className="inline-flex items-center bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
+                      className="inline-flex items-center bg-black hover:bg-gray-800 text-white px-4 py-2 rounded-full text-sm font-medium transition-colors"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
