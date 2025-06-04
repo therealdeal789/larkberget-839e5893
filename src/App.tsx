@@ -9,6 +9,7 @@ import AboutLarkberget from "./pages/AboutLarkberget";
 import InvestorsOverview from "./pages/InvestorsOverview";
 import FinancialReports from "./pages/FinancialReports";
 import ShareholdersPage from "./pages/ShareholdersPage";
+import ProspektPage from "./pages/ProspektPage";
 import NewsPage from "./pages/NewsPage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/investerare" element={<InvestorsOverview />} />
           <Route path="/investerare/finansiella-rapporter" element={<FinancialReports />} />
           <Route path="/investerare/aktieagare" element={<ShareholdersPage />} />
+          <Route path="/investerare/prospekt-im" element={<ProspektPage />} />
           <Route path="/pressmeddelanden" element={<NewsPage />} />
           <Route path="/kontakt" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />
