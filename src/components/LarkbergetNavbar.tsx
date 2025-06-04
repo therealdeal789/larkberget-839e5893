@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -39,7 +40,8 @@ const LarkbergetNavbar = () => {
         { label: "Översikt", path: "/investerare" },
         { label: "Finansiella rapporter", path: "/investerare/finansiella-rapporter" },
         { label: "Aktieägare", path: "/investerare/aktieagare" },
-        { label: "Prospekt/IM", path: "/investerare/prospekt-im" }
+        { label: "Prospekt/IM", path: "/investerare/prospekt-im" },
+        { label: "Nasdaq First North Growth Market", path: "https://www.nasdaq.com/european-market-activity/shares/combi?id=SSE165139", external: true }
       ]
     },
     { label: "Nyheter", path: "/pressmeddelanden" },
@@ -84,13 +86,25 @@ const LarkbergetNavbar = () => {
                   <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-larkberget-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     <div className="py-2">
                       {item.submenu?.map((subItem) => (
-                        <Link
-                          key={subItem.label}
-                          to={subItem.path}
-                          className="block px-4 py-2 text-larkberget-700 hover:text-trust-600 hover:bg-larkberget-50 transition-colors"
-                        >
-                          {subItem.label}
-                        </Link>
+                        subItem.external ? (
+                          <a
+                            key={subItem.label}
+                            href={subItem.path}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block px-4 py-2 text-larkberget-700 hover:text-trust-600 hover:bg-larkberget-50 transition-colors"
+                          >
+                            {subItem.label}
+                          </a>
+                        ) : (
+                          <Link
+                            key={subItem.label}
+                            to={subItem.path}
+                            className="block px-4 py-2 text-larkberget-700 hover:text-trust-600 hover:bg-larkberget-50 transition-colors"
+                          >
+                            {subItem.label}
+                          </Link>
+                        )
                       ))}
                     </div>
                   </div>
@@ -139,14 +153,27 @@ const LarkbergetNavbar = () => {
                 {item.hasDropdown && (
                   <div className="ml-4 space-y-2 mt-2">
                     {item.submenu?.map((subItem) => (
-                      <Link
-                        key={subItem.label}
-                        to={subItem.path}
-                        className="block text-larkberget-600 hover:text-trust-600 py-2 transition-colors"
-                        onClick={closeMenu}
-                      >
-                        {subItem.label}
-                      </Link>
+                      subItem.external ? (
+                        <a
+                          key={subItem.label}
+                          href={subItem.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block text-larkberget-600 hover:text-trust-600 py-2 transition-colors"
+                          onClick={closeMenu}
+                        >
+                          {subItem.label}
+                        </a>
+                      ) : (
+                        <Link
+                          key={subItem.label}
+                          to={subItem.path}
+                          className="block text-larkberget-600 hover:text-trust-600 py-2 transition-colors"
+                          onClick={closeMenu}
+                        >
+                          {subItem.label}
+                        </Link>
+                      )
                     ))}
                   </div>
                 )}
