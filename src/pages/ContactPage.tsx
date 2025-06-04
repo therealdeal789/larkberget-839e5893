@@ -3,7 +3,7 @@
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
-import { Mail, MapPin, Phone, Clock, FileText, User } from "lucide-react";
+import { Mail, MapPin, Phone, Clock, FileText } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
@@ -84,7 +84,6 @@ const ContactPage = () => {
                 
                 <Card className="p-8">
                   <CardHeader className="pb-4 text-center">
-                    <User className="w-12 h-12 text-trust-600 mx-auto mb-4" />
                     <CardTitle className="text-xl">Peter Ekolind</CardTitle>
                     <p className="text-trust-600 font-medium">VD</p>
                   </CardHeader>
@@ -108,7 +107,6 @@ const ContactPage = () => {
 
                 <Card className="p-8">
                   <CardHeader className="pb-4 text-center">
-                    <User className="w-12 h-12 text-trust-600 mx-auto mb-4" />
                     <CardTitle className="text-xl">Luca di Stefano</CardTitle>
                     <p className="text-trust-600 font-medium">Ordförande</p>
                   </CardHeader>
