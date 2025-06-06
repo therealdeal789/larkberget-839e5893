@@ -10,9 +10,9 @@ const MFNNewsView = ({ pressReleases }: MFNNewsViewProps) => {
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('sv-SE', {
-      year: 'numeric',
+      day: 'numeric',
       month: 'short',
-      day: 'numeric'
+      year: 'numeric'
     }).toUpperCase();
   };
 
@@ -36,6 +36,36 @@ const MFNNewsView = ({ pressReleases }: MFNNewsViewProps) => {
           </p>
         </div>
 
+        {/* Add the toolbar section that matches the image */}
+        <div className="mfn-toolbar">
+          <div className="mfn-tags">
+            <span>Kategori</span>
+            <select className="mfn-select">
+              <option>Alla (Kategorier)</option>
+            </select>
+          </div>
+          
+          <div className="mfn-year">
+            <span>År</span>
+            <select className="mfn-select">
+              <option>Alla (År)</option>
+            </select>
+          </div>
+          
+          <div className="mfn-lang">
+            <span>Språk</span>
+            <select className="mfn-select">
+              <option>Alla (Språk)</option>
+            </select>
+          </div>
+          
+          <div className="mfn-search">
+            <span>Sök</span>
+            <input type="text" className="mfn-search-input" placeholder="Sök..." />
+            <button className="mfn-search-button">Sök</button>
+          </div>
+        </div>
+
         <div className="mfn-content">
           {pressReleases.map((item) => (
             <div key={item.id} className="mfn-row">
@@ -57,6 +87,9 @@ const MFNNewsView = ({ pressReleases }: MFNNewsViewProps) => {
                       ))}
                     </div>
                   )}
+                  <div style={{ marginTop: '10px' }}>
+                    <a href="#" className="documentation-link">Läs mer</a>
+                  </div>
                 </div>
                 
                 {item.attachments && Array.isArray(item.attachments) && item.attachments.length > 0 && (

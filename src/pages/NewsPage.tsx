@@ -9,7 +9,7 @@ import { usePressReleases, useSyncMFNNews } from "@/hooks/usePressReleases";
 import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 
-// Import MFN CSS styles
+// Import MFN CSS styles - ensure correct order
 import "../../css/general.css";
 import "../../css/list.css";
 import "../../css/single.css";
@@ -38,11 +38,11 @@ const NewsPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
       <LarkbergetNavbar />
       
-      {/* Hero Section with sync button */}
-      <section className="bg-gradient-to-br from-blue-900 via-slate-800 to-blue-800 text-white pt-48 pb-16">
+      {/* Sync button at top */}
+      <section className="bg-gradient-to-br from-blue-900 via-slate-800 to-blue-800 text-white pt-48 pb-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center">
@@ -64,40 +64,33 @@ const NewsPage = () => {
         </div>
       </section>
 
-      {/* MFN Style News Content */}
-      <section className="py-8" style={{ backgroundColor: '#123252' }}>
-        <div className="flex justify-center">
-          {isLoading ? (
-            <div className="text-white text-center">
-              <RefreshCw className="w-8 h-8 animate-spin mx-auto mb-4" />
-              <p>Laddar nyheter...</p>
+      {/* MFN News Content - directly use their CSS structure */}
+      <div style={{ backgroundColor: '#123252', minHeight: '100vh', padding: 0, margin: 0 }}>
+        {isLoading ? (
+          <div id="wrapper">
+            <div id="container">
+              <div className="text-center py-12">
+                <RefreshCw className="w-8 h-8 animate-spin mx-auto mb-4 text-white" />
+                <p className="text-white">Laddar nyheter...</p>
+              </div>
             </div>
-          ) : pressReleases && pressReleases.length > 0 ? (
-            <MFNNewsView pressReleases={pressReleases} />
-          ) : (
-            <div className="text-white text-center py-12">
-              <h3 className="text-lg font-medium mb-2">Inga nyheter hittades</h3>
-              <p className="mb-4">Klicka på "Synkronisera nyheter" för att hämta de senaste artiklarna.</p>
-              <Button 
-                onClick={handleSync}
-                disabled={isSyncing}
-                className="text-trust-600 border-trust-300 hover:bg-trust-50"
-                variant="outline"
-              >
-                {isSyncing ? (
-                  <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
-                ) : (
-                  <RefreshCw className="w-4 h-4 mr-2" />
-                )}
-                Synkronisera nyheter
-              </Button>
+          </div>
+        ) : pressReleases && pressReleases.length > 0 ? (
+          <MFNNewsView pressReleases={pressReleases} />
+        ) : (
+          <div id="wrapper">
+            <div id="container">
+              <div className="text-center py-12">
+                <h3 className="text-lg font-medium mb-2">Inga nyheter hittades</h3>
+                <p className="mb-4">Klicka på "Synkronisera nyheter" för att hämta de senaste artiklarna.</p>
+              </div>
             </div>
-          )}
-        </div>
-      </section>
+          </div>
+        )}
+      </div>
 
       <LarkbergetFooter />
-    </div>
+    </>
   );
 };
 
