@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useEffect } from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
 import MFNNewsView from "@/components/MFNNewsView";
@@ -19,6 +19,26 @@ const NewsPage = () => {
   const { data: pressReleases, isLoading, error } = usePressReleases(20);
   const { refetch: syncNews, isLoading: isSyncing } = useSyncMFNNews();
   const queryClient = useQueryClient();
+
+  // Automatically sync news when page loads if no data exists
+  useEffect(() => {
+    const autoSync = async () => {
+      if (!pressReleases || pressReleases.length === 0) {
+        console.log('No press releases found, auto-syncing...');
+        try {
+          const result = await syncNews();
+          if (result.data?.success) {
+            console.log(`Auto-sync completed! ${result.data.processed} articles synced.`);
+            queryClient.invalidateQueries({ queryKey: ['press-releases'] });
+          }
+        } catch (error) {
+          console.error('Auto-sync error:', error);
+        }
+      }
+    };
+
+    autoSync();
+  }, [pressReleases, syncNews, queryClient]);
 
   const handleSync = async () => {
     try {
@@ -66,7 +86,7 @@ const NewsPage = () => {
 
       {/* MFN News Content - directly use their CSS structure */}
       <div style={{ backgroundColor: '#123252', minHeight: '100vh', padding: 0, margin: 0 }}>
-        {isLoading ? (
+        {isLoading || isSyncing ? (
           <div id="wrapper">
             <div id="container">
               <div className="text-center py-12">
@@ -82,7 +102,7 @@ const NewsPage = () => {
             <div id="container">
               <div className="text-center py-12">
                 <h3 className="text-lg font-medium mb-2">Inga nyheter hittades</h3>
-                <p className="mb-4">Klicka på "Synkronisera nyheter" för att hämta de senaste artiklarna.</p>
+                <p className="mb-4">Försöker hämta nyheter automatiskt...</p>
               </div>
             </div>
           </div>
