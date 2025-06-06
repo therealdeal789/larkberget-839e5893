@@ -12,7 +12,7 @@ export interface PressRelease {
   language: string;
   type?: string;
   tags: string[];
-  attachments: any[];
+  attachments: any;
   primary_image_url?: string;
   created_at: string;
   updated_at: string;
