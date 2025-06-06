@@ -31,12 +31,11 @@ const MFNNewsView = ({ pressReleases }: MFNNewsViewProps) => {
         
         <div className="introduction">
           <p>
-            <span className="documentation-highlight">Senaste nyheterna</span> från Lärkberget AB. 
+            <span className="documentation-highlight">Senaste nyheterna</span> från Combigene AB. 
             Här hittar du våra pressmeddelanden, finansiella rapporter och andra viktiga meddelanden.
           </p>
         </div>
 
-        {/* Add the toolbar section that matches the image */}
         <div className="mfn-toolbar">
           <div className="mfn-tags">
             <span>Kategori</span>
@@ -67,44 +66,50 @@ const MFNNewsView = ({ pressReleases }: MFNNewsViewProps) => {
         </div>
 
         <div className="mfn-content">
-          {pressReleases.map((item) => (
-            <div key={item.id} className="mfn-row">
-              <div className="mfn-sub-row">
-                <div style={{ flexGrow: 1 }}>
-                  <div className="mfn-date">{formatDate(item.published_at)}</div>
-                  <div className="mfn-title">
-                    <a href={`#`}>{item.title}</a>
+          {pressReleases && pressReleases.length > 0 ? (
+            pressReleases.map((item) => (
+              <div key={item.id} className="mfn-row">
+                <div className="mfn-sub-row">
+                  <div style={{ flexGrow: 1 }}>
+                    <div className="mfn-date">{formatDate(item.published_at)}</div>
+                    <div className="mfn-title">
+                      <a href={`#`}>{item.title}</a>
+                    </div>
+                    {item.summary && (
+                      <div className="mfn-preamble">{item.summary}</div>
+                    )}
+                    {item.tags && item.tags.length > 0 && (
+                      <div className="mfn-tags-list">
+                        {item.tags.map((tag, index) => (
+                          <span key={index} className="mfn-tag">
+                            {tag.replace(':', '').replace('sub:', '')}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    <div style={{ marginTop: '10px' }}>
+                      <a href="#" className="documentation-link">Läs mer</a>
+                    </div>
                   </div>
-                  {item.summary && (
-                    <div className="mfn-preamble">{item.summary}</div>
-                  )}
-                  {item.tags && item.tags.length > 0 && (
-                    <div className="mfn-tags-list">
-                      {item.tags.map((tag, index) => (
-                        <span key={index} className="mfn-tag">
-                          {tag.replace(':', '').replace('sub:', '')}
-                        </span>
+                  
+                  {item.attachments && Array.isArray(item.attachments) && item.attachments.length > 0 && (
+                    <div className="mfn-attachments">
+                      {item.attachments.slice(0, 3).map((attachment, index) => (
+                        <div key={index} className="mfn-attachment">
+                          <div className={getFileTypeClass(attachment)}></div>
+                          <span className="mfn-attachment-text">{attachment.name}</span>
+                        </div>
                       ))}
                     </div>
                   )}
-                  <div style={{ marginTop: '10px' }}>
-                    <a href="#" className="documentation-link">Läs mer</a>
-                  </div>
                 </div>
-                
-                {item.attachments && Array.isArray(item.attachments) && item.attachments.length > 0 && (
-                  <div className="mfn-attachments">
-                    {item.attachments.slice(0, 3).map((attachment, index) => (
-                      <div key={index} className="mfn-attachment">
-                        <div className={getFileTypeClass(attachment)}></div>
-                        <span className="mfn-attachment-text">{attachment.name}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
               </div>
+            ))
+          ) : (
+            <div className="mfn-notfound">
+              <p>Inga pressmeddelanden hittades.</p>
             </div>
-          ))}
+          )}
         </div>
       </div>
     </div>

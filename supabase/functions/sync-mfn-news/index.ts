@@ -29,7 +29,7 @@ serve(async (req) => {
   }
 
   try {
-    console.log('Starting MFN sync...');
+    console.log('Starting MFN sync for Combigene...');
     
     // Initialize Supabase client
     const supabaseUrl = "https://tubpnlfpxrsorwaparts.supabase.co";
@@ -37,16 +37,16 @@ serve(async (req) => {
     
     const supabase = createClient(supabaseUrl, supabaseKey);
 
-    // Fetch data from MFN API
+    // Fetch data from MFN API with the correct Combigene feed ID
     const feedId = 'b64b654a-26ab-45a5-bf5e-78064331219e';
     const mfnApiUrl = `https://widget.mfn.se/v1/serve/feeds/${feedId}/items?limit=50&lang=all`;
     
-    console.log('Fetching from MFN API:', mfnApiUrl);
+    console.log('Fetching from MFN API for Combigene:', mfnApiUrl);
     
     const response = await fetch(mfnApiUrl, {
       headers: {
         'Accept': 'application/json',
-        'User-Agent': 'Larkberget-Sync/1.0'
+        'User-Agent': 'Combigene-Sync/1.0'
       }
     });
 
@@ -100,7 +100,7 @@ serve(async (req) => {
       }
     }
 
-    console.log(`Sync completed. Processed: ${processedCount}, Errors: ${errorCount}`);
+    console.log(`Combigene sync completed. Processed: ${processedCount}, Errors: ${errorCount}`);
 
     return new Response(
       JSON.stringify({ 
