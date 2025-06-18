@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -41,6 +40,7 @@ const LarkbergetNavbar = () => {
         { label: "Finansiella rapporter", path: "/investerare/finansiella-rapporter" },
         { label: "Bolags- och aktieinformation", path: "/investerare/aktieagare" },
         { label: "Prospekt/IM", path: "/investerare/prospekt-im" },
+        { label: "Nasdaq First North Growth Market", path: "https://www.nasdaq.com/european-market-activity/shares/combi?id=SSE165139", external: true },
         { 
           label: "Bolagsstyrning", 
           path: "#", 
@@ -50,8 +50,7 @@ const LarkbergetNavbar = () => {
             { label: "Bolagsordning", path: "/investerare/bolagsstyrning/bolagsordning" },
             { label: "Bolagsbeskrivning", path: "/investerare/bolagsstyrning/bolagsbeskrivning" }
           ]
-        },
-        { label: "Nasdaq First North Growth Market", path: "https://www.nasdaq.com/european-market-activity/shares/combi?id=SSE165139", external: true }
+        }
       ]
     },
     { label: "Pressmeddelanden", path: "/pressmeddelanden" },
