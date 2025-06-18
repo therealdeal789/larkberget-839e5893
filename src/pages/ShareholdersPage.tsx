@@ -79,6 +79,76 @@ const ShareholdersPage = () => {
                       </p>
                     </div>
                   </div>
+
+                  {/* Största aktieägarna Section */}
+                  <div className="mt-8 pt-8 border-t border-gray-200">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Största aktieägarna</h3>
+                    <p className="text-sm text-gray-600 mb-4">Tio största aktieägarna per 2025-03-31</p>
+                    
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-sm">
+                        <thead>
+                          <tr className="border-b border-gray-200">
+                            <th className="text-left py-2 pr-4 font-medium text-gray-900">Namn</th>
+                            <th className="text-right py-2 px-4 font-medium text-gray-900">Summa innehav</th>
+                            <th className="text-right py-2 pl-4 font-medium text-gray-900">Innehav %</th>
+                          </tr>
+                        </thead>
+                        <tbody className="text-gray-700">
+                          <tr className="border-b border-gray-100">
+                            <td className="py-2 pr-4">MOLSE, OLIVER JOHN LARS</td>
+                            <td className="text-right py-2 px-4">2 689 889</td>
+                            <td className="text-right py-2 pl-4">13,58</td>
+                          </tr>
+                          <tr className="border-b border-gray-100">
+                            <td className="py-2 pr-4">STOCKSLATTEN AB</td>
+                            <td className="text-right py-2 px-4">2 327 058</td>
+                            <td className="text-right py-2 pl-4">11,75</td>
+                          </tr>
+                          <tr className="border-b border-gray-100">
+                            <td className="py-2 pr-4">NORDQVIST, JAN IVAR</td>
+                            <td className="text-right py-2 px-4">1 960 994</td>
+                            <td className="text-right py-2 pl-4">9,9</td>
+                          </tr>
+                          <tr className="border-b border-gray-100">
+                            <td className="py-2 pr-4">AVANZA PENSION</td>
+                            <td className="text-right py-2 px-4">1 173 801</td>
+                            <td className="text-right py-2 pl-4">5,93</td>
+                          </tr>
+                          <tr className="border-b border-gray-100">
+                            <td className="py-2 pr-4">M&L INDUSTRIFÖRVALTNING AB</td>
+                            <td className="text-right py-2 px-4">650 000</td>
+                            <td className="text-right py-2 pl-4">3,28</td>
+                          </tr>
+                          <tr className="border-b border-gray-100">
+                            <td className="py-2 pr-4">DANIELSSON, JOAKIM</td>
+                            <td className="text-right py-2 px-4">516 229</td>
+                            <td className="text-right py-2 pl-4">2,61</td>
+                          </tr>
+                          <tr className="border-b border-gray-100">
+                            <td className="py-2 pr-4">THOREN TILLVAXT AB</td>
+                            <td className="text-right py-2 px-4">494 894</td>
+                            <td className="text-right py-2 pl-4">2,5</td>
+                          </tr>
+                          <tr className="border-b border-gray-100">
+                            <td className="py-2 pr-4">NORDNET PENSIONSFORSAKRING AB</td>
+                            <td className="text-right py-2 px-4">405 274</td>
+                            <td className="text-right py-2 pl-4">2,05</td>
+                          </tr>
+                          <tr className="border-b border-gray-100">
+                            <td className="py-2 pr-4">FERSTAD, ARNE</td>
+                            <td className="text-right py-2 px-4">302 000</td>
+                            <td className="text-right py-2 pl-4">1,53</td>
+                          </tr>
+                          <tr>
+                            <td className="py-2 pr-4">OLSSON, PER MAGNUS</td>
+                            <td className="text-right py-2 px-4">262 491</td>
+                            <td className="text-right py-2 pl-4">1,33</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
