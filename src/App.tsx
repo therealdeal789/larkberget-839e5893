@@ -12,6 +12,7 @@ import ShareholdersPage from "./pages/ShareholdersPage";
 import ProspektPage from "./pages/ProspektPage";
 import PressReleasesPage from "./pages/PressReleasesPage";
 import ContactPage from "./pages/ContactPage";
+import CertifiedAdviserPage from "./pages/CertifiedAdviserPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/investerare/finansiella-rapporter" element={<FinancialReports />} />
           <Route path="/investerare/aktieagare" element={<ShareholdersPage />} />
           <Route path="/investerare/prospekt-im" element={<ProspektPage />} />
+          <Route path="/investerare/radgivare" element={<CertifiedAdviserPage />} />
           <Route path="/pressmeddelanden" element={<PressReleasesPage />} />
           <Route path="/kontakt" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />

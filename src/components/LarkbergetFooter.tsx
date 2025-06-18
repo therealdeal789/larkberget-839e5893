@@ -50,9 +50,10 @@ const LarkbergetFooter = () => {
           <div>
             <h4 className="font-semibold mb-4">Investerarinformation</h4>
             <ul className="space-y-2">
+              <li><Link to="/pressmeddelanden" className="text-larkberget-300 hover:text-white transition-colors">Pressmeddelanden</Link></li>
+              <li><Link to="/investerare/kalendarium" className="text-larkberget-300 hover:text-white transition-colors">Kalendarium</Link></li>
               <li><Link to="/investerare/finansiella-rapporter" className="text-larkberget-300 hover:text-white transition-colors">Finansiella rapporter</Link></li>
-              <li><Link to="/investerare/substansvarde" className="text-larkberget-300 hover:text-white transition-colors">Substansvärde</Link></li>
-              <li><Link to="/investerare/aktieagare" className="text-larkberget-300 hover:text-white transition-colors">Ägarstruktur</Link></li>
+              <li><Link to="/investerare/aktieagare" className="text-larkberget-300 hover:text-white transition-colors">Bolags- & aktieinformation</Link></li>
               <li><Link to="/investerare/radgivare" className="text-larkberget-300 hover:text-white transition-colors">Certifierad rådgivare</Link></li>
             </ul>
           </div>
