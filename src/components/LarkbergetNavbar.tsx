@@ -151,7 +151,7 @@ const LarkbergetNavbar = () => {
 
         {/* Mobile menu button */}
         <button 
-          className="lg:hidden text-larkberget-700 p-2 focus:outline-none z-60" 
+          className="lg:hidden text-larkberget-700 p-2 focus:outline-none relative z-[60]" 
           onClick={toggleMenu}
           aria-label={isMenuOpen ? "Stäng meny" : "Öppna meny"}
         >
@@ -159,82 +159,98 @@ const LarkbergetNavbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation Backdrop */}
-      {isMenuOpen && (
-        <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300"
-          onClick={closeMenu}
-        />
-      )}
-
       {/* Mobile Navigation */}
-      <div className={cn(
-        "fixed inset-0 z-50 lg:hidden transition-all duration-300 ease-in-out",
-        isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
-      )}>
-        <div className="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl border-l border-larkberget-200">
-          <div className="pt-20 px-6 h-full overflow-y-auto">
-            <nav className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <div key={item.label}>
-                  <Link 
-                    to={item.path}
-                    className="block text-xl font-medium py-3 text-larkberget-800 hover:text-trust-600 transition-colors border-b border-larkberget-100"
-                    onClick={closeMenu}
-                  >
-                    {item.label}
-                  </Link>
-                  {item.hasDropdown && (
-                    <div className="ml-4 space-y-2 mt-2 pb-4">
-                      {item.submenu?.map((subItem) => (
-                        <div key={subItem.label}>
-                          {subItem.isCategory ? (
-                            <div>
-                              <div className="text-sm font-semibold text-larkberget-900 py-2 border-b border-larkberget-200 bg-larkberget-50 px-3 rounded">
+      {isMenuOpen && (
+        <>
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 bg-black/60 z-40 lg:hidden"
+            onClick={closeMenu}
+          />
+          
+          {/* Mobile Menu Panel */}
+          <div className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-in-out">
+            {/* Header with close button */}
+            <div className="flex items-center justify-between p-6 border-b border-larkberget-200">
+              <img 
+                src="/lovable-uploads/6cda060c-786e-4e3d-8d39-925730a21f34.png" 
+                alt="Lärkberget AB" 
+                className="h-8 w-auto"
+              />
+              <button 
+                onClick={closeMenu}
+                className="p-2 text-larkberget-700 hover:text-trust-600 transition-colors focus:outline-none"
+                aria-label="Stäng meny"
+              >
+                <X size={20} />
+              </button>
+            </div>
+            
+            {/* Navigation Menu */}
+            <div className="px-6 py-4 h-full overflow-y-auto">
+              <nav className="flex flex-col space-y-2">
+                {navItems.map((item) => (
+                  <div key={item.label}>
+                    <Link 
+                      to={item.path}
+                      className="flex items-center justify-between text-lg font-medium py-3 text-larkberget-800 hover:text-trust-600 transition-colors border-b border-larkberget-100"
+                      onClick={closeMenu}
+                    >
+                      <span>{item.label}</span>
+                      {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
+                    </Link>
+                    {item.hasDropdown && (
+                      <div className="ml-4 space-y-1 mt-2 pb-4">
+                        {item.submenu?.map((subItem) => (
+                          <div key={subItem.label}>
+                            {subItem.isCategory ? (
+                              <div>
+                                <div className="text-sm font-semibold text-larkberget-900 py-2 px-3 bg-larkberget-50 rounded mb-2">
+                                  {subItem.label}
+                                </div>
+                                <div className="ml-4 space-y-1">
+                                  {subItem.submenu?.map((categoryItem) => (
+                                    <Link
+                                      key={categoryItem.label}
+                                      to={categoryItem.path}
+                                      className="block text-larkberget-600 hover:text-trust-600 py-2 px-2 rounded hover:bg-larkberget-50 transition-colors"
+                                      onClick={closeMenu}
+                                    >
+                                      {categoryItem.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            ) : subItem.external ? (
+                              <a
+                                href={subItem.path}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block text-larkberget-600 hover:text-trust-600 py-2 px-2 rounded hover:bg-larkberget-50 transition-colors"
+                                onClick={closeMenu}
+                              >
                                 {subItem.label}
-                              </div>
-                              <div className="ml-4 space-y-1">
-                                {subItem.submenu?.map((categoryItem) => (
-                                  <Link
-                                    key={categoryItem.label}
-                                    to={categoryItem.path}
-                                    className="block text-larkberget-600 hover:text-trust-600 py-2 px-2 rounded hover:bg-larkberget-50 transition-colors"
-                                    onClick={closeMenu}
-                                  >
-                                    {categoryItem.label}
-                                  </Link>
-                                ))}
-                              </div>
-                            </div>
-                          ) : subItem.external ? (
-                            <a
-                              href={subItem.path}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="block text-larkberget-600 hover:text-trust-600 py-2 px-2 rounded hover:bg-larkberget-50 transition-colors"
-                              onClick={closeMenu}
-                            >
-                              {subItem.label}
-                            </a>
-                          ) : (
-                            <Link
-                              to={subItem.path}
-                              className="block text-larkberget-600 hover:text-trust-600 py-2 px-2 rounded hover:bg-larkberget-50 transition-colors"
-                              onClick={closeMenu}
-                            >
-                              {subItem.label}
-                            </Link>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </nav>
+                              </a>
+                            ) : (
+                              <Link
+                                to={subItem.path}
+                                className="block text-larkberget-600 hover:text-trust-600 py-2 px-2 rounded hover:bg-larkberget-50 transition-colors"
+                                onClick={closeMenu}
+                              >
+                                {subItem.label}
+                              </Link>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </nav>
+            </div>
           </div>
-        </div>
-      </div>
+        </>
+      )}
     </header>
   );
 };
