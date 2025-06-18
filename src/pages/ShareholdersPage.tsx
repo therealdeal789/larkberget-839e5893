@@ -2,6 +2,7 @@
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
+import Aktiegraf from "@/components/Aktiegraf";
 import { Users, TrendingUp, PieChart, FileText } from "lucide-react";
 
 const ShareholdersPage = () => {
@@ -25,6 +26,14 @@ const ShareholdersPage = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             
+            {/* Stock Chart Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Aktiekursutveckling</h2>
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                <Aktiegraf />
+              </div>
+            </div>
+
             {/* Shareholder Information Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               
@@ -107,4 +116,3 @@ const ShareholdersPage = () => {
 };
 
 export default ShareholdersPage;
-
