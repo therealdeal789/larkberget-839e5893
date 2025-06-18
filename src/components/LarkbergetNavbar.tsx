@@ -37,7 +37,6 @@ const LarkbergetNavbar = () => {
       hasDropdown: true,
       submenu: [
         { label: "Kalendarium", path: "/investerare/kalendarium" },
-        { label: "Översikt", path: "/investerare/oversikt" },
         { label: "Finansiella rapporter", path: "/investerare/finansiella-rapporter" },
         { label: "Aktieägare", path: "/investerare/aktieagare" },
         { label: "Prospekt/IM", path: "/investerare/prospekt-im" },
