@@ -50,5 +50,22 @@ export default function Aktiegraf() {
     ]);
   }, []);
 
-  return <div id="aktiegraf" style={{ padding: "40px 0" }} />;
+  return (
+    <>
+      <style>
+        {`
+          #aktiegraf {
+            max-width: 100%;
+            overflow: hidden;
+          }
+          
+          .datablocks-widget h3 {
+            font-size: 1.25rem;
+            color: #1f3b57;
+          }
+        `}
+      </style>
+      <div id="aktiegraf" style={{ padding: "40px 0" }} />
+    </>
+  );
 }
