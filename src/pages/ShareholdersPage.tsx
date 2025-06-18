@@ -42,15 +42,6 @@ const ShareholdersPage = () => {
               </div>
             </div>
 
-            {/* Information Notice */}
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h3 className="font-semibold text-blue-900 mb-2">Viktig information</h3>
-              <p className="text-blue-800 text-sm">
-                För aktuell information om aktiekurs, handelsvolym och andra marknadsdata, 
-                hänvisas till Nasdaq Stockholm eller andra finansiella datatjänster.
-              </p>
-            </div>
-
           </div>
         </div>
       </section>
