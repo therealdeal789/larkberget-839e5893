@@ -79,9 +79,9 @@ const ContactPage = () => {
             {/* Contact Persons */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Kontaktpersoner</h2>
-              <div className="flex justify-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 
-                <Card className="p-8 max-w-md">
+                <Card className="p-8">
                   <CardHeader className="pb-4 text-center">
                     <CardTitle className="text-xl">Luca Di Stefano</CardTitle>
                     <p className="text-trust-600 font-medium">TF VD</p>
@@ -92,6 +92,35 @@ const ContactPage = () => {
                         <Phone className="w-4 h-4 text-gray-600" />
                         <a href="tel:+46708556723" className="text-gray-600 hover:text-trust-600">
                           +46 708 556 723
+                        </a>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2">
+                        <Mail className="w-4 h-4 text-gray-600" />
+                        <a href="mailto:luca@larkberget.se" className="text-gray-600 hover:text-trust-600">
+                          luca@larkberget.se
+                        </a>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="p-8">
+                  <CardHeader className="pb-4 text-center">
+                    <CardTitle className="text-xl">Robert Klatzkow</CardTitle>
+                    <p className="text-trust-600 font-medium">Styrelseordförande</p>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-center space-x-2">
+                        <Phone className="w-4 h-4 text-gray-600" />
+                        <a href="tel:+46735303798" className="text-gray-600 hover:text-trust-600">
+                          +46 735 303 798
+                        </a>
+                      </div>
+                      <div className="flex items-center justify-center space-x-2">
+                        <Mail className="w-4 h-4 text-gray-600" />
+                        <a href="mailto:robert@larkberget.se" className="text-gray-600 hover:text-trust-600">
+                          robert@larkberget.se
                         </a>
                       </div>
                     </div>
