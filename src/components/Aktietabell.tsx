@@ -88,27 +88,16 @@ export default function Aktietabell() {
           }
         `}
       </style>
-      <section style={{ padding: "60px 0" }}>
-        <h2 style={{
-          fontSize: "1.75rem",
-          marginBottom: "1rem",
-          color: "#1f3b57",
-          fontWeight: 600
-        }}>
-          Nyckeltal och aktiedata
-        </h2>
-
-        <div
-          id="aktietabell"
-          style={{
-            backgroundColor: "#f9fafb",
-            padding: "32px",
-            borderRadius: "12px",
-            boxShadow: "0 2px 10px rgba(0, 0, 0, 0.04)",
-            overflowX: "auto",
-          }}
-        />
-      </section>
+      <div
+        id="aktietabell"
+        style={{
+          backgroundColor: "#f9fafb",
+          padding: "32px",
+          borderRadius: "12px",
+          boxShadow: "0 2px 10px rgba(0, 0, 0, 0.04)",
+          overflowX: "auto",
+        }}
+      />
     </>
   );
 }
