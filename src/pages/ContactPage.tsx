@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -80,35 +79,12 @@ const ContactPage = () => {
             {/* Contact Persons */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Kontaktpersoner</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="flex justify-center">
                 
-                <Card className="p-8">
+                <Card className="p-8 max-w-md">
                   <CardHeader className="pb-4 text-center">
-                    <CardTitle className="text-xl">Peter Ekolind</CardTitle>
-                    <p className="text-trust-600 font-medium">VD</p>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-center space-x-2">
-                        <Phone className="w-4 h-4 text-gray-600" />
-                        <a href="tel:+46703415560" className="text-gray-600 hover:text-trust-600">
-                          +46 703 415 560
-                        </a>
-                      </div>
-                      <div className="flex items-center justify-center space-x-2">
-                        <Mail className="w-4 h-4 text-gray-600" />
-                        <a href="mailto:pe@larkberget.se" className="text-gray-600 hover:text-trust-600">
-                          pe@larkberget.se
-                        </a>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="p-8">
-                  <CardHeader className="pb-4 text-center">
-                    <CardTitle className="text-xl">Luca di Stefano</CardTitle>
-                    <p className="text-trust-600 font-medium">Ordförande</p>
+                    <CardTitle className="text-xl">Luca Di Stefano</CardTitle>
+                    <p className="text-trust-600 font-medium">TF VD</p>
                   </CardHeader>
                   <CardContent className="text-center">
                     <div className="space-y-2">
@@ -116,12 +92,6 @@ const ContactPage = () => {
                         <Phone className="w-4 h-4 text-gray-600" />
                         <a href="tel:+46708556723" className="text-gray-600 hover:text-trust-600">
                           +46 708 556 723
-                        </a>
-                      </div>
-                      <div className="flex items-center justify-center space-x-2">
-                        <Mail className="w-4 h-4 text-gray-600" />
-                        <a href="mailto:lds@larkberget.se" className="text-gray-600 hover:text-trust-600">
-                          lds@larkberget.se
                         </a>
                       </div>
                     </div>
@@ -175,4 +145,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-
