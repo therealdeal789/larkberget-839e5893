@@ -14,7 +14,7 @@ const LarkbergetFooter = () => {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/lovable-uploads/2656c953-5589-4467-af02-c14392971b3d.png" 
+                src="/lovable-uploads/2da2adf2-aba6-4ece-b4b3-8798bb6c5461.png" 
                 alt="Lärkberget AB" 
                 className="h-10 w-auto"
               />
