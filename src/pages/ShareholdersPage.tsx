@@ -4,6 +4,7 @@ import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
 import Aktiegraf from "@/components/Aktiegraf";
 import Aktietabell from "@/components/Aktietabell";
+import PrenumerationsWidget from "@/components/PrenumerationsWidget";
 
 const ShareholdersPage = () => {
   return (
@@ -53,6 +54,9 @@ const ShareholdersPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Subscription Widget */}
+      <PrenumerationsWidget />
 
       <LarkbergetFooter />
     </div>
