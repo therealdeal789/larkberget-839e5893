@@ -1,4 +1,5 @@
 
+
 import React, { useState } from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -86,7 +87,7 @@ Oberoende i förhållande till bolaget och bolagsledningen men inte i förhålla
       title: "Styrelsesuppleant sedan 2024",
       phone: "",
       email: "lars@larkberget.se",
-      image: null,
+      image: "/lovable-uploads/8e2f8ba2-ca17-4fe9-bbac-6c6e069fb2cb.png",
       bio: `Styrelsesuppleant sedan 2024
 
 Födelseår: 1966
@@ -278,3 +279,4 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
 };
 
 export default ContactPage;
+
