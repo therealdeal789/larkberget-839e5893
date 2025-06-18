@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -241,12 +242,12 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
                   </div>
                   <div className="bg-white rounded-lg p-6">
                     <Mail className="w-8 h-8 text-trust-600 mx-auto mb-4" />
-                    <h4 className="font-semibold text-gray-900 mb-3">Nyheter</h4>
+                    <h4 className="font-semibold text-gray-900 mb-3">Pressmeddelanden</h4>
                     <Link 
-                      to="/nyheter"
+                      to="/pressmeddelanden"
                       className="text-trust-600 hover:text-trust-700 font-medium text-sm"
                     >
-                      Läs nyheter →
+                      Läs pressmeddelanden →
                     </Link>
                   </div>
                 </div>
