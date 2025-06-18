@@ -1,3 +1,4 @@
+
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetAboutOverview from "@/components/LarkbergetAboutOverview";
@@ -27,17 +28,17 @@ const LarkbergetHome = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/investerare"
+                to="/investerare/finansiella-rapporter"
                 className="bg-trust-600 hover:bg-trust-700 text-white font-medium py-3 px-12 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg group flex items-center justify-center"
               >
-                <span>Investerare</span>
+                <span>Finansiella rapporter</span>
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
-                to="/om-larkberget"
+                to="/pressmeddelanden"
                 className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-medium py-3 px-12 rounded-lg transition-all duration-300 border border-white/20 flex items-center justify-center"
               >
-                Om Lärkberget
+                Senaste nytt
               </Link>
             </div>
           </div>

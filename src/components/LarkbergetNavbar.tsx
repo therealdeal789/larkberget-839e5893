@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -44,7 +43,6 @@ const LarkbergetNavbar = () => {
         { label: "Nasdaq First North Growth Market", path: "https://www.nasdaq.com/european-market-activity/shares/combi?id=SSE165139", external: true }
       ]
     },
-    { label: "Nyheter", path: "/pressmeddelanden" },
     { label: "Kontakt", path: "/kontakt" }
   ];
 
