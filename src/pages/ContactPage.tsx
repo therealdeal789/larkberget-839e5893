@@ -1,12 +1,83 @@
 
-import React from "react";
+import React, { useState } from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
-import { Mail, MapPin, Phone, Clock, FileText } from "lucide-react";
+import { Mail, MapPin, Phone, Clock, FileText, User } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
 
 const ContactPage = () => {
+  const contactPersons = [
+    {
+      name: "Luca Di Stefano",
+      title: "TF VD sedan 2025",
+      phone: "+46 708 556 723",
+      email: "luca@larkberget.se",
+      bio: `Styrelseordförande sedan 2024, TF VD sedan 2025
+      
+Födelseår: 1978
+
+Utbildning och erfarenhet: Luca Di Stefano har en marknadsekonomutbildning från Frans Schartaus Handelsinstitut samt studerat Internationella relationer på Stockholms universitet. Luca är investerare, styrelseproffs och grundare av flera bolag inom media och IT. Sedan 2017 även haft en aktiv roll som VD/operativ ansvarig och styrelseledamot för flera tillväxtbolag. Kommer senast från posten som delägare och VD för digitala marknadsföringsbyrån Brandson AB som senare köptes upp av Defiso Media AB. Luca är för närvarande ansvarig för det svenska investeringsföretaget Molcap och övervakar deras onoterade portfölj.
+
+Övriga styrelseuppdrag: Styrelseordförande i Refine Group AB och Gavald Holdings. Styrelseledamot i Tellusgruppen AB, Upgrade Invest Nordic AB, XLNT group AB, Mresell Group AB, Hamax Holding AB och Cazzosa Capital.
+
+Tidigare styrelseuppdrag/övriga befattningar: Storage 365, Spacett och Brandson.
+
+Innehav i CombiGene AB: Innehar inga aktier eller teckningsoptioner.
+
+Oberoende i förhållande till bolaget och bolagsledningen men inte till bolagets större aktieägare.`
+    },
+    {
+      name: "Robert Klatzkow",
+      title: "Styrelseordförande sedan 2025",
+      phone: "+46 735 303 798",
+      email: "robert@larkberget.se",
+      bio: "Styrelseordförande sedan 2025. Mer information kommer inom kort."
+    },
+    {
+      name: "Marcus Isaksson",
+      title: "Styrelseledamot sedan 2024",
+      phone: "",
+      email: "marcus@larkberget.se",
+      bio: `Styrelseledamot sedan 2024
+
+Födelseår: 1972
+
+Utbildning och erfarenhet: Marcus har en akademisk utbildning i företagsekonomi med inriktning mot finans från Stockholms universitet. Han har över 25 års gedigen erfarenhet inom bank- och riskkapitalsektorn, med erfarenhet från både stora börsnoterade företag från arbeten på Nordea och startups genom sin roll på Partnerinvest. Markus är vd, delägare och styrelseledamot i Thoren Tillväxt AB.
+
+Från 2010 till 2016 arbetade Marcus som investment manager på Partnerinvest, där han specialiserade sig på investeringar, kapitalanskaffning och avyttringar i ägarledda startups inom olika branscher.
+
+Övriga styrelseuppdrag: Styrelseledamot i Thoren Tillväxt AB och Ledyer AB. Styrelseordförande i NELAB Invest AB.
+
+Tidigare styrelseuppdrag/övriga befattningar: Styrelseledamot i Tanomed AB (förvärvat av Karo Bio) och Evosport AB (förvärvat av WeSport).
+
+Innehav i CombiGene AB: Indirekt innehav genom Thoren Tillväxt AB 494 894 aktier.
+
+Oberoende i förhållande till bolaget och bolagsledningen och till bolagets större aktieägare.`
+    },
+    {
+      name: "Alexander Gradin",
+      title: "Styrelseledamot sedan 2025",
+      phone: "",
+      email: "alexander@larkberget.se",
+      bio: `Styrelseledamot sedan 2025
+
+Födelseår: 1989
+
+Utbildning och erfarenhet: Alexander har en examen i data- och systemvetenskap och har en bred erfarenhet inom entreprenörskap, tech och finans. Han grundade marketing tech-bolaget Beatly AB år 2015, där han var VD med ansvar för produktutveckling till 2020, för att därefter vara försäljningschef till 2022. Mellan 2020 och 2022 arbetade Alexander med kapitalresning åt privata bolag, samt grundade ett e-handelsbolag, The Skincare Revolution AB, som avyttrades till Lyko 2023. Utöver detta har Alexander varit IT-konsult med fokus på IT-säkerhet, webbutveckling och cloudmiljö, primärt för bolag inom den finansiella sektorn. Sedan 2024 är han VD på AG Equity Research AB.
+
+Övriga styrelseuppdrag: VD och styrelseledamot i AG Equity Research AB, Styrelseledamot i Vestona AB, Styrelseledamot i Vibe Ventures AB, Suppleant i The Socials 29660 AB, Suppleant i Ran Invest AB
+
+Tidigare styrelseuppdrag/övriga befattningar: VD för Beatly AB, VD The Skincare Revolution AB
+
+Innehav i CombiGene AB: Innehar inga aktier eller teckningsoptioner.
+
+Oberoende i förhållande till bolaget och bolagsledningen men inte i förhållande till större aktieägare.`
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       <LarkbergetNavbar />
@@ -76,56 +147,56 @@ const ContactPage = () => {
 
             </div>
 
-            {/* Contact Persons */}
+            {/* Leadership & Board */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Kontaktpersoner</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Ledning & styrelse</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 
-                <Card className="p-8">
-                  <CardHeader className="pb-4 text-center">
-                    <CardTitle className="text-xl">Luca Di Stefano</CardTitle>
-                    <p className="text-trust-600 font-medium">TF VD</p>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-center space-x-2">
-                        <Phone className="w-4 h-4 text-gray-600" />
-                        <a href="tel:+46708556723" className="text-gray-600 hover:text-trust-600">
-                          +46 708 556 723
-                        </a>
+                {contactPersons.map((person, index) => (
+                  <Card key={index} className="p-6">
+                    <CardHeader className="pb-4 text-center">
+                      <CardTitle className="text-lg">{person.name}</CardTitle>
+                      <p className="text-trust-600 font-medium text-sm">{person.title}</p>
+                    </CardHeader>
+                    <CardContent className="text-center">
+                      <div className="space-y-2 mb-4">
+                        {person.phone && (
+                          <div className="flex items-center justify-center space-x-2">
+                            <Phone className="w-4 h-4 text-gray-600" />
+                            <a href={`tel:${person.phone.replace(/\s/g, '')}`} className="text-gray-600 hover:text-trust-600 text-sm">
+                              {person.phone}
+                            </a>
+                          </div>
+                        )}
+                        <div className="flex items-center justify-center space-x-2">
+                          <Mail className="w-4 h-4 text-gray-600" />
+                          <a href={`mailto:${person.email}`} className="text-gray-600 hover:text-trust-600 text-sm">
+                            {person.email}
+                          </a>
+                        </div>
                       </div>
-                      <div className="flex items-center justify-center space-x-2">
-                        <Mail className="w-4 h-4 text-gray-600" />
-                        <a href="mailto:luca@larkberget.se" className="text-gray-600 hover:text-trust-600">
-                          luca@larkberget.se
-                        </a>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="p-8">
-                  <CardHeader className="pb-4 text-center">
-                    <CardTitle className="text-xl">Robert Klatzkow</CardTitle>
-                    <p className="text-trust-600 font-medium">Styrelseordförande</p>
-                  </CardHeader>
-                  <CardContent className="text-center">
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-center space-x-2">
-                        <Phone className="w-4 h-4 text-gray-600" />
-                        <a href="tel:+46735303798" className="text-gray-600 hover:text-trust-600">
-                          +46 735 303 798
-                        </a>
-                      </div>
-                      <div className="flex items-center justify-center space-x-2">
-                        <Mail className="w-4 h-4 text-gray-600" />
-                        <a href="mailto:robert@larkberget.se" className="text-gray-600 hover:text-trust-600">
-                          robert@larkberget.se
-                        </a>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                      
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button variant="outline" size="sm" className="w-full">
+                            <User className="w-4 h-4 mr-2" />
+                            Bio
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                          <DialogHeader>
+                            <DialogTitle className="text-xl">{person.name}</DialogTitle>
+                          </DialogHeader>
+                          <div className="mt-4">
+                            <p className="whitespace-pre-line text-sm leading-relaxed text-gray-700">
+                              {person.bio}
+                            </p>
+                          </div>
+                        </DialogContent>
+                      </Dialog>
+                    </CardContent>
+                  </Card>
+                ))}
 
               </div>
             </div>
