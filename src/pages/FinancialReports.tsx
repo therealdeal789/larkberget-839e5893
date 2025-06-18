@@ -64,7 +64,7 @@ const FinancialReports = () => {
               textAlign: "center",
             }}
           >
-            Finansiella rapporter & pressmeddelanden
+            Finansiella rapporter
           </h2>
           <p
             style={{
@@ -75,7 +75,7 @@ const FinancialReports = () => {
               marginInline: "auto",
             }}
           >
-            Här hittar du Lärkbergets delårsrapporter, årsredovisningar och regulatoriska pressmeddelanden. Arkivet uppdateras automatiskt med de senaste publiceringarna.
+            Här hittar du Lärkbergets delårsrapporter och årsredovisningar.
           </p>
 
           <div
