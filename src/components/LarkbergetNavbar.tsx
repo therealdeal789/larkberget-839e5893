@@ -159,18 +159,18 @@ const LarkbergetNavbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation - Full Screen */}
       {isMenuOpen && (
         <>
-          {/* Backdrop */}
+          {/* Full screen backdrop */}
           <div 
-            className="fixed inset-0 bg-black/60 z-40 lg:hidden"
+            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
             onClick={closeMenu}
           />
           
-          {/* Mobile Menu Panel */}
-          <div className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-50 lg:hidden transform transition-transform duration-300 ease-in-out">
-            {/* Header with close button */}
+          {/* Full Screen Mobile Menu */}
+          <div className="fixed inset-0 bg-white z-50 lg:hidden overflow-y-auto">
+            {/* Header with logo and close button */}
             <div className="flex items-center justify-between p-6 border-b border-larkberget-200">
               <img 
                 src="/lovable-uploads/6cda060c-786e-4e3d-8d39-925730a21f34.png" 
@@ -182,30 +182,30 @@ const LarkbergetNavbar = () => {
                 className="p-2 text-larkberget-700 hover:text-trust-600 transition-colors focus:outline-none"
                 aria-label="Stäng meny"
               >
-                <X size={20} />
+                <X size={24} />
               </button>
             </div>
             
-            {/* Navigation Menu */}
-            <div className="px-6 py-4 h-full overflow-y-auto">
-              <nav className="flex flex-col space-y-2">
+            {/* Navigation Menu - Full Screen */}
+            <div className="p-6">
+              <nav className="flex flex-col space-y-1">
                 {navItems.map((item) => (
                   <div key={item.label}>
                     <Link 
                       to={item.path}
-                      className="flex items-center justify-between text-lg font-medium py-3 text-larkberget-800 hover:text-trust-600 transition-colors border-b border-larkberget-100"
+                      className="flex items-center justify-between text-xl font-medium py-4 text-larkberget-800 hover:text-trust-600 transition-colors border-b border-larkberget-100"
                       onClick={closeMenu}
                     >
                       <span>{item.label}</span>
-                      {item.hasDropdown && <ChevronDown className="w-4 h-4" />}
+                      {item.hasDropdown && <ChevronDown className="w-5 h-5" />}
                     </Link>
                     {item.hasDropdown && (
-                      <div className="ml-4 space-y-1 mt-2 pb-4">
+                      <div className="ml-6 space-y-1 mt-2 pb-4">
                         {item.submenu?.map((subItem) => (
                           <div key={subItem.label}>
                             {subItem.isCategory ? (
                               <div>
-                                <div className="text-sm font-semibold text-larkberget-900 py-2 px-3 bg-larkberget-50 rounded mb-2">
+                                <div className="text-base font-semibold text-larkberget-900 py-3 px-4 bg-larkberget-50 rounded-lg mb-2">
                                   {subItem.label}
                                 </div>
                                 <div className="ml-4 space-y-1">
@@ -213,7 +213,7 @@ const LarkbergetNavbar = () => {
                                     <Link
                                       key={categoryItem.label}
                                       to={categoryItem.path}
-                                      className="block text-larkberget-600 hover:text-trust-600 py-2 px-2 rounded hover:bg-larkberget-50 transition-colors"
+                                      className="block text-base text-larkberget-600 hover:text-trust-600 py-3 px-3 rounded-lg hover:bg-larkberget-50 transition-colors"
                                       onClick={closeMenu}
                                     >
                                       {categoryItem.label}
@@ -226,7 +226,7 @@ const LarkbergetNavbar = () => {
                                 href={subItem.path}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="block text-larkberget-600 hover:text-trust-600 py-2 px-2 rounded hover:bg-larkberget-50 transition-colors"
+                                className="block text-base text-larkberget-600 hover:text-trust-600 py-3 px-3 rounded-lg hover:bg-larkberget-50 transition-colors"
                                 onClick={closeMenu}
                               >
                                 {subItem.label}
@@ -234,7 +234,7 @@ const LarkbergetNavbar = () => {
                             ) : (
                               <Link
                                 to={subItem.path}
-                                className="block text-larkberget-600 hover:text-trust-600 py-2 px-2 rounded hover:bg-larkberget-50 transition-colors"
+                                className="block text-base text-larkberget-600 hover:text-trust-600 py-3 px-3 rounded-lg hover:bg-larkberget-50 transition-colors"
                                 onClick={closeMenu}
                               >
                                 {subItem.label}
