@@ -1,36 +1,30 @@
+
 import React from "react";
-import { TrendingUp, FileText, Calendar, PieChart } from "lucide-react";
+import { FileText, Calendar, MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const LarkbergetInvestorHighlights = () => {
   const highlights = [
     {
-      icon: TrendingUp,
-      title: "Substansvärde",
-      description: "Aktuellt NAV och historisk utveckling",
-      link: "/investerare/substansvarde",
+      icon: MessageSquare,
+      title: "Pressmeddelanden",
+      description: "Senaste nytt och pressmeddelanden",
+      link: "/pressmeddelanden",
       color: "trust"
     },
     {
       icon: FileText,
-      title: "Finansiella rapporter",
+      title: "Rapporter",
       description: "Års- och delårsrapporter",
       link: "/investerare/finansiella-rapporter",
       color: "earth"
     },
     {
       icon: Calendar,
-      title: "Finansiell kalender",
+      title: "Kalendarium",
       description: "Kommande rapportdatum och stämmor",
       link: "/investerare/finansiella-rapporter",
       color: "trust"
-    },
-    {
-      icon: PieChart,
-      title: "Ägarstruktur",
-      description: "Aktieägare och ägarfördelning",
-      link: "/investerare/aktieagare",
-      color: "earth"
     }
   ];
 
@@ -46,7 +40,7 @@ const LarkbergetInvestorHighlights = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {highlights.map((item, index) => {
             const Icon = item.icon;
             const colorClass = item.color === 'trust' ? 'trust' : 'earth';
