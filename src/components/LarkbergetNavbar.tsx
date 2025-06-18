@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -92,7 +93,7 @@ const LarkbergetNavbar = () => {
                     <span>{item.label}</span>
                     <ChevronDown className="w-4 h-4" />
                   </Link>
-                  <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-larkberget-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-larkberget-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="py-2">
                       {item.submenu?.map((subItem) => (
                         <div key={subItem.label}>
@@ -150,7 +151,7 @@ const LarkbergetNavbar = () => {
 
         {/* Mobile menu button */}
         <button 
-          className="lg:hidden text-larkberget-700 p-2 focus:outline-none" 
+          className="lg:hidden text-larkberget-700 p-2 focus:outline-none z-60" 
           onClick={toggleMenu}
           aria-label={isMenuOpen ? "Stäng meny" : "Öppna meny"}
         >
@@ -158,70 +159,80 @@ const LarkbergetNavbar = () => {
         </button>
       </div>
 
+      {/* Mobile Navigation Backdrop */}
+      {isMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden transition-opacity duration-300"
+          onClick={closeMenu}
+        />
+      )}
+
       {/* Mobile Navigation */}
       <div className={cn(
-        "fixed inset-0 z-40 bg-white lg:hidden transition-all duration-300 ease-in-out",
+        "fixed inset-0 z-50 lg:hidden transition-all duration-300 ease-in-out",
         isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
       )}>
-        <div className="pt-20 px-6">
-          <nav className="flex flex-col space-y-4">
-            {navItems.map((item) => (
-              <div key={item.label}>
-                <Link 
-                  to={item.path}
-                  className="block text-xl font-medium py-3 text-larkberget-800 hover:text-trust-600 transition-colors"
-                  onClick={closeMenu}
-                >
-                  {item.label}
-                </Link>
-                {item.hasDropdown && (
-                  <div className="ml-4 space-y-2 mt-2">
-                    {item.submenu?.map((subItem) => (
-                      <div key={subItem.label}>
-                        {subItem.isCategory ? (
-                          <div>
-                            <div className="text-sm font-semibold text-larkberget-900 py-2 border-b border-larkberget-200">
+        <div className="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl border-l border-larkberget-200">
+          <div className="pt-20 px-6 h-full overflow-y-auto">
+            <nav className="flex flex-col space-y-4">
+              {navItems.map((item) => (
+                <div key={item.label}>
+                  <Link 
+                    to={item.path}
+                    className="block text-xl font-medium py-3 text-larkberget-800 hover:text-trust-600 transition-colors border-b border-larkberget-100"
+                    onClick={closeMenu}
+                  >
+                    {item.label}
+                  </Link>
+                  {item.hasDropdown && (
+                    <div className="ml-4 space-y-2 mt-2 pb-4">
+                      {item.submenu?.map((subItem) => (
+                        <div key={subItem.label}>
+                          {subItem.isCategory ? (
+                            <div>
+                              <div className="text-sm font-semibold text-larkberget-900 py-2 border-b border-larkberget-200 bg-larkberget-50 px-3 rounded">
+                                {subItem.label}
+                              </div>
+                              <div className="ml-4 space-y-1">
+                                {subItem.submenu?.map((categoryItem) => (
+                                  <Link
+                                    key={categoryItem.label}
+                                    to={categoryItem.path}
+                                    className="block text-larkberget-600 hover:text-trust-600 py-2 px-2 rounded hover:bg-larkberget-50 transition-colors"
+                                    onClick={closeMenu}
+                                  >
+                                    {categoryItem.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          ) : subItem.external ? (
+                            <a
+                              href={subItem.path}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block text-larkberget-600 hover:text-trust-600 py-2 px-2 rounded hover:bg-larkberget-50 transition-colors"
+                              onClick={closeMenu}
+                            >
                               {subItem.label}
-                            </div>
-                            <div className="ml-4 space-y-1">
-                              {subItem.submenu?.map((categoryItem) => (
-                                <Link
-                                  key={categoryItem.label}
-                                  to={categoryItem.path}
-                                  className="block text-larkberget-600 hover:text-trust-600 py-2 transition-colors"
-                                  onClick={closeMenu}
-                                >
-                                  {categoryItem.label}
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        ) : subItem.external ? (
-                          <a
-                            href={subItem.path}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block text-larkberget-600 hover:text-trust-600 py-2 transition-colors"
-                            onClick={closeMenu}
-                          >
-                            {subItem.label}
-                          </a>
-                        ) : (
-                          <Link
-                            to={subItem.path}
-                            className="block text-larkberget-600 hover:text-trust-600 py-2 transition-colors"
-                            onClick={closeMenu}
-                          >
-                            {subItem.label}
-                          </Link>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
+                            </a>
+                          ) : (
+                            <Link
+                              to={subItem.path}
+                              className="block text-larkberget-600 hover:text-trust-600 py-2 px-2 rounded hover:bg-larkberget-50 transition-colors"
+                              onClick={closeMenu}
+                            >
+                              {subItem.label}
+                            </Link>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </nav>
+          </div>
         </div>
       </div>
     </header>
