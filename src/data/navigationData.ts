@@ -4,6 +4,7 @@ import { NavItem } from "@/types/navigation";
 export const navItems: NavItem[] = [
   { label: "Hem", path: "/" },
   { label: "Om Lärkberget", path: "/om-larkberget" },
+  { label: "Pressmeddelanden", path: "/pressmeddelanden" },
   { 
     label: "Investerare", 
     path: "/investerare",
@@ -26,6 +27,5 @@ export const navItems: NavItem[] = [
       }
     ]
   },
-  { label: "Pressmeddelanden", path: "/pressmeddelanden" },
   { label: "Kontakt", path: "/kontakt" }
 ];
