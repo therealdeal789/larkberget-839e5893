@@ -42,12 +42,6 @@ export default function AktieInfoSektion() {
 
     window._MF.push([
       {
-        widget: "stock-table",
-        token: "7a7a33e7-c70c-4557-8f74-c580e19167f2",
-        query: "#aktietabell",
-        locale: "sv",
-      },
-      {
         widget: "subscribe-v2",
         token: "17db48cb-01d1-4856-851c-92680dc46446",
         query: "#prenumeration",
@@ -60,67 +54,90 @@ export default function AktieInfoSektion() {
     <>
       <style>
         {`
-          #aktietabell {
-            overflow-x: auto;
-            background-color: #f9fafb;
-            border-radius: 8px;
-            padding: 16px;
-            max-width: 100%;
-          }
-
-          #aktietabell table {
-            width: 100%;
-            font-size: 0.95rem;
-            border-collapse: collapse;
-          }
-          
-          .datablocks-widget th,
-          .datablocks-widget td {
-            text-align: left;
-            padding: 12px;
-            border-bottom: 1px solid #e5e7eb;
-          }
-          
-          .datablocks-widget th {
-            background-color: #ffffff;
-            font-weight: 600;
-            color: #374151;
-          }
-
           #prenumeration {
             background: #ffffff;
             border: 1px solid #e5e7eb;
             border-radius: 8px;
-            padding: 20px;
-            min-width: 280px;
+            padding: 24px;
+            max-width: 500px;
+            margin: 0 auto;
+          }
+
+          #prenumeration h3 {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            color: #374151;
+          }
+
+          #prenumeration input[type="email"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            margin: 12px 0;
+            background-color: #ffffff;
+          }
+
+          #prenumeration input[type="email"]:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+          }
+
+          #prenumeration input[type="submit"],
+          #prenumeration button[type="submit"] {
+            background-color: #3b82f6;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 12px;
+            transition: background-color 0.2s;
+          }
+
+          #prenumeration input[type="submit"]:hover,
+          #prenumeration button[type="submit"]:hover {
+            background-color: #2563eb;
+          }
+
+          #prenumeration label {
+            display: block;
+            margin: 16px 0 8px 0;
+            line-height: 1.5;
+          }
+
+          #prenumeration .checkbox-group {
+            margin: 16px 0;
+          }
+
+          #prenumeration .checkbox-group label {
+            margin: 8px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+          }
+
+          #prenumeration input[type="checkbox"] {
+            margin-top: 2px;
+            flex-shrink: 0;
+          }
+
+          #prenumeration br {
+            line-height: 2;
           }
         `}
       </style>
       <section style={{ padding: "40px 0" }}>
-        <h2 style={{ fontSize: "1.75rem", marginBottom: "1rem" }}>Aktiedata & Prenumeration</h2>
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "2rem",
-          }}
-        >
-          {/* Aktietabell */}
-          <div
-            id="aktietabell"
-            style={{
-              flex: "1 1 400px",
-            }}
-          />
-
-          {/* Prenumeration */}
-          <div
-            id="prenumeration"
-            style={{
-              flex: "1 1 300px",
-            }}
-          />
-        </div>
+        <h2 style={{ fontSize: "1.75rem", marginBottom: "2rem", textAlign: "center" }}>
+          Prenumeration
+        </h2>
+        <div id="prenumeration" />
       </section>
     </>
   );
