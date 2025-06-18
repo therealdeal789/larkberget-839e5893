@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LarkbergetHome from "./pages/LarkbergetHome";
 import AboutLarkberget from "./pages/AboutLarkberget";
 import InvestorsOverview from "./pages/InvestorsOverview";
+import KalendariumPage from "./pages/KalendariumPage";
 import FinancialReports from "./pages/FinancialReports";
 import ShareholdersPage from "./pages/ShareholdersPage";
 import ProspektPage from "./pages/ProspektPage";
@@ -25,7 +26,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<LarkbergetHome />} />
           <Route path="/om-larkberget" element={<AboutLarkberget />} />
-          <Route path="/investerare" element={<InvestorsOverview />} />
+          <Route path="/investerare" element={<KalendariumPage />} />
+          <Route path="/investerare/oversikt" element={<InvestorsOverview />} />
+          <Route path="/investerare/kalendarium" element={<KalendariumPage />} />
           <Route path="/investerare/finansiella-rapporter" element={<FinancialReports />} />
           <Route path="/investerare/aktieagare" element={<ShareholdersPage />} />
           <Route path="/investerare/prospekt-im" element={<ProspektPage />} />
