@@ -22,21 +22,30 @@ const PressReleasesPage = () => {
         </div>
       </section>
 
-      {/* Content Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center py-12">
-              <h2 className="text-2xl font-bold text-larkberget-800 mb-4">
-                Pressmeddelanden kommer snart
-              </h2>
-              <p className="text-larkberget-600">
-                Vi arbetar med att publicera våra senaste pressmeddelanden här. 
-                Kontakta oss gärna för mer information.
-              </p>
-            </div>
-          </div>
-        </div>
+      {/* News Feed Section */}
+      <section style={{ padding: "60px 20px" }}>
+        <h2
+          style={{
+            fontSize: "1.75rem",
+            marginBottom: "1rem",
+            color: "#1f3b57",
+            fontWeight: 600,
+            textAlign: "center",
+          }}
+        >
+          Pressmeddelanden & Nyheter
+        </h2>
+        <iframe
+          src="https://therealdeal789.github.io/larkberget/list.html"
+          style={{
+            width: "100%",
+            height: "1000px",
+            border: "none",
+            borderRadius: "12px",
+            backgroundColor: "#ffffff",
+          }}
+          title="MFN Nyhetsflöde"
+        />
       </section>
 
       <LarkbergetFooter />
