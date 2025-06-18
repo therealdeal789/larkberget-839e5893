@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -44,7 +43,7 @@ Oberoende i förhållande till bolaget och bolagsledningen men inte till bolaget
       title: "Styrelseledamot sedan 2024",
       phone: "",
       email: "marcus@larkberget.se",
-      image: null,
+      image: "/lovable-uploads/b0caefa3-4b86-4997-876e-b49a4af912c4.png",
       bio: `Styrelseledamot sedan 2024
 
 Födelseår: 1972
