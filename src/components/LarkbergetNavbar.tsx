@@ -63,7 +63,7 @@ const LarkbergetNavbar = () => {
           onClick={closeMenu}
         >
           <img 
-            src="/lovable-uploads/554001cd-4c36-4266-aa06-f2a9023cfa1c.png" 
+            src="/lovable-uploads/6cda060c-786e-4e3d-8d39-925730a21f34.png" 
             alt="Lärkberget AB" 
             className="h-10 w-auto"
           />

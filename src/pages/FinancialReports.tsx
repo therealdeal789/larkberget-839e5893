@@ -3,19 +3,6 @@ import React, { useEffect } from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
 
-// Extend the Window interface to include _MF
-declare global {
-  interface Window {
-    _MF: {
-      data: any[];
-      url: string;
-      ready: boolean;
-      render: () => void;
-      push: (w: any[]) => void;
-    };
-  }
-}
-
 const FinancialReports = () => {
   useEffect(() => {
     const url = "https://widget.datablocks.se/api/rose";
