@@ -2,6 +2,8 @@
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
+import { Button } from "@/components/ui/button";
+import { FileText } from "lucide-react";
 
 const BolagsbeskrivningPage = () => {
   return (
@@ -25,66 +27,30 @@ const BolagsbeskrivningPage = () => {
       {/* Main Content */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none">
-              <p className="text-lg text-gray-700 mb-8">
-                Här finns en detaljerad beskrivning av Lärkberget AB:s verksamhet, organisation och framtidsutsikter.
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-blue-50 rounded-xl p-12">
+              <FileText className="w-16 h-16 text-blue-600 mx-auto mb-6" />
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                Lärkberget AB Bolagsbeskrivning
+              </h2>
+              <p className="text-gray-700 mb-8 text-lg">
+                Ladda ner vår fullständiga bolagsbeskrivning för detaljerad information om bolaget.
               </p>
-
-              <div className="bg-gray-50 rounded-xl p-8 mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Verksamhetsbeskrivning</h2>
-                <p className="text-gray-700 mb-4">
-                  Lärkberget AB utvecklar och tillverkar avancerade robotlösningar med fokus på:
-                </p>
-                <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                  <li>Humanoida robotar för olika tillämpningsområden</li>
-                  <li>AI-drivna system för automatisering</li>
-                  <li>Innovativa lösningar för framtidens behov</li>
-                </ul>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-8 mb-8">
-                <div className="bg-blue-50 rounded-xl p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Organisation</h3>
-                  <p className="text-gray-700">
-                    Bolaget har sitt säte i Stockholm och är organiserat för att 
-                    effektivt utveckla och marknadsföra sina produkter inom robotik 
-                    och automation.
-                  </p>
-                </div>
-                
-                <div className="bg-green-50 rounded-xl p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Marknad</h3>
-                  <p className="text-gray-700">
-                    Bolaget verkar på den växande marknaden för robotlösningar 
-                    och automation, med fokus på både konsument- och 
-                    industriapplikationer.
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-yellow-50 rounded-xl p-8 mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Riskfaktorer</h2>
-                <p className="text-gray-700 mb-4">
-                  Som med alla investeringar finns det risker förknippade med en investering i Lärkberget AB:
-                </p>
-                <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                  <li>Marknadsrisker</li>
-                  <li>Tekniska risker</li>
-                  <li>Finansiella risker</li>
-                  <li>Regulatoriska risker</li>
-                </ul>
-              </div>
-
-              <div className="bg-blue-50 border-l-4 border-blue-500 p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">Fullständig bolagsbeskrivning</h3>
-                <p className="text-blue-800 mb-4">
-                  En mer detaljerad bolagsbeskrivning kommer att göras tillgänglig här.
-                </p>
-                <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors" disabled>
-                  Ladda ner PDF (kommer snart)
-                </button>
-              </div>
+              <Button 
+                asChild 
+                size="lg" 
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg"
+              >
+                <a 
+                  href="https://drive.google.com/file/d/1CCQKuKPj2zhaBUnvny2kZdekhagNggcH/view?usp=drive_link" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <FileText className="w-5 h-5" />
+                  Ladda ner bolagsbeskrivning (PDF)
+                </a>
+              </Button>
             </div>
           </div>
         </div>
