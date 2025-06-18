@@ -1,4 +1,3 @@
-
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -10,31 +9,31 @@ const ProspektPage = () => {
       title: "Prospekt 2021",
       subtitle: "Företrädesemission",
       type: "PROSPEKT",
-      pdfUrl: "#", // Will be updated when you provide the actual links
+      pdfUrl: "https://drive.google.com/file/d/1x27zzWt4I6Meu2XGHuUbvpKCWl29w-Ci/view?usp=drive_link",
     },
     {
       title: "Prospekt 2018", 
       subtitle: "Företrädesemission, 24 augusti",
       type: "PROSPEKT",
-      pdfUrl: "#", // Will be updated when you provide the actual links
+      pdfUrl: "https://drive.google.com/file/d/1DEqh965s4FsmKH50Ikq55mNuctCyxZcJ/view?usp=drive_link",
     },
     {
       title: "Prospekt 2020",
       subtitle: "Företrädesemission", 
       type: "PROSPEKT",
-      pdfUrl: "#", // Will be updated when you provide the actual links
+      pdfUrl: "https://drive.google.com/file/d/1ITz3TUOlJX6HY8F0d3USgE0t9raSBhnj/view?usp=drive_link",
     },
     {
       title: "Informationsmemorandum 2017",
       subtitle: "Företrädesemission",
       type: "MEMORANDUM",
-      pdfUrl: "#", // Will be updated when you provide the actual links
+      pdfUrl: "https://drive.google.com/file/d/1dWh8eezOtxWKY98bR_wPbrvzPnDtTOr-/view?usp=drive_link",
     },
     {
       title: "Informationsmemorandum 2018",
       subtitle: "Företrädesemission, 6 april",
       type: "MEMORANDUM", 
-      pdfUrl: "#", // Will be updated when you provide the actual links
+      pdfUrl: "https://drive.google.com/file/d/1nyeJED_qojmrO0EnJAieXRa8BmNDTd_R/view?usp=drive_link",
     },
   ];
 
