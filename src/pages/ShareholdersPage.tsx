@@ -3,6 +3,7 @@ import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
 import Aktiegraf from "@/components/Aktiegraf";
+import Aktietabell from "@/components/Aktietabell";
 import { Users, TrendingUp, PieChart, FileText } from "lucide-react";
 
 const ShareholdersPage = () => {
@@ -31,6 +32,14 @@ const ShareholdersPage = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Aktiekursutveckling</h2>
               <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
                 <Aktiegraf />
+              </div>
+            </div>
+
+            {/* Stock Table Section - Replaces Key Stats */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Aktiedata</h2>
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                <Aktietabell />
               </div>
             </div>
 
@@ -70,31 +79,6 @@ const ShareholdersPage = () => {
                 </button>
               </div>
 
-            </div>
-
-            {/* Key Stats */}
-            <div className="bg-gradient-to-br from-trust-50 to-larkberget-50 rounded-2xl p-8 md:p-12 mb-16">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Nyckeltal</h2>
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-trust-600 mb-2">~8,800</div>
-                    <div className="text-gray-600">Aktieägare</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-trust-600 mb-2">1994</div>
-                    <div className="text-gray-600">Börsnoterat sedan</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-trust-600 mb-2">LARK B</div>
-                    <div className="text-gray-600">Ticker symbol</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-trust-600 mb-2">100M</div>
-                    <div className="text-gray-600">SEK i portfölj</div>
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Information Notice */}
