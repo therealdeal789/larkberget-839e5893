@@ -12,7 +12,7 @@ const LarkbergetAboutOverview = () => {
             <h2 className="section-title mb-6">
               Om Lärkberget
             </h2>
-            <p className="section-subtitle mb-8">
+            <p className="section-subtitle mb-8 mx-auto text-center">
               Fyra huvudinriktningar för investeringsverksamheten
             </p>
           </div>
@@ -72,7 +72,7 @@ const LarkbergetAboutOverview = () => {
               to="/om-larkberget"
               className="inline-flex items-center space-x-2 text-trust-600 hover:text-trust-700 font-medium transition-colors"
             >
-              <span>Läs mer om oss</span>
+              <span>Om Lärkberget</span>
               <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
