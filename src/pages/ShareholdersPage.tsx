@@ -1,3 +1,4 @@
+
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -13,7 +14,7 @@ const ShareholdersPage = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Aktieägare
+              Bolags- och aktieinformation
             </h1>
           </div>
         </div>
@@ -106,3 +107,4 @@ const ShareholdersPage = () => {
 };
 
 export default ShareholdersPage;
+
