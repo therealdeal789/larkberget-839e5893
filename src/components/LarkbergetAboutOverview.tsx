@@ -25,7 +25,7 @@ const LarkbergetAboutOverview = () => {
               <div>
                 <h3 className="font-semibold text-larkberget-900 mb-3">Direktinvesteringar i lågriskinstrument</h3>
                 <p className="text-larkberget-600">
-                  Att placera Bolagets likvida medel i räntebärande värdepapper och andra instrument med låg risk och förutsägbar avkastning, som en aktiv del i förvaltningen av Bolagets kassa.
+                  Vi placerar bolagets likvida medel i räntebärande värdepapper och andra stabila instrument med låg risk. Syftet är att säkerställa en förutsägbar avkastning och en trygg kassaförvaltning som utgör en viktig del i bolagets finansiella strategi och kapitalbevarande över tid.
                 </p>
               </div>
             </div>
@@ -37,7 +37,7 @@ const LarkbergetAboutOverview = () => {
               <div>
                 <h3 className="font-semibold text-larkberget-900 mb-3">Finansiella placeringar</h3>
                 <p className="text-larkberget-600">
-                  Att använda delar av Bolagets likvida medel för att genomföra investeringar i noterade aktier, fonder och andra tillgångsslag med god likviditet, samt att delta i brygglån och ställa ut garantiåtaganden.
+                  En del av kapitalet används för investeringar i noterade aktier, fonder och andra likvida tillgångar. Vi deltar även i brygglån och kan ställa ut garantiåtaganden. Samtliga investeringar görs med fokus på likviditet, riskspridning och möjligheten till god riskjusterad avkastning.
                 </p>
               </div>
             </div>
@@ -49,7 +49,7 @@ const LarkbergetAboutOverview = () => {
               <div>
                 <h3 className="font-semibold text-larkberget-900 mb-3">Direktinvesteringar i onoterade lönsamma bolag</h3>
                 <p className="text-larkberget-600">
-                  Att investera i utvalda, kassaflödesgenererande onoterade bolag med bevisad affärsmodell och hållbar lönsamhet. Syftet är att skapa långsiktigt värde genom aktivt ägande och stöd i bolagens fortsatta utveckling.
+                  Vi investerar i utvalda onoterade bolag med bevisad affärsmodell, hållbar lönsamhet och positivt kassaflöde. Genom aktivt ägande och nära samarbete skapar vi förutsättningar för värdetillväxt och bidrar till bolagens fortsatta utveckling på ett långsiktigt och strukturerat sätt.
                 </p>
               </div>
             </div>
@@ -61,7 +61,7 @@ const LarkbergetAboutOverview = () => {
               <div>
                 <h3 className="font-semibold text-larkberget-900 mb-3">Plattform för omvänt förvärv</h3>
                 <p className="text-larkberget-600">
-                  Att etablera en struktur som möjliggör att Bolaget över tid kan genomföra ett eller flera omvända förvärv. Genom att nyttja Bolagets publika struktur och kapitalbas skapas förutsättningar för att hjälpa målbolag att snabbare nå kapitalmarknaden.
+                  Vi utvecklar en plattform som gör det möjligt att genomföra omvända förvärv. Genom vår publika struktur och kapitalbas kan vi hjälpa tillväxtbolag att nå börsen snabbare och mer kostnadseffektivt, samtidigt som vi skapar affärsmöjligheter med långsiktig avkastningspotential.
                 </p>
               </div>
             </div>
