@@ -182,7 +182,7 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
                     <CardHeader className="pb-4 text-center">
                       {person.image && (
                         <div className="flex justify-center mb-4">
-                          <Avatar className="w-16 h-16">
+                          <Avatar className="w-32 h-32">
                             <AvatarImage src={person.image} alt={person.name} />
                             <AvatarFallback>{person.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                           </Avatar>
