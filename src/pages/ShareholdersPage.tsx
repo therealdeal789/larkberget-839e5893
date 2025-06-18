@@ -3,7 +3,6 @@ import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
 import Aktiegraf from "@/components/Aktiegraf";
-import AktieInfoSektion from "@/components/AktieInfoSektion";
 
 const ShareholdersPage = () => {
   return (
@@ -31,13 +30,6 @@ const ShareholdersPage = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Aktiekursutveckling</h2>
               <div className="w-full bg-white rounded-xl shadow-sm border border-gray-200 p-6">
                 <Aktiegraf />
-              </div>
-            </div>
-
-            {/* Subscription Section */}
-            <div className="mb-16">
-              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                <AktieInfoSektion />
               </div>
             </div>
 
