@@ -6,6 +6,7 @@ import { Mail, MapPin, Phone, Clock, FileText, User } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Link } from "react-router-dom";
 
 const ContactPage = () => {
@@ -15,6 +16,7 @@ const ContactPage = () => {
       title: "TF VD sedan 2025",
       phone: "+46 708 556 723",
       email: "luca@larkberget.se",
+      image: null,
       bio: `Styrelseordförande sedan 2024, TF VD sedan 2025
       
 Födelseår: 1978
@@ -34,6 +36,7 @@ Oberoende i förhållande till bolaget och bolagsledningen men inte till bolaget
       title: "Styrelseordförande sedan 2025",
       phone: "+46 735 303 798",
       email: "robert@larkberget.se",
+      image: null,
       bio: "Styrelseordförande sedan 2025. Mer information kommer inom kort."
     },
     {
@@ -41,6 +44,7 @@ Oberoende i förhållande till bolaget och bolagsledningen men inte till bolaget
       title: "Styrelseledamot sedan 2024",
       phone: "",
       email: "marcus@larkberget.se",
+      image: null,
       bio: `Styrelseledamot sedan 2024
 
 Födelseår: 1972
@@ -62,6 +66,7 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
       title: "Styrelseledamot sedan 2025",
       phone: "",
       email: "alexander@larkberget.se",
+      image: "/lovable-uploads/42a58b84-8829-45d3-aa26-38b0a28bc250.png",
       bio: `Styrelseledamot sedan 2025
 
 Födelseår: 1989
@@ -81,6 +86,7 @@ Oberoende i förhållande till bolaget och bolagsledningen men inte i förhålla
       title: "Styrelsesuppleant sedan 2024",
       phone: "",
       email: "lars@larkberget.se",
+      image: null,
       bio: `Styrelsesuppleant sedan 2024
 
 Födelseår: 1966
@@ -174,6 +180,14 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
                 {contactPersons.map((person, index) => (
                   <Card key={index} className="p-6">
                     <CardHeader className="pb-4 text-center">
+                      {person.image && (
+                        <div className="flex justify-center mb-4">
+                          <Avatar className="w-16 h-16">
+                            <AvatarImage src={person.image} alt={person.name} />
+                            <AvatarFallback>{person.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                          </Avatar>
+                        </div>
+                      )}
                       <CardTitle className="text-lg">{person.name}</CardTitle>
                       <p className="text-trust-600 font-medium text-sm">{person.title}</p>
                     </CardHeader>
