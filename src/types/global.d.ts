@@ -1,7 +1,7 @@
 
 declare global {
   interface Window {
-    _MF: {
+    _MF?: {
       data: any[];
       url: string;
       ready: boolean;

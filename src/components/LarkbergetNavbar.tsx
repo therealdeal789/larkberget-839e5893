@@ -44,6 +44,7 @@ const LarkbergetNavbar = () => {
         { label: "Nasdaq First North Growth Market", path: "https://www.nasdaq.com/european-market-activity/shares/combi?id=SSE165139", external: true }
       ]
     },
+    { label: "Pressmeddelanden", path: "/pressmeddelanden" },
     { label: "Kontakt", path: "/kontakt" }
   ];
 
