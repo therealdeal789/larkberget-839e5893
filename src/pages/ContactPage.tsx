@@ -36,7 +36,7 @@ Oberoende i förhållande till bolaget och bolagsledningen men inte till bolaget
       title: "Styrelseordförande sedan 2025",
       phone: "+46 735 303 798",
       email: "robert@larkberget.se",
-      image: null,
+      image: "/lovable-uploads/eb29887a-1082-497b-96f8-f4a91997dce1.png",
       bio: "Styrelseordförande sedan 2025. Mer information kommer inom kort."
     },
     {
