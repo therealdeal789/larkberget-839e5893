@@ -23,7 +23,7 @@ const PressReleasesPage = () => {
       </section>
 
       {/* News Feed Section */}
-      <section style={{ padding: "60px 20px" }}>
+      <section style={{ padding: "60px 20px", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <h2
           style={{
             fontSize: "1.75rem",
@@ -35,17 +35,19 @@ const PressReleasesPage = () => {
         >
           Pressmeddelanden & Nyheter
         </h2>
-        <iframe
-          src="https://therealdeal789.github.io/larkberget/list.html"
-          style={{
-            width: "100%",
-            height: "1000px",
-            border: "none",
-            borderRadius: "12px",
-            backgroundColor: "#ffffff",
-          }}
-          title="MFN Nyhetsflöde"
-        />
+        <div style={{ width: "100%", maxWidth: "800px", display: "flex", justifyContent: "center" }}>
+          <iframe
+            src="https://therealdeal789.github.io/larkberget/list.html"
+            style={{
+              width: "100%",
+              height: "1000px",
+              border: "none",
+              borderRadius: "12px",
+              backgroundColor: "#ffffff",
+            }}
+            title="MFN Nyhetsflöde"
+          />
+        </div>
       </section>
 
       <LarkbergetFooter />
