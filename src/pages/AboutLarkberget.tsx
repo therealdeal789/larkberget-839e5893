@@ -1,8 +1,8 @@
+
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
-import { ArrowRight, Target, Users, TrendingUp, Building2 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Target, TrendingUp, Building, Zap } from "lucide-react";
 
 const AboutLarkberget = () => {
   return (
@@ -23,95 +23,67 @@ const AboutLarkberget = () => {
       {/* Main Content */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             
             {/* Company Overview */}
-            <div className="mb-16">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-6">Vår historia och vision</h2>
-                  <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                    Lärkberget AB grundades med visionen att vara en pålitlig partner för långsiktiga investeringar. 
-                    Sedan starten har vi byggt upp en stark portfölj och skapat värde för våra aktieägare genom 
-                    noggrann analys och strategiska beslut.
-                  </p>
-                  <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                    Vi fokuserar på hållbara investeringar som inte bara genererar avkastning, utan också 
-                    bidrar positivt till samhället och miljön.
-                  </p>
-                  <Link 
-                    to="/investerare"
-                    className="inline-flex items-center bg-trust-600 hover:bg-trust-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300"
-                  >
-                    Läs mer om våra investeringar
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Link>
-                </div>
-                <div className="relative">
-                  <img 
-                    src="/lovable-uploads/c7737b6d-fdf2-492f-9276-9ae76cdebed4.png" 
-                    alt="Lärkberget kontor" 
-                    className="rounded-xl shadow-lg"
-                  />
-                </div>
-              </div>
+            <div className="mb-12">
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                Lärkberget AB (tidigare CombiGene AB) är ett svenskt publikt bolag med en lång börshistorik. Bolaget noterades ursprungligen under namnet CombiGene AB på Aktietorget (nuvarande Spotlight Stock Market) den 25 maj 2015. Den 19 december 2018 bytte bolaget handelsplats till Nasdaq First North Growth Market i syfte att stärka sin tillgång till kapitalmarknaden.
+              </p>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Under 2025 har ett strategiskt skifte genomförts där bolaget transformerats till ett investeringsbolag, och i samband med detta har namnbytet till Lärkberget AB genomförts. Den nya inriktningen innebär ett brett men selektivt investeringsmandat, uppdelat i fyra huvudsakliga verksamhetsområden:
+              </p>
             </div>
 
-            {/* Key Facts */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-center">
-                <Building2 className="w-12 h-12 text-trust-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Börsnoterat</h3>
-                <p className="text-gray-600">
-                  Noterat på Nasdaq Stockholm sedan 1994
-                </p>
-              </div>
+            {/* Investment Focus Section */}
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Investeringsinriktning</h2>
               
-              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-center">
-                <TrendingUp className="w-12 h-12 text-trust-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Stark portfölj</h3>
-                <p className="text-gray-600">
-                  Ca 100 MSEK i likvida placeringar
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-center">
-                <Users className="w-12 h-12 text-trust-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Erfaren ledning</h3>
-                <p className="text-gray-600">
-                  Professionell organisation med bred kompetens
-                </p>
-              </div>
-            </div>
+              <div className="space-y-8">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-trust-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Target className="w-6 h-6 text-trust-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Direktinvesteringar i lågriskinstrument</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Lärkberget placerar delar av sina likvida medel i räntebärande värdepapper och andra instrument med låg risk och förutsägbar avkastning. Detta utgör en aktiv del av kassaförvaltningen och syftar till att säkerställa en stabil finansiell grund.
+                    </p>
+                  </div>
+                </div>
 
-            {/* Investment Philosophy */}
-            <div className="bg-gradient-to-br from-trust-50 to-larkberget-50 rounded-2xl p-8 md:p-12">
-              <div className="max-w-4xl mx-auto text-center">
-                <Target className="w-16 h-16 text-trust-600 mx-auto mb-6" />
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Vår investeringsfilosofi</h2>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  Vi tror på kraften i långsiktigt tänkande. Genom att fokusera på företag med stark 
-                  fundamenta och hållbara affärsmodeller skapar vi värde som står emot tidens tand. 
-                  Våra investeringsbeslut baseras på djup analys, marknadsintelligens och en stark 
-                  förståelse för framtida trender.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                  <div className="bg-white rounded-lg p-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Långsiktighet</h4>
-                    <p className="text-gray-600 text-sm">
-                      Vi investerar med en horisont på 5-10 år och fokuserar på fundamental värdetillväxt.
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-earth-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <TrendingUp className="w-6 h-6 text-earth-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Finansiella placeringar</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Genom investeringar i noterade aktier, fonder och andra likvida tillgångsslag, samt deltagande i brygglån och garantiåtaganden, eftersträvar bolaget en attraktiv, riskjusterad avkastning. Dessa investeringar ger även flexibilitet att stödja kapitalresningar med strategisk potential.
                     </p>
                   </div>
-                  <div className="bg-white rounded-lg p-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Hållbarhet</h4>
-                    <p className="text-gray-600 text-sm">
-                      ESG-faktorer är integrerade i alla våra investeringsbeslut.
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-trust-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Building className="w-6 h-6 text-trust-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Direktinvesteringar i onoterade lönsamma bolag</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Lärkberget investerar i noggrant utvalda, kassaflödesgenererande onoterade företag med bevisade affärsmodeller och hållbar lönsamhet. Genom aktivt ägande bidrar bolaget till fortsatt tillväxt och värdeskapande i dessa verksamheter.
                     </p>
                   </div>
-                  <div className="bg-white rounded-lg p-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Transparens</h4>
-                    <p className="text-gray-600 text-sm">
-                      Vi kommunicerar öppet och regelbundet med våra aktieägare.
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-earth-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Zap className="w-6 h-6 text-earth-600" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Plattform för omvänt förvärv</h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      Bolaget etablerar en strukturell bas för att möjliggöra ett eller flera omvända förvärv. Genom att nyttja Lärkbergets publika struktur och kapitalbas erbjuds målbolag en effektiv väg till kapitalmarknaden.
                     </p>
                   </div>
                 </div>
