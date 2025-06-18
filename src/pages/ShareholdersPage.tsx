@@ -4,7 +4,6 @@ import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
 import Aktiegraf from "@/components/Aktiegraf";
 import AktieInfoSektion from "@/components/AktieInfoSektion";
-import { Users, TrendingUp, FileText } from "lucide-react";
 
 const ShareholdersPage = () => {
   return (
@@ -26,44 +25,6 @@ const ShareholdersPage = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            
-            {/* Shareholder Information Cards - Now above the chart */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              
-              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 hover:shadow-md transition-all duration-300">
-                <Users className="w-10 h-10 text-trust-600 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Ägarstruktur</h3>
-                <p className="text-gray-600 mb-6">
-                  Information om våra största aktieägare och ägarfördelning.
-                </p>
-                <button className="text-trust-600 hover:text-trust-700 font-medium">
-                  Visa ägarstruktur →
-                </button>
-              </div>
-
-              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 hover:shadow-md transition-all duration-300">
-                <TrendingUp className="w-10 h-10 text-trust-600 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Aktiekursutveckling</h3>
-                <p className="text-gray-600 mb-6">
-                  Följ utvecklingen av Lärkbergets aktiekurs över tid.
-                </p>
-                <button className="text-trust-600 hover:text-trust-700 font-medium">
-                  Se kursutveckling →
-                </button>
-              </div>
-
-              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 hover:shadow-md transition-all duration-300">
-                <FileText className="w-10 h-10 text-trust-600 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Aktieägarservice</h3>
-                <p className="text-gray-600 mb-6">
-                  Kontaktinformation och service för våra aktieägare.
-                </p>
-                <button className="text-trust-600 hover:text-trust-700 font-medium">
-                  Kontakta oss →
-                </button>
-              </div>
-
-            </div>
 
             {/* Stock Chart Section - Now gets full width on its own row */}
             <div className="mb-16">
