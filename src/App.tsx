@@ -13,6 +13,9 @@ import ProspektPage from "./pages/ProspektPage";
 import PressReleasesPage from "./pages/PressReleasesPage";
 import ContactPage from "./pages/ContactPage";
 import CertifiedAdviserPage from "./pages/CertifiedAdviserPage";
+import BolagsstammorPage from "./pages/BolagsstammorPage";
+import BolagsordningPage from "./pages/BolagsordningPage";
+import BolagsbeskrivningPage from "./pages/BolagsbeskrivningPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +35,9 @@ const App = () => (
           <Route path="/investerare/aktieagare" element={<ShareholdersPage />} />
           <Route path="/investerare/prospekt-im" element={<ProspektPage />} />
           <Route path="/investerare/radgivare" element={<CertifiedAdviserPage />} />
+          <Route path="/investerare/bolagsstyrning/bolagsstammor" element={<BolagsstammorPage />} />
+          <Route path="/investerare/bolagsstyrning/bolagsordning" element={<BolagsordningPage />} />
+          <Route path="/investerare/bolagsstyrning/bolagsbeskrivning" element={<BolagsbeskrivningPage />} />
           <Route path="/pressmeddelanden" element={<PressReleasesPage />} />
           <Route path="/kontakt" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />

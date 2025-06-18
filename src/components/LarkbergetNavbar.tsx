@@ -41,6 +41,16 @@ const LarkbergetNavbar = () => {
         { label: "Finansiella rapporter", path: "/investerare/finansiella-rapporter" },
         { label: "Bolags- och aktieinformation", path: "/investerare/aktieagare" },
         { label: "Prospekt/IM", path: "/investerare/prospekt-im" },
+        { 
+          label: "Bolagsstyrning", 
+          path: "#", 
+          isCategory: true,
+          submenu: [
+            { label: "Bolagsstämmor", path: "/investerare/bolagsstyrning/bolagsstammor" },
+            { label: "Bolagsordning", path: "/investerare/bolagsstyrning/bolagsordning" },
+            { label: "Bolagsbeskrivning", path: "/investerare/bolagsstyrning/bolagsbeskrivning" }
+          ]
+        },
         { label: "Nasdaq First North Growth Market", path: "https://www.nasdaq.com/european-market-activity/shares/combi?id=SSE165139", external: true }
       ]
     },
@@ -83,28 +93,43 @@ const LarkbergetNavbar = () => {
                     <span>{item.label}</span>
                     <ChevronDown className="w-4 h-4" />
                   </Link>
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-larkberget-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-larkberget-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     <div className="py-2">
                       {item.submenu?.map((subItem) => (
-                        subItem.external ? (
-                          <a
-                            key={subItem.label}
-                            href={subItem.path}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block px-4 py-2 text-larkberget-700 hover:text-trust-600 hover:bg-larkberget-50 transition-colors"
-                          >
-                            {subItem.label}
-                          </a>
-                        ) : (
-                          <Link
-                            key={subItem.label}
-                            to={subItem.path}
-                            className="block px-4 py-2 text-larkberget-700 hover:text-trust-600 hover:bg-larkberget-50 transition-colors"
-                          >
-                            {subItem.label}
-                          </Link>
-                        )
+                        <div key={subItem.label}>
+                          {subItem.isCategory ? (
+                            <div>
+                              <div className="px-4 py-2 text-sm font-semibold text-larkberget-900 border-b border-larkberget-100">
+                                {subItem.label}
+                              </div>
+                              {subItem.submenu?.map((categoryItem) => (
+                                <Link
+                                  key={categoryItem.label}
+                                  to={categoryItem.path}
+                                  className="block px-6 py-2 text-larkberget-700 hover:text-trust-600 hover:bg-larkberget-50 transition-colors"
+                                >
+                                  {categoryItem.label}
+                                </Link>
+                              ))}
+                            </div>
+                          ) : subItem.external ? (
+                            <a
+                              href={subItem.path}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block px-4 py-2 text-larkberget-700 hover:text-trust-600 hover:bg-larkberget-50 transition-colors"
+                            >
+                              {subItem.label}
+                            </a>
+                          ) : (
+                            <Link
+                              to={subItem.path}
+                              className="block px-4 py-2 text-larkberget-700 hover:text-trust-600 hover:bg-larkberget-50 transition-colors"
+                            >
+                              {subItem.label}
+                            </Link>
+                          )}
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -153,27 +178,45 @@ const LarkbergetNavbar = () => {
                 {item.hasDropdown && (
                   <div className="ml-4 space-y-2 mt-2">
                     {item.submenu?.map((subItem) => (
-                      subItem.external ? (
-                        <a
-                          key={subItem.label}
-                          href={subItem.path}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="block text-larkberget-600 hover:text-trust-600 py-2 transition-colors"
-                          onClick={closeMenu}
-                        >
-                          {subItem.label}
-                        </a>
-                      ) : (
-                        <Link
-                          key={subItem.label}
-                          to={subItem.path}
-                          className="block text-larkberget-600 hover:text-trust-600 py-2 transition-colors"
-                          onClick={closeMenu}
-                        >
-                          {subItem.label}
-                        </Link>
-                      )
+                      <div key={subItem.label}>
+                        {subItem.isCategory ? (
+                          <div>
+                            <div className="text-sm font-semibold text-larkberget-900 py-2 border-b border-larkberget-200">
+                              {subItem.label}
+                            </div>
+                            <div className="ml-4 space-y-1">
+                              {subItem.submenu?.map((categoryItem) => (
+                                <Link
+                                  key={categoryItem.label}
+                                  to={categoryItem.path}
+                                  className="block text-larkberget-600 hover:text-trust-600 py-2 transition-colors"
+                                  onClick={closeMenu}
+                                >
+                                  {categoryItem.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        ) : subItem.external ? (
+                          <a
+                            href={subItem.path}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block text-larkberget-600 hover:text-trust-600 py-2 transition-colors"
+                            onClick={closeMenu}
+                          >
+                            {subItem.label}
+                          </a>
+                        ) : (
+                          <Link
+                            to={subItem.path}
+                            className="block text-larkberget-600 hover:text-trust-600 py-2 transition-colors"
+                            onClick={closeMenu}
+                          >
+                            {subItem.label}
+                          </Link>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}
