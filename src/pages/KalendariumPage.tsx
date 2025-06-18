@@ -2,36 +2,32 @@
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
-import { Calendar, Clock, MapPin } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 
 const KalendariumPage = () => {
   const events = [
     {
       date: "2025-02-14",
-      time: "08:00",
       title: "Bokslutskommuniké 2024",
-      location: "Digitalt",
+      location: "Stockholm",
       description: "Publicering av bokslutskommuniké för helåret 2024"
     },
     {
       date: "2025-06-12",
-      time: "10:00",
       title: "Årsstämma 2025",
       location: "Stockholm",
       description: "Ordinarie årsstämma för aktieägare"
     },
     {
       date: "2025-08-22",
-      time: "08:00",
       title: "Delårsrapport januari-juni 2025",
-      location: "Digitalt",
+      location: "Stockholm",
       description: "Publicering av delårsrapport för första halvåret 2025"
     },
     {
       date: "2026-02-13",
-      time: "08:00",
       title: "Bokslutskommuniké 2025",
-      location: "Digitalt",
+      location: "Stockholm",
       description: "Publicering av bokslutskommuniké för helåret 2025"
     }
   ];
@@ -67,10 +63,6 @@ const KalendariumPage = () => {
                         <div className="flex items-center space-x-2 text-trust-600">
                           <Calendar className="w-5 h-5" />
                           <span className="font-medium">{event.date}</span>
-                        </div>
-                        <div className="flex items-center space-x-2 text-gray-600">
-                          <Clock className="w-4 h-4" />
-                          <span>{event.time}</span>
                         </div>
                         <div className="flex items-center space-x-2 text-gray-600">
                           <MapPin className="w-4 h-4" />
