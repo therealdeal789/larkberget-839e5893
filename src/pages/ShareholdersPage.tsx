@@ -3,8 +3,8 @@ import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
 import Aktiegraf from "@/components/Aktiegraf";
-import Aktietabell from "@/components/Aktietabell";
-import { Users, TrendingUp, PieChart, FileText } from "lucide-react";
+import AktieInfoSektion from "@/components/AktieInfoSektion";
+import { Users, TrendingUp, FileText } from "lucide-react";
 
 const ShareholdersPage = () => {
   return (
@@ -35,11 +35,10 @@ const ShareholdersPage = () => {
               </div>
             </div>
 
-            {/* Stock Table Section - Replaces Key Stats */}
+            {/* Combined Stock Data and Subscription Section */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Aktiedata</h2>
               <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                <Aktietabell />
+                <AktieInfoSektion />
               </div>
             </div>
 
