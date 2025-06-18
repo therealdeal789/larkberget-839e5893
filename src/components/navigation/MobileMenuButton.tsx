@@ -10,7 +10,7 @@ interface MobileMenuButtonProps {
 const MobileMenuButton = ({ isMenuOpen, toggleMenu }: MobileMenuButtonProps) => {
   return (
     <button 
-      className="lg:hidden text-larkberget-700 p-2 focus:outline-none relative z-[60]" 
+      className="lg:hidden text-white p-2 focus:outline-none relative z-[60]" 
       onClick={toggleMenu}
       aria-label={isMenuOpen ? "Stäng meny" : "Öppna meny"}
     >

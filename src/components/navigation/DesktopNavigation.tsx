@@ -20,25 +20,25 @@ const DesktopNavigation = ({ navItems }: DesktopNavigationProps) => {
             <>
               <Link 
                 to={item.path}
-                className="nav-link flex items-center space-x-1"
+                className="flex items-center space-x-1 text-white hover:text-blue-200 py-2 transition-all duration-300 ease-out font-medium text-sm uppercase tracking-wide"
               >
                 <span>{item.label}</span>
                 <ChevronDown className="w-4 h-4" />
               </Link>
-              <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-larkberget-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
                   {item.submenu?.map((subItem) => (
                     <div key={subItem.label}>
                       {subItem.isCategory ? (
                         <div>
-                          <div className="px-4 py-2 text-sm font-semibold text-larkberget-900 border-b border-larkberget-100">
+                          <div className="px-4 py-2 text-sm font-semibold text-gray-900 border-b border-gray-100">
                             {subItem.label}
                           </div>
                           {subItem.submenu?.map((categoryItem) => (
                             <Link
                               key={categoryItem.label}
                               to={categoryItem.path}
-                              className="block px-6 py-2 text-larkberget-700 hover:text-trust-600 hover:bg-larkberget-50 transition-colors"
+                              className="block px-6 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
                             >
                               {categoryItem.label}
                             </Link>
@@ -49,14 +49,14 @@ const DesktopNavigation = ({ navItems }: DesktopNavigationProps) => {
                           href={subItem.path}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block px-4 py-2 text-larkberget-700 hover:text-trust-600 hover:bg-larkberget-50 transition-colors"
+                          className="block px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
                         >
                           {subItem.label}
                         </a>
                       ) : (
                         <Link
                           to={subItem.path}
-                          className="block px-4 py-2 text-larkberget-700 hover:text-trust-600 hover:bg-larkberget-50 transition-colors"
+                          className="block px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
                         >
                           {subItem.label}
                         </Link>
@@ -70,8 +70,8 @@ const DesktopNavigation = ({ navItems }: DesktopNavigationProps) => {
             <Link 
               to={item.path}
               className={cn(
-                "nav-link",
-                location.pathname === item.path && "text-trust-600"
+                "text-white hover:text-blue-200 py-2 transition-all duration-300 ease-out font-medium text-sm uppercase tracking-wide",
+                location.pathname === item.path && "text-blue-200"
               )}
             >
               {item.label}
