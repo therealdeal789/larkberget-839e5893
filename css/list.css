@@ -1,3 +1,4 @@
+
 /* Toolbar */
 .mfn-toolbar {
     display: flex;
@@ -9,6 +10,14 @@
     max-width: 700px;
     padding: 5px 5px 25px 5px;
     margin: 20px auto 30px auto;
+}
+
+/* Hide theme/view selector elements */
+.mfn-toolbar .mfn-theme,
+.mfn-toolbar .mfn-view,
+.mfn-toolbar select[name="theme"],
+.mfn-toolbar select[name="view"] {
+    display: none !important;
 }
 
 /* Setting general style of input/select labels (span) in toolbar */
