@@ -2,6 +2,8 @@
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
+import { Button } from "@/components/ui/button";
+import { FileText } from "lucide-react";
 
 const BolagsordningPage = () => {
   return (
@@ -49,11 +51,23 @@ const BolagsordningPage = () => {
               <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">Ladda ner bolagsordning</h3>
                 <p className="text-blue-800 mb-4">
-                  Den fullständiga bolagsordningen kommer att göras tillgänglig för nedladdning här.
+                  Den fullständiga bolagsordningen finns tillgänglig för nedladdning här.
                 </p>
-                <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors" disabled>
-                  Ladda ner PDF (kommer snart)
-                </button>
+                <Button 
+                  asChild 
+                  size="lg" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2"
+                >
+                  <a 
+                    href="https://drive.google.com/file/d/1O-bUFzcRvxhK0sckRL2ejfO-beuBMGW7/view?usp=drive_link" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    <FileText className="w-5 h-5" />
+                    Ladda ner PDF
+                  </a>
+                </Button>
               </div>
 
               <div className="bg-yellow-50 rounded-xl p-8">
