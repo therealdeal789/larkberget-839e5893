@@ -32,10 +32,10 @@ export default function Aktietabell() {
         url: url,
         ready: false,
         render: () => {
-          window._MF.ready = true;
+          window._MF!.ready = true;
         },
         push: (w) => {
-          window._MF.data.push(...w);
+          window._MF!.data.push(...w);
         },
       };
     }
@@ -55,12 +55,16 @@ export default function Aktietabell() {
       <style>
         {`
           #aktietabell {
+            overflow-x: auto;
+            background-color: #f9fafb;
+            border-radius: 8px;
+            padding: 16px;
             max-width: 100%;
-            overflow: hidden;
           }
-          
-          .datablocks-widget table {
+
+          #aktietabell table {
             width: 100%;
+            font-size: 0.95rem;
             border-collapse: collapse;
           }
           
@@ -72,7 +76,7 @@ export default function Aktietabell() {
           }
           
           .datablocks-widget th {
-            background-color: #f9fafb;
+            background-color: #ffffff;
             font-weight: 600;
             color: #374151;
           }
