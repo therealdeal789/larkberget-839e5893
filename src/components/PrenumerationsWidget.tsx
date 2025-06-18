@@ -64,7 +64,7 @@ export default function PrenumerationsWidget() {
           #prenumerationswidget input[type="email"] {
             padding: 12px 16px;
             border-radius: 8px;
-            border: 1px solid #d1d5db;
+            border: 1px solid #000000;
             font-size: 15px;
             outline: none;
           }
@@ -82,6 +82,10 @@ export default function PrenumerationsWidget() {
 
           #prenumerationswidget button:hover {
             background-color: #163048;
+          }
+
+          #prenumerationswidget .checkbox-container {
+            margin-top: 16px;
           }
         `}
       </style>
@@ -104,7 +108,7 @@ export default function PrenumerationsWidget() {
           Prenumerera på våra nyheter
         </h2>
         <p style={{ marginBottom: "2rem", color: "#4b5563", maxWidth: "600px", marginInline: "auto" }}>
-          Få pressmeddelanden, rapporter och annan viktig information direkt i inkorgen – helt kostnadsfritt.
+          Få pressmeddelanden, rapporter och annan viktig information direkt i inkorgen.
         </p>
         <div
           id="prenumerationswidget"
