@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -15,7 +16,7 @@ const ContactPage = () => {
       title: "TF VD sedan 2025",
       phone: "+46 708 556 723",
       email: "luca@larkberget.se",
-      image: null,
+      image: "/lovable-uploads/b4de0013-5df7-4bf2-9bcb-550116f27be6.png",
       bio: `Styrelseordförande sedan 2024, TF VD sedan 2025
       
 Födelseår: 1978
