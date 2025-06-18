@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -37,7 +35,7 @@ Oberoende i förhållande till bolaget och bolagsledningen men inte till bolaget
       title: "Styrelseordförande sedan 2025",
       phone: "+46 735 303 798",
       email: "robert@larkberget.se",
-      image: "/lovable-uploads/eb29887a-1082-497b-96f8-f4a91997dce1.png",
+      image: "/lovable-uploads/972dc6f6-bd3f-44df-a3a0-20bcd99067e9.png",
       bio: "Styrelseordförande sedan 2025. Mer information kommer inom kort."
     },
     {
@@ -279,4 +277,3 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
 };
 
 export default ContactPage;
-
