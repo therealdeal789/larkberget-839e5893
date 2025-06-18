@@ -54,35 +54,61 @@ export default function Aktietabell() {
     <>
       <style>
         {`
-          #aktietabell {
-            overflow-x: auto;
-            background-color: #f9fafb;
-            border-radius: 8px;
-            padding: 16px;
-            max-width: 100%;
-          }
-
           #aktietabell table {
             width: 100%;
-            font-size: 0.95rem;
             border-collapse: collapse;
+            font-size: 15px;
+            font-family: 'Inter', sans-serif;
+            color: #1f2d3d;
           }
-          
-          .datablocks-widget th,
-          .datablocks-widget td {
+
+          #aktietabell thead {
+            background-color: #e5e7eb;
+          }
+
+          #aktietabell thead th {
             text-align: left;
-            padding: 12px;
+            padding: 12px 16px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #111827;
+          }
+
+          #aktietabell tbody td {
+            padding: 12px 16px;
             border-bottom: 1px solid #e5e7eb;
           }
-          
-          .datablocks-widget th {
-            background-color: #ffffff;
-            font-weight: 600;
-            color: #374151;
+
+          #aktietabell tbody tr:last-child td {
+            border-bottom: none;
+          }
+
+          #aktietabell tbody tr:hover {
+            background-color: #f3f4f6;
           }
         `}
       </style>
-      <div id="aktietabell" style={{ padding: "40px 0" }} />
+      <section style={{ padding: "60px 0" }}>
+        <h2 style={{
+          fontSize: "1.75rem",
+          marginBottom: "1rem",
+          color: "#1f3b57",
+          fontWeight: 600
+        }}>
+          Nyckeltal och aktiedata
+        </h2>
+
+        <div
+          id="aktietabell"
+          style={{
+            backgroundColor: "#f9fafb",
+            padding: "32px",
+            borderRadius: "12px",
+            boxShadow: "0 2px 10px rgba(0, 0, 0, 0.04)",
+            overflowX: "auto",
+          }}
+        />
+      </section>
     </>
   );
 }
