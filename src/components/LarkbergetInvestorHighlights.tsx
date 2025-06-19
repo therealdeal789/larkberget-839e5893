@@ -1,4 +1,3 @@
-
 import React from "react";
 import { FileText, Calendar, MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -23,7 +22,7 @@ const LarkbergetInvestorHighlights = () => {
       icon: Calendar,
       title: "Kalendarium",
       description: "Kommande rapportdatum och stämmor",
-      link: "/investerare/finansiella-rapporter",
+      link: "/investerare/kalendarium",
       color: "trust"
     }
   ];
