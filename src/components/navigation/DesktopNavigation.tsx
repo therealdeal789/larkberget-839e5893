@@ -20,7 +20,12 @@ const DesktopNavigation = ({ navItems }: DesktopNavigationProps) => {
             <>
               <Link 
                 to={item.path}
-                className="flex items-center space-x-1 text-white hover:text-blue-200 py-2 transition-all duration-300 ease-out font-medium text-sm uppercase tracking-wide"
+                className={cn(
+                  "flex items-center space-x-1 py-2 transition-all duration-300 ease-out font-medium text-sm uppercase tracking-wide",
+                  location.pathname === item.path 
+                    ? "text-green-300" 
+                    : "text-white hover:text-green-300"
+                )}
               >
                 <span>{item.label}</span>
                 <ChevronDown className="w-4 h-4" />
@@ -70,8 +75,10 @@ const DesktopNavigation = ({ navItems }: DesktopNavigationProps) => {
             <Link 
               to={item.path}
               className={cn(
-                "text-white hover:text-blue-200 py-2 transition-all duration-300 ease-out font-medium text-sm uppercase tracking-wide",
-                location.pathname === item.path && "text-blue-200"
+                "py-2 transition-all duration-300 ease-out font-medium text-sm uppercase tracking-wide",
+                location.pathname === item.path 
+                  ? "text-green-300" 
+                  : "text-white hover:text-green-300"
               )}
             >
               {item.label}
