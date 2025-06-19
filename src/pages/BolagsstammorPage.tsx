@@ -1,4 +1,3 @@
-
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -64,7 +63,7 @@ const BolagsstammorPage = () => {
       <LarkbergetNavbar />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-larkberget-900 via-larkberget-800 to-larkberget-700 text-white pt-48 pb-32">
+      <section className="bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white pt-48 pb-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -105,8 +104,8 @@ const BolagsstammorPage = () => {
                     <Table>
                       <TableHeader>
                         <TableRow className="hover:bg-green-50">
-                          <TableHead className="font-semibold">Dokument</TableHead>
-                          <TableHead className="w-32 text-center font-semibold">Ladda ner</TableHead>
+                          <TableHead className="font-semibold text-green-800">Dokument</TableHead>
+                          <TableHead className="w-32 text-center font-semibold text-green-800">Ladda ner</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -118,7 +117,7 @@ const BolagsstammorPage = () => {
                                 asChild
                                 variant="outline"
                                 size="sm"
-                                className="text-larkberget-600 hover:text-larkberget-700 hover:bg-larkberget-50 border-larkberget-300 hover:border-larkberget-400"
+                                className="text-green-700 hover:text-green-800 hover:bg-green-50 border-green-300 hover:border-green-500"
                               >
                                 <a
                                   href={doc.url}
