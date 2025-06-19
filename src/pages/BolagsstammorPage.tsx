@@ -64,7 +64,7 @@ const BolagsstammorPage = () => {
       <LarkbergetNavbar />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-slate-800 to-blue-800 text-white pt-48 pb-32">
+      <section className="bg-gradient-to-br from-larkberget-900 via-larkberget-800 to-larkberget-700 text-white pt-48 pb-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
