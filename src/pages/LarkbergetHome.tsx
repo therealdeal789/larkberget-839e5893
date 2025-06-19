@@ -6,21 +6,22 @@ import LarkbergetInvestorHighlights from "@/components/LarkbergetInvestorHighlig
 import LarkbergetFooter from "@/components/LarkbergetFooter";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 
 const LarkbergetHome = () => {
   return (
     <div className="min-h-screen">
       <LarkbergetNavbar />
       
-      {/* Hero Section with Green Gradient Background */}
-      <section className="bg-gradient-to-br from-larkberget-500 to-larkberget-900 text-white pt-48 pb-32">
+      {/* Hero Section with Aurora Background */}
+      <AuroraBackground className="pt-0 pb-0">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white">
               Lärkberget
               <span className="block text-larkberget-200 mt-2">investeringsbolag</span>
             </h1>
-            <p className="text-xl text-larkberget-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
               Ett börsnoterat investmentbolag med fokus på långsiktiga investeringar 
               och hållbar värdetillväxt för våra aktieägare.
             </p>
@@ -43,7 +44,7 @@ const LarkbergetHome = () => {
             </div>
           </div>
         </div>
-      </section>
+      </AuroraBackground>
 
       <main>
         <LarkbergetAboutOverview />
