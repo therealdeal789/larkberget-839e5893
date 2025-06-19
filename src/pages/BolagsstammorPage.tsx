@@ -70,7 +70,7 @@ const BolagsstammorPage = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Bolagsstämmor
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto">
               Information om Lärkbergets bolagsstämmor
             </p>
           </div>
@@ -95,7 +95,7 @@ const BolagsstammorPage = () => {
             </div>
 
             {/* Historical Meetings */}
-            <div className="bg-blue-50 rounded-xl p-8 mb-8">
+            <div className="bg-green-50 rounded-xl p-8 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-8">Tidigare bolagsstämmor</h2>
               
               {Object.entries(meetingData).reverse().map(([year, documents]) => (
@@ -118,7 +118,7 @@ const BolagsstammorPage = () => {
                                 asChild
                                 variant="outline"
                                 size="sm"
-                                className="text-blue-600 hover:text-blue-700 hover:bg-blue-50"
+                                className="text-larkberget-600 hover:text-larkberget-700 hover:bg-larkberget-50 border-larkberget-300 hover:border-larkberget-400"
                               >
                                 <a
                                   href={doc.url}
