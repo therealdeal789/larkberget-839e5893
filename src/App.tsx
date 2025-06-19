@@ -2,7 +2,6 @@
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import LarkbergetHome from "./pages/LarkbergetHome";
@@ -19,8 +18,6 @@ import BolagsordningPage from "./pages/BolagsordningPage";
 import BolagsbeskrivningPage from "./pages/BolagsbeskrivningPage";
 import NotFound from "./pages/NotFound";
 
-const queryClient = new QueryClient();
-
 // Component to handle scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -33,31 +30,29 @@ const ScrollToTop = () => {
 };
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<LarkbergetHome />} />
-          <Route path="/om-larkberget" element={<AboutLarkberget />} />
-          <Route path="/investerare" element={<KalendariumPage />} />
-          <Route path="/investerare/kalendarium" element={<KalendariumPage />} />
-          <Route path="/investerare/finansiella-rapporter" element={<FinancialReports />} />
-          <Route path="/investerare/aktieagare" element={<ShareholdersPage />} />
-          <Route path="/investerare/prospekt-im" element={<ProspektPage />} />
-          <Route path="/investerare/radgivare" element={<CertifiedAdviserPage />} />
-          <Route path="/investerare/bolagsstyrning/bolagsstammor" element={<BolagsstammorPage />} />
-          <Route path="/investerare/bolagsstyrning/bolagsordning" element={<BolagsordningPage />} />
-          <Route path="/investerare/bolagsstyrning/bolagsbeskrivning" element={<BolagsbeskrivningPage />} />
-          <Route path="/pressmeddelanden" element={<PressReleasesPage />} />
-          <Route path="/kontakt" element={<ContactPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <TooltipProvider>
+    <Toaster />
+    <Sonner />
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<LarkbergetHome />} />
+        <Route path="/om-larkberget" element={<AboutLarkberget />} />
+        <Route path="/investerare" element={<KalendariumPage />} />
+        <Route path="/investerare/kalendarium" element={<KalendariumPage />} />
+        <Route path="/investerare/finansiella-rapporter" element={<FinancialReports />} />
+        <Route path="/investerare/aktieagare" element={<ShareholdersPage />} />
+        <Route path="/investerare/prospekt-im" element={<ProspektPage />} />
+        <Route path="/investerare/radgivare" element={<CertifiedAdviserPage />} />
+        <Route path="/investerare/bolagsstyrning/bolagsstammor" element={<BolagsstammorPage />} />
+        <Route path="/investerare/bolagsstyrning/bolagsordning" element={<BolagsordningPage />} />
+        <Route path="/investerare/bolagsstyrning/bolagsbeskrivning" element={<BolagsbeskrivningPage />} />
+        <Route path="/pressmeddelanden" element={<PressReleasesPage />} />
+        <Route path="/kontakt" element={<ContactPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  </TooltipProvider>
 );
 
 export default App;
