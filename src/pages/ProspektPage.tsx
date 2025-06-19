@@ -62,7 +62,7 @@ const ProspektPage = () => {
                 <div key={index} className="bg-gray-50 rounded-lg p-6 flex items-center space-x-4 hover:shadow-md transition-all duration-300">
                   {/* Document Preview/Icon */}
                   <div className="relative flex-shrink-0">
-                    <div className="w-24 h-32 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg shadow-lg flex items-center justify-center">
+                    <div className="w-24 h-32 bg-gradient-to-br from-larkberget-700 to-larkberget-800 rounded-lg shadow-lg flex items-center justify-center">
                       <div className="text-white text-xs font-bold text-center">
                         <div className="mb-1">PDF</div>
                         <Download className="w-6 h-6 mx-auto" />
