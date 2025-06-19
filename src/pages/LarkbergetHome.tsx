@@ -38,7 +38,7 @@ const LarkbergetHome = () => {
                 to="/pressmeddelanden"
                 className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-medium py-3 px-12 rounded-lg transition-all duration-300 border border-white/20 flex items-center justify-center"
               >
-                Senaste nytt
+                Pressmeddelanden
               </Link>
             </div>
           </div>
