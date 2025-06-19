@@ -11,13 +11,13 @@ const BolagsbeskrivningPage = () => {
       <LarkbergetNavbar />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-slate-800 to-blue-800 text-white pt-48 pb-32">
+      <section className="bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white pt-48 pb-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Bolagsbeskrivning
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto">
               Detaljerad beskrivning av Lärkberget AB
             </p>
           </div>
@@ -28,8 +28,8 @@ const BolagsbeskrivningPage = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-blue-50 rounded-xl p-12">
-              <FileText className="w-16 h-16 text-blue-600 mx-auto mb-6" />
+            <div className="bg-green-50 rounded-xl p-12">
+              <FileText className="w-16 h-16 text-green-600 mx-auto mb-6" />
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 Lärkberget AB Bolagsbeskrivning
               </h2>
@@ -39,7 +39,7 @@ const BolagsbeskrivningPage = () => {
               <Button 
                 asChild 
                 size="lg" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg"
+                className="bg-green-700 hover:bg-green-800 text-white px-8 py-3 text-lg"
               >
                 <a 
                   href="https://drive.google.com/file/d/1CCQKuKPj2zhaBUnvny2kZdekhagNggcH/view?usp=drive_link" 
