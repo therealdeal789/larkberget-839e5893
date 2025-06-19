@@ -104,14 +104,14 @@ const BolagsstammorPage = () => {
                   <div className="bg-white rounded-lg shadow-sm overflow-hidden">
                     <Table>
                       <TableHeader>
-                        <TableRow>
+                        <TableRow className="hover:bg-green-50">
                           <TableHead className="font-semibold">Dokument</TableHead>
                           <TableHead className="w-32 text-center font-semibold">Ladda ner</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
                         {documents.map((doc, index) => (
-                          <TableRow key={index}>
+                          <TableRow key={index} className="hover:bg-green-50">
                             <TableCell className="font-medium">{doc.name}</TableCell>
                             <TableCell className="text-center">
                               <Button
