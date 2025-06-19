@@ -44,9 +44,10 @@ const DesktopNavigation = ({ navItems }: DesktopNavigationProps) => {
                             <Link
                               key={categoryItem.label}
                               to={categoryItem.path}
-                              className="block px-6 py-2 text-gray-700 hover:text-green-700 hover:bg-gray-50 transition-colors"
+                              className="group/submenu flex items-center justify-between px-6 py-2 text-gray-700 hover:text-green-700 hover:bg-gray-50 transition-colors"
                             >
-                              {categoryItem.label}
+                              <span>{categoryItem.label}</span>
+                              <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/submenu:opacity-100 group-hover/submenu:translate-x-0 transition-all duration-300" />
                             </Link>
                           ))}
                         </div>
@@ -55,16 +56,18 @@ const DesktopNavigation = ({ navItems }: DesktopNavigationProps) => {
                           href={subItem.path}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block px-4 py-2 text-gray-700 hover:text-green-700 hover:bg-gray-50 transition-colors"
+                          className="group/submenu flex items-center justify-between px-4 py-2 text-gray-700 hover:text-green-700 hover:bg-gray-50 transition-colors"
                         >
-                          {subItem.label}
+                          <span>{subItem.label}</span>
+                          <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/submenu:opacity-100 group-hover/submenu:translate-x-0 transition-all duration-300" />
                         </a>
                       ) : (
                         <Link
                           to={subItem.path}
-                          className="block px-4 py-2 text-gray-700 hover:text-green-700 hover:bg-gray-50 transition-colors"
+                          className="group/submenu flex items-center justify-between px-4 py-2 text-gray-700 hover:text-green-700 hover:bg-gray-50 transition-colors"
                         >
-                          {subItem.label}
+                          <span>{subItem.label}</span>
+                          <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover/submenu:opacity-100 group-hover/submenu:translate-x-0 transition-all duration-300" />
                         </Link>
                       )}
                     </div>
