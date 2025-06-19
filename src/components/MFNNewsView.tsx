@@ -26,12 +26,12 @@ const MFNNewsView = ({ pressReleases }: MFNNewsViewProps) => {
 
   return (
     <div id="wrapper">
-      <div id="container" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <div id="container">
         <h1 className="mfn-heading-h1">Pressmeddelanden</h1>
         
         <div className="introduction">
           <p>
-            <span className="documentation-highlight">Senaste nyheterna</span> från Lärkberget AB. 
+            <span className="documentation-highlight">Senaste nyheterna</span> från Combigene AB. 
             Här hittar du våra pressmeddelanden, finansiella rapporter och andra viktiga meddelanden.
           </p>
         </div>
@@ -65,7 +65,7 @@ const MFNNewsView = ({ pressReleases }: MFNNewsViewProps) => {
           </div>
         </div>
 
-        <div className="mfn-content" style={{ maxWidth: '1100px' }}>
+        <div className="mfn-content">
           {pressReleases && pressReleases.length > 0 ? (
             pressReleases.map((item) => (
               <div key={item.id} className="mfn-row">
