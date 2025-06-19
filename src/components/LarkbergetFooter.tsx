@@ -19,7 +19,7 @@ const LarkbergetFooter = () => {
                 className="h-10 w-auto"
               />
             </div>
-            <p className="text-larkberget-300 mb-6 max-w-md">
+            <p className="text-larkberget-200 mb-6 max-w-md">
               Bolaget är publikt och noterat på den svenska marknadsplatsen Nasdaq First North Growth Market. Bolagets Certified Adviser är Bergs Securities AB.
             </p>
             <div className="space-y-2">
@@ -36,30 +36,30 @@ const LarkbergetFooter = () => {
 
           {/* Navigation */}
           <div>
-            <h4 className="font-semibold mb-4">Navigation</h4>
+            <h4 className="font-semibold mb-4 text-larkberget-100">Navigation</h4>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-larkberget-300 hover:text-white transition-colors">Hem</Link></li>
-              <li><Link to="/om-larkberget" className="text-larkberget-300 hover:text-white transition-colors">Om Lärkberget</Link></li>
-              <li><Link to="/investerare" className="text-larkberget-300 hover:text-white transition-colors">Investerare</Link></li>
-              <li><Link to="/pressmeddelanden" className="text-larkberget-300 hover:text-white transition-colors">Pressmeddelanden</Link></li>
-              <li><Link to="/kontakt" className="text-larkberget-300 hover:text-white transition-colors">Kontakt</Link></li>
+              <li><Link to="/" className="text-larkberget-300 hover:text-larkberget-500 transition-colors">Hem</Link></li>
+              <li><Link to="/om-larkberget" className="text-larkberget-300 hover:text-larkberget-500 transition-colors">Om Lärkberget</Link></li>
+              <li><Link to="/investerare" className="text-larkberget-300 hover:text-larkberget-500 transition-colors">Investerare</Link></li>
+              <li><Link to="/pressmeddelanden" className="text-larkberget-300 hover:text-larkberget-500 transition-colors">Pressmeddelanden</Link></li>
+              <li><Link to="/kontakt" className="text-larkberget-300 hover:text-larkberget-500 transition-colors">Kontakt</Link></li>
             </ul>
           </div>
 
           {/* Investor info */}
           <div>
-            <h4 className="font-semibold mb-4">Investerarinformation</h4>
+            <h4 className="font-semibold mb-4 text-larkberget-100">Investerarinformation</h4>
             <ul className="space-y-2">
-              <li><Link to="/pressmeddelanden" className="text-larkberget-300 hover:text-white transition-colors">Pressmeddelanden</Link></li>
-              <li><Link to="/investerare/kalendarium" className="text-larkberget-300 hover:text-white transition-colors">Kalendarium</Link></li>
-              <li><Link to="/investerare/finansiella-rapporter" className="text-larkberget-300 hover:text-white transition-colors">Finansiella rapporter</Link></li>
-              <li><Link to="/investerare/aktieagare" className="text-larkberget-300 hover:text-white transition-colors">Bolags- & aktieinformation</Link></li>
-              <li><Link to="/investerare/radgivare" className="text-larkberget-300 hover:text-white transition-colors">Certifierad rådgivare</Link></li>
+              <li><Link to="/pressmeddelanden" className="text-larkberget-300 hover:text-larkberget-500 transition-colors">Pressmeddelanden</Link></li>
+              <li><Link to="/investerare/kalendarium" className="text-larkberget-300 hover:text-larkberget-500 transition-colors">Kalendarium</Link></li>
+              <li><Link to="/investerare/finansiella-rapporter" className="text-larkberget-300 hover:text-larkberget-500 transition-colors">Finansiella rapporter</Link></li>
+              <li><Link to="/investerare/aktieagare" className="text-larkberget-300 hover:text-larkberget-500 transition-colors">Bolags- & aktieinformation</Link></li>
+              <li><Link to="/investerare/radgivare" className="text-larkberget-300 hover:text-larkberget-500 transition-colors">Certifierad rådgivare</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-larkberget-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-trust-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-larkberget-300 text-sm">
             © {currentYear} Lärkberget AB. Alla rättigheter förbehållna.
           </p>

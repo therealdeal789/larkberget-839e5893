@@ -21,7 +21,7 @@ const LarkbergetNavbar = () => {
   };
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-50 py-4 bg-gradient-to-r from-blue-900 to-blue-800 shadow-lg">
+    <header className="sticky top-0 left-0 right-0 z-50 py-4 bg-gradient-to-r from-larkberget-900 to-trust-800 shadow-lg">
       <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
         <NavbarLogo closeMenu={closeMenu} />
         <DesktopNavigation navItems={navItems} />
