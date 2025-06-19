@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { NavItem } from "@/types/navigation";
 
@@ -21,7 +21,7 @@ const DesktopNavigation = ({ navItems }: DesktopNavigationProps) => {
               <Link 
                 to={item.path}
                 className={cn(
-                  "flex items-center space-x-1 py-2 transition-all duration-300 ease-out font-medium text-sm uppercase tracking-wide",
+                  "flex items-center space-x-1 py-2 transition-all duration-300 ease-out font-medium text-sm uppercase tracking-wide group",
                   location.pathname === item.path 
                     ? "text-green-300" 
                     : "text-white hover:text-green-300"
@@ -29,6 +29,7 @@ const DesktopNavigation = ({ navItems }: DesktopNavigationProps) => {
               >
                 <span>{item.label}</span>
                 <ChevronDown className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
               </Link>
               <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
@@ -43,7 +44,7 @@ const DesktopNavigation = ({ navItems }: DesktopNavigationProps) => {
                             <Link
                               key={categoryItem.label}
                               to={categoryItem.path}
-                              className="block px-6 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
+                              className="block px-6 py-2 text-gray-700 hover:text-green-700 hover:bg-gray-50 transition-colors"
                             >
                               {categoryItem.label}
                             </Link>
@@ -54,14 +55,14 @@ const DesktopNavigation = ({ navItems }: DesktopNavigationProps) => {
                           href={subItem.path}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
+                          className="block px-4 py-2 text-gray-700 hover:text-green-700 hover:bg-gray-50 transition-colors"
                         >
                           {subItem.label}
                         </a>
                       ) : (
                         <Link
                           to={subItem.path}
-                          className="block px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors"
+                          className="block px-4 py-2 text-gray-700 hover:text-green-700 hover:bg-gray-50 transition-colors"
                         >
                           {subItem.label}
                         </Link>
@@ -75,13 +76,14 @@ const DesktopNavigation = ({ navItems }: DesktopNavigationProps) => {
             <Link 
               to={item.path}
               className={cn(
-                "py-2 transition-all duration-300 ease-out font-medium text-sm uppercase tracking-wide",
+                "flex items-center space-x-2 py-2 transition-all duration-300 ease-out font-medium text-sm uppercase tracking-wide group",
                 location.pathname === item.path 
                   ? "text-green-300" 
                   : "text-white hover:text-green-300"
               )}
             >
-              {item.label}
+              <span>{item.label}</span>
+              <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
             </Link>
           )}
         </div>
