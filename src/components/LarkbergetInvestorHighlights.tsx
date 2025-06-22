@@ -7,21 +7,21 @@ const LarkbergetInvestorHighlights = () => {
   const highlights = [
     {
       icon: MessageSquare,
-      title: "Pressmeddelanden",
+      title: " Pressmeddelanden",
       description: "Senaste nytt och pressmeddelanden",
       link: "/pressmeddelanden",
       color: "trust"
     },
     {
       icon: FileText,
-      title: "Rapporter",
+      title: " Rapporter",
       description: "Års- och delårsrapporter",
       link: "/investerare/finansiella-rapporter",
       color: "earth"
     },
     {
       icon: Calendar,
-      title: "Kalendarium",
+      title: " Kalendarium",
       description: "Kommande rapportdatum och stämmor",
       link: "/investerare/kalendarium",
       color: "trust"
@@ -49,7 +49,7 @@ const LarkbergetInvestorHighlights = () => {
               <Link
                 key={index}
                 to={item.link}
-                className="card-elevated p-6 group hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                className="card-elevated p-6 group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col items-center md:items-start text-center md:text-left"
               >
                 <div className={`w-12 h-12 bg-${colorClass}-100 rounded-lg flex items-center justify-center mb-6 md:mb-4 group-hover:bg-${colorClass}-200 transition-colors`}>
                   <Icon className={`w-6 h-6 text-${colorClass}-600`} />
