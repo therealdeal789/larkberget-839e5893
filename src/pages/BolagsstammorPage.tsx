@@ -62,16 +62,13 @@ const BolagsstammorPage = () => {
     <div className="min-h-screen bg-gray-50">
       <LarkbergetNavbar />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white pt-48 pb-32">
+      {/* Hero Section with matching styling */}
+      <section className="bg-gradient-to-br from-larkberget-500 via-trust-700 to-larkberget-900 text-white pt-48 pb-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Bolagsstämmor
             </h1>
-            <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto">
-              Information om Lärkbergets bolagsstämmor
-            </p>
           </div>
         </div>
       </section>
