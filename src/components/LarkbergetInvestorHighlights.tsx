@@ -54,7 +54,7 @@ const LarkbergetInvestorHighlights = () => {
                 <div className={`w-12 h-12 bg-${colorClass}-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-${colorClass}-200 transition-colors`}>
                   <Icon className={`w-6 h-6 text-${colorClass}-600`} />
                 </div>
-                <h3 className="font-semibold text-larkberget-900 mb-2">{item.title}</h3>
+                <h3 className="font-semibold text-larkberget-900 mb-2 md:mb-2">{item.title}</h3>
                 <p className="text-larkberget-600 text-sm hidden md:block">
                   {item.description}
                 </p>
