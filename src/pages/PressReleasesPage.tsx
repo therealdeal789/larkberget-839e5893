@@ -15,9 +15,6 @@ const PressReleasesPage = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Pressmeddelanden
             </h1>
-            <p className="text-xl text-larkberget-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Här hittar du de senaste nyheterna och pressmeddelanden från Lärkberget AB.
-            </p>
           </div>
         </div>
       </section>
