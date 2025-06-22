@@ -1,3 +1,4 @@
+
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -46,6 +47,18 @@ const ShareholdersPage = () => {
                         <p><strong>Hemsida:</strong> www.larkberget.se</p>
                         <p><strong>E-postadress:</strong> info@larkberget.se</p>
                         <p><strong>Telefon:</strong> 08 35 73 55</p>
+                        <p className="mt-2">
+                          Se bolagets sida på Nasdaq First North Growth Market{" "}
+                          <a 
+                            href="https://www.nasdaq.com/european-market-activity/shares/combi?id=SSE165139" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-larkberget-600 hover:text-larkberget-800 underline font-medium"
+                          >
+                            HÄR
+                          </a>
+                          .
+                        </p>
                       </div>
                     </div>
                     

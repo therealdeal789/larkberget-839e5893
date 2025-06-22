@@ -14,7 +14,6 @@ export const navItems: NavItem[] = [
       { label: "Finansiella rapporter", path: "/investerare/finansiella-rapporter" },
       { label: "Bolags- och aktieinformation", path: "/investerare/aktieagare" },
       { label: "Prospekt/IM", path: "/investerare/prospekt-im" },
-      { label: "Nasdaq First North Growth Market", path: "https://www.nasdaq.com/european-market-activity/shares/combi?id=SSE165139", external: true },
       { 
         label: "Bolagsstyrning", 
         path: "#", 
