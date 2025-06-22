@@ -14,7 +14,7 @@ const LarkbergetHome = () => {
       <LarkbergetNavbar />
       
       {/* Hero Section with Aurora Background */}
-      <AuroraBackground className="pt-32 pb-20 h-[70vh]">
+      <AuroraBackground className="pt-24 pb-20 h-[70vh]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white dark:text-white">
