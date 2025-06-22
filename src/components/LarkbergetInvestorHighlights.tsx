@@ -1,3 +1,4 @@
+
 import React from "react";
 import { FileText, Calendar, MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -8,6 +9,11 @@ const LarkbergetInvestorHighlights = () => {
       icon: MessageSquare,
       title: "Pressmeddelanden",
       description: "Senaste nytt och pressmeddelanden",
+      mobileDescription: (
+        <>
+          Senaste nytt och<br />pressmeddelanden
+        </>
+      ),
       link: "/pressmeddelanden",
       color: "trust"
     },
@@ -54,7 +60,10 @@ const LarkbergetInvestorHighlights = () => {
                   <Icon className={`w-6 h-6 text-${colorClass}-600`} />
                 </div>
                 <h3 className="font-semibold text-larkberget-900 mb-2">{item.title}</h3>
-                <p className="text-larkberget-600 text-sm">{item.description}</p>
+                <p className="text-larkberget-600 text-sm">
+                  <span className="hidden md:inline">{item.description}</span>
+                  <span className="md:hidden">{item.mobileDescription || item.description}</span>
+                </p>
               </Link>
             );
           })}
