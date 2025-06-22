@@ -51,7 +51,7 @@ const LarkbergetInvestorHighlights = () => {
                 to={item.link}
                 className="card-elevated p-6 group hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
-                <div className={`w-12 h-12 bg-${colorClass}-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-${colorClass}-200 transition-colors`}>
+                <div className={`w-12 h-12 bg-${colorClass}-100 rounded-lg flex items-center justify-center mb-6 md:mb-4 group-hover:bg-${colorClass}-200 transition-colors`}>
                   <Icon className={`w-6 h-6 text-${colorClass}-600`} />
                 </div>
                 <h3 className="font-semibold text-larkberget-900 mb-2 md:mb-2">{item.title}</h3>
