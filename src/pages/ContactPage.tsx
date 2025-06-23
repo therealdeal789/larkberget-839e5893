@@ -126,7 +126,7 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
             {/* Contact Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               
-              <Card className="p-8">
+              <Card className="p-8 border-[#136047]">
                 <CardHeader className="pb-4">
                   <CardTitle className="flex items-center space-x-3">
                     <Mail className="w-6 h-6 text-larkberget-600" />
@@ -146,7 +146,7 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
                 </CardContent>
               </Card>
 
-              <Card className="p-8">
+              <Card className="p-8 border-[#136047]">
                 <CardHeader className="pb-4">
                   <CardTitle className="flex items-center space-x-3">
                     <MapPin className="w-6 h-6 text-larkberget-600" />
@@ -159,7 +159,7 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
                   <p className="text-gray-600 mb-2">Nybrogatan 7</p>
                   <p className="text-gray-600 mb-4">SE-114 34 Stockholm</p>
                   
-                  <div className="mt-4 pt-4 border-t border-gray-200">
+                  <div className="mt-4 pt-4 border-t border-[#136047]">
                     <p className="text-gray-600 text-sm mb-1">
                       <strong>Org.nummer:</strong> 556403-3818
                     </p>
@@ -178,7 +178,7 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 
                 {contactPersons.map((person, index) => (
-                  <Card key={index} className="p-6">
+                  <Card key={index} className="p-6 border-[#136047]">
                     <CardHeader className="pb-4 text-center">
                       {person.image && (
                         <div className="flex justify-center mb-4">
@@ -211,7 +211,7 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
                       
                       <Dialog>
                         <DialogTrigger asChild>
-                          <Button variant="outline" size="sm" className="w-full">
+                          <Button variant="outline" size="sm" className="w-full border-[#136047] hover:bg-[#136047] hover:text-white">
                             <User className="w-4 h-4 mr-2" />
                             Bio
                           </Button>
@@ -235,7 +235,7 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
             </div>
 
             {/* Additional Information */}
-            <div className="bg-gradient-to-br from-larkberget-50 to-larkberget-100 rounded-2xl p-8 md:p-12">
+            <div className="bg-gradient-to-br from-larkberget-50 to-larkberget-100 rounded-2xl p-8 md:p-12 border border-[#136047]">
               <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-3xl font-bold text-larkberget-900 mb-6">Investerarinformation</h2>
                 <p className="text-lg text-gray-600 mb-8">
@@ -244,7 +244,7 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-white rounded-lg p-6">
+                  <div className="bg-white rounded-lg p-6 border border-[#136047]">
                     <FileText className="w-8 h-8 text-larkberget-600 mx-auto mb-4" />
                     <h4 className="font-semibold text-larkberget-900 mb-3">Finansiella rapporter</h4>
                     <Link 
@@ -254,7 +254,7 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
                       Visa rapporter →
                     </Link>
                   </div>
-                  <div className="bg-white rounded-lg p-6">
+                  <div className="bg-white rounded-lg p-6 border border-[#136047]">
                     <Mail className="w-8 h-8 text-larkberget-600 mx-auto mb-4" />
                     <h4 className="font-semibold text-larkberget-900 mb-3">Pressmeddelanden</h4>
                     <Link 
