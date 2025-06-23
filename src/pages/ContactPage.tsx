@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -103,11 +104,11 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-larkberget-50">
       <LarkbergetNavbar />
       
-      {/* Hero Section with Dark Blue Gradient Background */}
-      <section className="bg-gradient-to-br from-blue-900 via-slate-800 to-blue-800 text-white pt-48 pb-32">
+      {/* Hero Section with Green Gradient Background */}
+      <section className="bg-gradient-to-br from-larkberget-600 via-larkberget-700 to-larkberget-800 text-white pt-48 pb-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -128,7 +129,7 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
               <Card className="p-8">
                 <CardHeader className="pb-4">
                   <CardTitle className="flex items-center space-x-3">
-                    <Mail className="w-6 h-6 text-trust-600" />
+                    <Mail className="w-6 h-6 text-larkberget-600" />
                     <span>E-post</span>
                   </CardTitle>
                 </CardHeader>
@@ -138,7 +139,7 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
                   </p>
                   <a 
                     href="mailto:info@larkberget.se"
-                    className="text-trust-600 hover:text-trust-700 font-medium"
+                    className="text-larkberget-600 hover:text-larkberget-700 font-medium"
                   >
                     info@larkberget.se
                   </a>
@@ -148,7 +149,7 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
               <Card className="p-8">
                 <CardHeader className="pb-4">
                   <CardTitle className="flex items-center space-x-3">
-                    <MapPin className="w-6 h-6 text-trust-600" />
+                    <MapPin className="w-6 h-6 text-larkberget-600" />
                     <span>Adress</span>
                   </CardTitle>
                 </CardHeader>
@@ -173,7 +174,7 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
 
             {/* Leadership & Board */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Ledning & styrelse</h2>
+              <h2 className="text-3xl font-bold text-larkberget-900 mb-8 text-center">Ledning & styrelse</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 
                 {contactPersons.map((person, index) => (
@@ -188,21 +189,21 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
                         </div>
                       )}
                       <CardTitle className="text-lg">{person.name}</CardTitle>
-                      <p className="text-trust-600 font-medium text-sm">{person.title}</p>
+                      <p className="text-larkberget-600 font-medium text-sm">{person.title}</p>
                     </CardHeader>
                     <CardContent className="text-center">
                       <div className="space-y-2 mb-4">
                         {person.phone && (
                           <div className="flex items-center justify-center space-x-2">
                             <Phone className="w-4 h-4 text-gray-600" />
-                            <a href={`tel:${person.phone.replace(/\s/g, '')}`} className="text-gray-600 hover:text-trust-600 text-sm">
+                            <a href={`tel:${person.phone.replace(/\s/g, '')}`} className="text-gray-600 hover:text-larkberget-600 text-sm">
                               {person.phone}
                             </a>
                           </div>
                         )}
                         <div className="flex items-center justify-center space-x-2">
                           <Mail className="w-4 h-4 text-gray-600" />
-                          <a href={`mailto:${person.email}`} className="text-gray-600 hover:text-trust-600 text-sm">
+                          <a href={`mailto:${person.email}`} className="text-gray-600 hover:text-larkberget-600 text-sm">
                             {person.email}
                           </a>
                         </div>
@@ -234,9 +235,9 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
             </div>
 
             {/* Additional Information */}
-            <div className="bg-gradient-to-br from-trust-50 to-larkberget-50 rounded-2xl p-8 md:p-12">
+            <div className="bg-gradient-to-br from-larkberget-50 to-larkberget-100 rounded-2xl p-8 md:p-12">
               <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Investerarinformation</h2>
+                <h2 className="text-3xl font-bold text-larkberget-900 mb-6">Investerarinformation</h2>
                 <p className="text-lg text-gray-600 mb-8">
                   Som börsnoterat företag följer vi strikta regler för informationsgivning. 
                   All viktig information publiceras samtidigt till alla aktieägare och marknaden.
@@ -244,21 +245,21 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-white rounded-lg p-6">
-                    <FileText className="w-8 h-8 text-trust-600 mx-auto mb-4" />
-                    <h4 className="font-semibold text-gray-900 mb-3">Finansiella rapporter</h4>
+                    <FileText className="w-8 h-8 text-larkberget-600 mx-auto mb-4" />
+                    <h4 className="font-semibold text-larkberget-900 mb-3">Finansiella rapporter</h4>
                     <Link 
                       to="/investerare/finansiella-rapporter"
-                      className="text-trust-600 hover:text-trust-700 font-medium text-sm"
+                      className="text-larkberget-600 hover:text-larkberget-700 font-medium text-sm"
                     >
                       Visa rapporter →
                     </Link>
                   </div>
                   <div className="bg-white rounded-lg p-6">
-                    <Mail className="w-8 h-8 text-trust-600 mx-auto mb-4" />
-                    <h4 className="font-semibold text-gray-900 mb-3">Pressmeddelanden</h4>
+                    <Mail className="w-8 h-8 text-larkberget-600 mx-auto mb-4" />
+                    <h4 className="font-semibold text-larkberget-900 mb-3">Pressmeddelanden</h4>
                     <Link 
                       to="/pressmeddelanden"
-                      className="text-trust-600 hover:text-trust-700 font-medium text-sm"
+                      className="text-larkberget-600 hover:text-larkberget-700 font-medium text-sm"
                     >
                       Läs pressmeddelanden →
                     </Link>
