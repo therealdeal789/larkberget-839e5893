@@ -38,9 +38,9 @@ const CertifiedAdviserPage = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-4">Kontaktinformation</h3>
                     <div className="space-y-2 text-gray-700">
-                      <p><strong>Adress:</strong> Berzelii Park 9, 103 91 Stockholm</p>
-                      <p><strong>Telefon:</strong> +46 8 506 437 00</p>
-                      <p><strong>E-post:</strong> info@bergssecurities.se</p>
+                      <p><strong>Adress:</strong> Jungfrugatan 35, 114 44 Stockholm</p>
+                      <p><strong>Telefon:</strong> +46 739 49 62 50</p>
+                      <p><strong>E-post:</strong> ca@bergssecurities.se</p>
                       <p><strong>Hemsida:</strong> <a href="https://www.bergssecurities.se" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">www.bergssecurities.se</a></p>
                     </div>
                   </div>
