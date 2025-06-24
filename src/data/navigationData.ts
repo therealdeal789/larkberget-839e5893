@@ -19,6 +19,7 @@ export const navItems: NavItem[] = [
         path: "#", 
         isCategory: true,
         submenu: [
+          { label: "Ledning & Styrelse", path: "/kontakt" },
           { label: "Bolagsstämmor", path: "/investerare/bolagsstyrning/bolagsstammor" },
           { label: "Bolagsordning", path: "/investerare/bolagsstyrning/bolagsordning" },
           { label: "Bolagsbeskrivning", path: "/investerare/bolagsstyrning/bolagsbeskrivning" }
