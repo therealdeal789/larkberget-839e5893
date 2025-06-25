@@ -18,6 +18,9 @@ const ContactPage = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Kontakt
             </h1>
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+              Kontaktuppgifter till Lärkberget och information om bolagets styrelse och ledning
+            </p>
           </div>
         </div>
       </section>
