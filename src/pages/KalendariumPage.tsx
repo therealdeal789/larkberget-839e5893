@@ -32,38 +32,22 @@ const KalendariumPage = () => {
 
             <div className="space-y-8">
               <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Kommande händelser 2025</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Kommande händelser</h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
                     <div>
-                      <h4 className="font-medium text-gray-900">Delårsrapport Q1 2025</h4>
-                      <p className="text-sm text-gray-600">Publicering av första kvartalets rapport</p>
+                      <h4 className="font-medium text-gray-900">Delårsrapport januari-juni 2025</h4>
+                      <p className="text-sm text-gray-600">Halvårsrapport för första halvåret 2025</p>
                     </div>
-                    <span className="text-sm font-medium text-larkberget-600">April 2025</span>
+                    <span className="text-sm font-medium text-larkberget-600">22 augusti, 2025</span>
                   </div>
                   
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
                     <div>
-                      <h4 className="font-medium text-gray-900">Årsstämma 2025</h4>
-                      <p className="text-sm text-gray-600">Ordinarie bolagsstämma</p>
+                      <h4 className="font-medium text-gray-900">Bokslutskommuniké 2025</h4>
+                      <p className="text-sm text-gray-600">Årsbokslut och kommuniké för 2025</p>
                     </div>
-                    <span className="text-sm font-medium text-larkberget-600">Maj 2025</span>
-                  </div>
-
-                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                    <div>
-                      <h4 className="font-medium text-gray-900">Delårsrapport Q2 2025</h4>
-                      <p className="text-sm text-gray-600">Halvårsrapport och andra kvartalets resultat</p>
-                    </div>
-                    <span className="text-sm font-medium text-larkberget-600">Juli 2025</span>
-                  </div>
-
-                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                    <div>
-                      <h4 className="font-medium text-gray-900">Delårsrapport Q3 2025</h4>
-                      <p className="text-sm text-gray-600">Tredje kvartalets rapport</p>
-                    </div>
-                    <span className="text-sm font-medium text-larkberget-600">Oktober 2025</span>
+                    <span className="text-sm font-medium text-larkberget-600">13 februari, 2026</span>
                   </div>
                 </div>
               </div>
