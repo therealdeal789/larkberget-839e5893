@@ -1,4 +1,3 @@
-
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -103,12 +102,9 @@ const AboutLarkberget = () => {
               <div className="flex items-center justify-center mb-4">
                 <Users className="w-8 h-8 text-larkberget-600" />
               </div>
-              <h3 className="text-2xl font-bold text-larkberget-900 mb-4">
+              <h3 className="text-2xl font-bold text-larkberget-900 mb-6">
                 Ledning och Styrelse
               </h3>
-              <p className="text-larkberget-600 mb-6">
-                Läs mer om vårt team och styrelse som leder Lärkberget framåt.
-              </p>
               <Link 
                 to="/kontakt"
                 className="inline-flex items-center space-x-2 bg-larkberget-600 text-white px-6 py-3 rounded-lg hover:bg-larkberget-700 transition-colors font-medium"
