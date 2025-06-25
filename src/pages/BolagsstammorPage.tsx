@@ -2,7 +2,6 @@
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
-import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Download } from "lucide-react";
 
@@ -133,15 +132,13 @@ const BolagsstammorPage = () => {
                           </TableCell>
                           <TableCell className="text-larkberget-800">{doc.name}</TableCell>
                           <TableCell>
-                            <Button
-                              variant="outline"
-                              size="sm"
+                            <button
                               onClick={() => window.open(doc.url, '_blank')}
-                              className="flex items-center gap-2 border-larkberget-300 text-larkberget-700 hover:bg-larkberget-100 hover:text-larkberget-800 hover:border-larkberget-400"
+                              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-larkberget-700 bg-white border border-larkberget-300 rounded-md hover:bg-larkberget-50 hover:text-larkberget-800 hover:border-larkberget-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-larkberget-500 focus:ring-offset-2"
                             >
                               <Download className="h-4 w-4" />
                               Ladda ner
-                            </Button>
+                            </button>
                           </TableCell>
                         </TableRow>
                       ))
