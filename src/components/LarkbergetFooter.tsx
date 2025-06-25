@@ -40,7 +40,6 @@ const LarkbergetFooter = () => {
             <ul className="space-y-1">
               <li><Link to="/" className="text-larkberget-300 hover:text-larkberget-500 transition-colors text-sm">Hem</Link></li>
               <li><Link to="/om-larkberget" className="text-larkberget-300 hover:text-larkberget-500 transition-colors text-sm">Om Lärkberget</Link></li>
-              <li><Link to="/investerare" className="text-larkberget-300 hover:text-larkberget-500 transition-colors text-sm">Investerare</Link></li>
               <li><Link to="/pressmeddelanden" className="text-larkberget-300 hover:text-larkberget-500 transition-colors text-sm">Pressmeddelanden</Link></li>
               <li><Link to="/kontakt" className="text-larkberget-300 hover:text-larkberget-500 transition-colors text-sm">Kontakt</Link></li>
             </ul>
