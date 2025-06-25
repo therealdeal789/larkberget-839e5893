@@ -1,4 +1,3 @@
-
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -11,7 +10,7 @@ const BolagsstammorPage = () => {
       year: "2025",
       documents: [
         { name: "Årsredovisning 2024", url: "https://drive.google.com/file/d/1KfZEcIRHF9iygcBk1yTyoc9Hk-hc_6D0/view?usp=drive_link" },
-        { name: "Kallelse årsstämma 2024", url: "https://drive.google.com/file/d/1AYqRCf--i29FAgmHOaE89yqVVtVMDTsW/view?usp=drive_link" }
+        { name: "Kallelse årsstämma 2025", url: "https://drive.google.com/file/d/1AYqRCf--i29FAgmHOaE89yqVVtVMDTsW/view?usp=drive_link" }
       ]
     },
     {
