@@ -52,7 +52,16 @@ const ContactPersonCard = ({ person }: ContactPersonCardProps) => {
         
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="outline" size="sm" className="w-full border-[#136047] hover:bg-[#136047] hover:text-white">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="w-full border-[#136047] hover:bg-[#136047] hover:text-white focus:bg-[#136047] focus:text-white active:bg-[#136047] active:text-white transition-colors duration-200"
+              style={{
+                WebkitTapHighlightColor: 'transparent',
+                outline: 'none',
+                boxShadow: 'none',
+              }}
+            >
               <User className="w-4 h-4 mr-2" />
               Bio
             </Button>
