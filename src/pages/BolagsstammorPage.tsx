@@ -78,11 +78,11 @@ const BolagsstammorPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-larkberget-50">
       <LarkbergetNavbar />
       
-      {/* Hero Section with matching styling */}
-      <section className="bg-gradient-to-br from-larkberget-500 via-trust-700 to-larkberget-900 text-white pt-48 pb-32">
+      {/* Hero Section with consistent green gradient */}
+      <section className="bg-gradient-to-br from-larkberget-600 via-larkberget-700 to-larkberget-900 text-white pt-48 pb-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -97,47 +97,47 @@ const BolagsstammorPage = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="prose prose-lg max-w-none mb-12">
-              <p className="text-lg text-gray-700 mb-8">
+              <p className="text-lg text-larkberget-800 mb-8">
                 Här hittar du information om Lärkberget AB:s bolagsstämmor, inklusive kallelser, protokoll och andra relevanta dokument.
               </p>
 
-              <div className="bg-gray-50 rounded-xl p-8 mb-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Kommande bolagsstämmor</h2>
-                <p className="text-gray-700">
+              <div className="bg-larkberget-50 rounded-xl p-8 mb-8 border border-larkberget-200">
+                <h2 className="text-2xl font-bold text-larkberget-900 mb-6">Kommande bolagsstämmor</h2>
+                <p className="text-larkberget-700">
                   Information om kommande bolagsstämmor kommer att publiceras här när de är tillgängliga.
                 </p>
               </div>
             </div>
 
             {/* Tidigare bolagsstämmor sektion */}
-            <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
-              <div className="bg-gray-50 px-8 py-6 border-b border-gray-200">
-                <h2 className="text-2xl font-bold text-gray-900">Tidigare bolagsstämmor</h2>
+            <div className="bg-white rounded-xl border border-larkberget-200 overflow-hidden shadow-sm">
+              <div className="bg-larkberget-100 px-8 py-6 border-b border-larkberget-200">
+                <h2 className="text-2xl font-bold text-larkberget-900">Tidigare bolagsstämmor</h2>
               </div>
               
               <div className="overflow-x-auto">
                 <Table>
                   <TableHeader>
-                    <TableRow>
-                      <TableHead className="w-1/4">År</TableHead>
-                      <TableHead className="w-1/2">Dokument</TableHead>
-                      <TableHead className="w-1/4">Ladda ner</TableHead>
+                    <TableRow className="border-b border-larkberget-200">
+                      <TableHead className="w-1/4 text-larkberget-800 font-semibold">År</TableHead>
+                      <TableHead className="w-1/2 text-larkberget-800 font-semibold">Dokument</TableHead>
+                      <TableHead className="w-1/4 text-larkberget-800 font-semibold">Ladda ner</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {documentsData.map((yearData, yearIndex) => (
                       yearData.documents.map((doc, docIndex) => (
-                        <TableRow key={`${yearIndex}-${docIndex}`}>
-                          <TableCell className="font-medium">
+                        <TableRow key={`${yearIndex}-${docIndex}`} className="border-b border-larkberget-100 hover:bg-larkberget-50">
+                          <TableCell className="font-medium text-larkberget-900">
                             {docIndex === 0 ? yearData.year : ""}
                           </TableCell>
-                          <TableCell>{doc.name}</TableCell>
+                          <TableCell className="text-larkberget-800">{doc.name}</TableCell>
                           <TableCell>
                             <Button
                               variant="outline"
                               size="sm"
                               onClick={() => window.open(doc.url, '_blank')}
-                              className="flex items-center gap-2"
+                              className="flex items-center gap-2 border-larkberget-300 text-larkberget-700 hover:bg-larkberget-100 hover:text-larkberget-800 hover:border-larkberget-400"
                             >
                               <Download className="h-4 w-4" />
                               Ladda ner
@@ -151,12 +151,12 @@ const BolagsstammorPage = () => {
               </div>
             </div>
 
-            <div className="bg-green-50 rounded-xl p-8 mt-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Aktieägarinformation</h2>
-              <p className="text-gray-700 mb-4">
+            <div className="bg-larkberget-50 rounded-xl p-8 mt-8 border border-larkberget-200">
+              <h2 className="text-2xl font-bold text-larkberget-900 mb-6">Aktieägarinformation</h2>
+              <p className="text-larkberget-700 mb-4">
                 Som aktieägare i Lärkberget AB har du rätt att delta i bolagsstämmor och utöva din rösträtt.
               </p>
-              <p className="text-gray-700">
+              <p className="text-larkberget-700">
                 För frågor angående bolagsstämmor, kontakta oss på info@larkberget.se
               </p>
             </div>
