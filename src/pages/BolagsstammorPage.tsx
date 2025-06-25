@@ -14,24 +14,13 @@ import {
 
 const BolagsstammorPage = () => {
   const meetingData = {
-    2021: [
-      { name: "Rösträttsfullmakt", url: "https://drive.google.com/file/d/1oS2dkUt4CH-Dbuia3YOvKwN0MBchVbjI/view?usp=drive_link" },
-      { name: "Kallelse till årsstämma", url: "https://drive.google.com/file/d/1E2MTmBiW2EzlfjlpDUTncNWTk8to4W2G/view?usp=drive_link" },
-      { name: "Valberedning", url: "https://drive.google.com/file/d/1nclz-dn6t-yva457mEWSRjMbMbouuLvz/view?usp=drive_link" }
+    2025: [
+      { name: "Årsredovisning 2024", url: "https://drive.google.com/file/d/1KfZEcIRHF9iygcBk1yTyoc9Hk-hc_6D0/view?usp=drive_link" },
+      { name: "Kallelse årsstämma 2024", url: "https://drive.google.com/file/d/1AYqRCf--i29FAgmHOaE89yqVVtVMDTsW/view?usp=drive_link" }
     ],
-    2022: [
-      { name: "Årsredovisning 2021", url: "https://drive.google.com/file/d/1FOlqmjN9DNmJ9biLIIU9TPenqPL3-ZxG/view?usp=drive_link" },
-      { name: "Valberedningens förslag 2022", url: "https://drive.google.com/file/d/17TqdHBBVNZi32sAqhk-vLLYbsFP0Xc4T/view?usp=drive_link" },
-      { name: "FÖRSLAG: Beslut om leverans och säkringsåtgärder för LTI 2022 Punkt 17", url: "https://drive.google.com/file/d/18lU3SaQib140eOl5OL7ISaZdGPeWMtje/view?usp=drive_link" },
-      { name: "FÖRSLAG: Prestationsbaserat incitamentsprogram LTI 2022 Punkt 16", url: "https://drive.google.com/file/d/1biLXTZj2lfX9sXEuhW6t40jf1dbiro7M/view?usp=drive_link" },
-      { name: "Kallelse 2022", url: "https://drive.google.com/file/d/1MWTV8qBVoRPm6RE8542QfxSfvzkipdIZ/view?usp=drive_link" },
-      { name: "Rösträttsfullmakt", url: "https://drive.google.com/file/d/151tAhTqUofZqJiieEYrejT5jq9AhggLu/view?usp=drive_link" }
-    ],
-    2023: [
-      { name: "Årsredovisning 2022", url: "https://drive.google.com/file/d/1iE3RbS_ouKjvnyhQB_1IxFf15zG6ioAQ/view?usp=drive_link" },
-      { name: "Fullmaktsformulär 2023", url: "https://drive.google.com/file/d/1DjnLw0chV2Rd3VfI88LQAeislLF3VQPG/view?usp=drive_link" },
-      { name: "Kallelse årsstämma 2023", url: "https://drive.google.com/file/d/1oAiJebpNUDaiARkIANbkTwKm1Bjy4yYO/view?usp=drive_link" },
-      { name: "Valberedning 2023", url: "https://drive.google.com/file/d/16-tm-NjkW_fQbjkaia6KFxMGvzY_WNDb/view?usp=drive_link" }
+    "2025 Extra bolagsstämma": [
+      { name: "CombiGene Fullmaktsförslag EBS 2025", url: "https://drive.google.com/file/d/1E2-vdo3tdoM8evnnqYtLbBnVANvicR-h/view?usp=drive_link" },
+      { name: "Kallelse extra bolagsstämma i CombiGene AB", url: "https://drive.google.com/file/d/1IvjDLj4_f8Kvh5PmjamTACZmrvAJ0A-W/view?usp=drive_link" }
     ],
     2024: [
       { name: "Årsredovisning 2023", url: "https://drive.google.com/file/d/1a_D1cgwfcEzEJM1u87dQqvZgEvpFvGi2/view?usp=drive_link" },
@@ -52,13 +41,24 @@ const BolagsstammorPage = () => {
       { name: "Shareholders proposal board", url: "https://drive.google.com/file/d/1tW_syWsYynYEfOp-rOhofBkBoUfVQbn3/view?usp=drive_link" },
       { name: "Styrelsens förslag till ny bolagsordning", url: "https://drive.google.com/file/d/1lCZAt2C9l-XmNiGAtE6YTXkhjKyzwSdu/view?usp=drive_link" }
     ],
-    "2025 Extra bolagsstämma": [
-      { name: "CombiGene Fullmaktsförslag EBS 2025", url: "https://drive.google.com/file/d/1E2-vdo3tdoM8evnnqYtLbBnVANvicR-h/view?usp=drive_link" },
-      { name: "Kallelse extra bolagsstämma i CombiGene AB", url: "https://drive.google.com/file/d/1IvjDLj4_f8Kvh5PmjamTACZmrvAJ0A-W/view?usp=drive_link" }
+    2023: [
+      { name: "Årsredovisning 2022", url: "https://drive.google.com/file/d/1iE3RbS_ouKjvnyhQB_1IxFf15zG6ioAQ/view?usp=drive_link" },
+      { name: "Fullmaktsformulär 2023", url: "https://drive.google.com/file/d/1DjnLw0chV2Rd3VfI88LQAeislLF3VQPG/view?usp=drive_link" },
+      { name: "Kallelse årsstämma 2023", url: "https://drive.google.com/file/d/1oAiJebpNUDaiARkIANbkTwKm1Bjy4yYO/view?usp=drive_link" },
+      { name: "Valberedning 2023", url: "https://drive.google.com/file/d/16-tm-NjkW_fQbjkaia6KFxMGvzY_WNDb/view?usp=drive_link" }
     ],
-    2025: [
-      { name: "Årsredovisning 2024", url: "https://drive.google.com/file/d/1KfZEcIRHF9iygcBk1yTyoc9Hk-hc_6D0/view?usp=drive_link" },
-      { name: "Kallelse årsstämma 2024", url: "https://drive.google.com/file/d/1AYqRCf--i29FAgmHOaE89yqVVtVMDTsW/view?usp=drive_link" }
+    2022: [
+      { name: "Årsredovisning 2021", url: "https://drive.google.com/file/d/1FOlqmjN9DNmJ9biLIIU9TPenqPL3-ZxG/view?usp=drive_link" },
+      { name: "Valberedningens förslag 2022", url: "https://drive.google.com/file/d/17TqdHBBVNZi32sAqhk-vLLYbsFP0Xc4T/view?usp=drive_link" },
+      { name: "FÖRSLAG: Beslut om leverans och säkringsåtgärder för LTI 2022 Punkt 17", url: "https://drive.google.com/file/d/18lU3SaQib140eOl5OL7ISaZdGPeWMtje/view?usp=drive_link" },
+      { name: "FÖRSLAG: Prestationsbaserat incitamentsprogram LTI 2022 Punkt 16", url: "https://drive.google.com/file/d/1biLXTZj2lfX9sXEuhW6t40jf1dbiro7M/view?usp=drive_link" },
+      { name: "Kallelse 2022", url: "https://drive.google.com/file/d/1MWTV8qBVoRPm6RE8542QfxSfvzkipdIZ/view?usp=drive_link" },
+      { name: "Rösträttsfullmakt", url: "https://drive.google.com/file/d/151tAhTqUofZqJiieEYrejT5jq9AhggLu/view?usp=drive_link" }
+    ],
+    2021: [
+      { name: "Rösträttsfullmakt", url: "https://drive.google.com/file/d/1oS2dkUt4CH-Dbuia3YOvKwN0MBchVbjI/view?usp=drive_link" },
+      { name: "Kallelse till årsstämma", url: "https://drive.google.com/file/d/1E2MTmBiW2EzlfjlpDUTncNWTk8to4W2G/view?usp=drive_link" },
+      { name: "Valberedning", url: "https://drive.google.com/file/d/1nclz-dn6t-yva457mEWSRjMbMbouuLvz/view?usp=drive_link" }
     ]
   };
 
@@ -98,7 +98,7 @@ const BolagsstammorPage = () => {
             <div className="bg-green-50 rounded-xl p-8 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-8">Tidigare bolagsstämmor</h2>
               
-              {Object.entries(meetingData).reverse().map(([year, documents]) => (
+              {Object.entries(meetingData).map(([year, documents]) => (
                 <div key={year} className="mb-8 last:mb-0">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">{year}</h3>
                   <div className="bg-white rounded-lg shadow-sm overflow-hidden">
