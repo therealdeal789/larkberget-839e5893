@@ -52,9 +52,13 @@ const BolagsstammorPage = () => {
       { name: "Shareholders proposal board", url: "https://drive.google.com/file/d/1tW_syWsYynYEfOp-rOhofBkBoUfVQbn3/view?usp=drive_link" },
       { name: "Styrelsens förslag till ny bolagsordning", url: "https://drive.google.com/file/d/1lCZAt2C9l-XmNiGAtE6YTXkhjKyzwSdu/view?usp=drive_link" }
     ],
-    2025: [
+    "2025 Extra bolagsstämma": [
       { name: "CombiGene Fullmaktsförslag EBS 2025", url: "https://drive.google.com/file/d/1E2-vdo3tdoM8evnnqYtLbBnVANvicR-h/view?usp=drive_link" },
       { name: "Kallelse extra bolagsstämma i CombiGene AB", url: "https://drive.google.com/file/d/1IvjDLj4_f8Kvh5PmjamTACZmrvAJ0A-W/view?usp=drive_link" }
+    ],
+    2025: [
+      { name: "Årsredovisning 2024", url: "https://drive.google.com/file/d/1KfZEcIRHF9iygcBk1yTyoc9Hk-hc_6D0/view?usp=drive_link" },
+      { name: "Kallelse årsstämma 2024", url: "https://drive.google.com/file/d/1AYqRCf--i29FAgmHOaE89yqVVtVMDTsW/view?usp=drive_link" }
     ]
   };
 
