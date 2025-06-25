@@ -29,7 +29,7 @@ const ContactPersonCard = ({ person }: ContactPersonCardProps) => {
 
   return (
     <>
-      <Card className="p-6 border-[#136047]">
+      <Card className="p-6 bg-white border border-larkberget-200">
         <CardHeader className="pb-4 text-center">
           {person.image && (
             <div className="flex justify-center mb-4">
@@ -39,7 +39,7 @@ const ContactPersonCard = ({ person }: ContactPersonCardProps) => {
               </Avatar>
             </div>
           )}
-          <CardTitle className="text-lg text-[#136047]">{person.name}</CardTitle>
+          <CardTitle className="text-lg text-larkberget-900">{person.name}</CardTitle>
           <p className="text-larkberget-600 font-medium text-sm">{person.title}</p>
         </CardHeader>
         <CardContent className="text-center">
@@ -62,7 +62,7 @@ const ContactPersonCard = ({ person }: ContactPersonCardProps) => {
           
           <button
             onClick={handleOpenDialog}
-            className="w-full border border-[#136047] text-[#136047] hover:bg-[#136047] hover:text-white focus:bg-[#136047] focus:text-white active:bg-[#136047] active:text-white transition-all duration-200 ease-in-out bg-transparent px-3 py-2 rounded-md text-sm font-medium inline-flex items-center justify-center"
+            className="w-full border border-larkberget-600 text-larkberget-600 hover:bg-larkberget-600 hover:text-white focus:bg-larkberget-600 focus:text-white active:bg-larkberget-600 active:text-white transition-all duration-200 ease-in-out bg-transparent px-3 py-2 rounded-md text-sm font-medium inline-flex items-center justify-center"
             style={{
               WebkitTapHighlightColor: 'transparent',
               WebkitAppearance: 'none',
