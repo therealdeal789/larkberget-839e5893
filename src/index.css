@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -165,9 +166,11 @@
     -webkit-tap-highlight-color: transparent !important;
   }
 
-  /* Special class for no tap highlight */
+  /* Special class for no tap highlight - with !important declarations */
   .no-tap-highlight,
-  .no-tap-highlight * {
+  .no-tap-highlight *,
+  .no-tap-highlight-button,
+  .no-tap-highlight-button * {
     -webkit-tap-highlight-color: transparent !important;
     -webkit-touch-callout: none !important;
     -webkit-user-select: none !important;
@@ -176,6 +179,23 @@
     user-select: none !important;
     outline: none !important;
     box-shadow: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    border: none !important;
+  }
+
+  /* Override any browser button defaults */
+  .no-tap-highlight-button:focus,
+  .no-tap-highlight-button:active,
+  .no-tap-highlight-button:hover,
+  .no-tap-highlight-button:focus-visible {
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
   }
 }
 
