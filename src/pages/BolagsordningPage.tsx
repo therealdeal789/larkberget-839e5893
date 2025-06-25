@@ -59,7 +59,7 @@ const BolagsordningPage = () => {
                   className="bg-green-700 hover:bg-green-800 text-white px-6 py-2"
                 >
                   <a 
-                    href="https://drive.google.com/file/d/1O-bUFzcRvxhK0sckRL2ejfO-beuBMGW7/view?usp=drive_link" 
+                    href="https://drive.google.com/file/d/1Syylnatfokw8mQie4Ak0jarR9QkxfTbg/view?usp=drive_link" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
