@@ -117,7 +117,7 @@ const BolagsstammorPage = () => {
               <div className="overflow-x-auto">
                 <Table>
                   <TableHeader>
-                    <TableRow className="border-b border-larkberget-200">
+                    <TableRow className="border-b border-larkberget-200 hover:bg-transparent">
                       <TableHead className="w-1/4 text-larkberget-800 font-semibold">År</TableHead>
                       <TableHead className="w-1/2 text-larkberget-800 font-semibold">Dokument</TableHead>
                       <TableHead className="w-1/4 text-larkberget-800 font-semibold">Ladda ner</TableHead>
