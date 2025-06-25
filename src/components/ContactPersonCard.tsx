@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, User } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -84,12 +83,12 @@ const ContactPersonCard = ({ person }: ContactPersonCardProps) => {
       </Card>
 
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto bg-green-50 border-green-200">
           <DialogHeader>
-            <DialogTitle className="text-xl">{person.name}</DialogTitle>
+            <DialogTitle className="text-xl text-green-900">{person.name}</DialogTitle>
           </DialogHeader>
           <div className="mt-4">
-            <p className="whitespace-pre-line text-sm leading-relaxed text-gray-700">
+            <p className="whitespace-pre-line text-sm leading-relaxed text-green-900">
               {person.bio}
             </p>
           </div>
