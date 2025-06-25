@@ -1,4 +1,3 @@
-
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -17,9 +16,6 @@ const BolagsordningPage = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Bolagsordning
             </h1>
-            <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto">
-              Lärkberget AB:s bolagsordning
-            </p>
           </div>
         </div>
       </section>
