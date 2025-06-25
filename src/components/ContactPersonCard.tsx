@@ -55,11 +55,19 @@ const ContactPersonCard = ({ person }: ContactPersonCardProps) => {
             <Button 
               variant="outline" 
               size="sm" 
-              className="w-full border-[#136047] hover:bg-[#136047] hover:text-white focus:bg-[#136047] focus:text-white active:bg-[#136047] active:text-white transition-colors duration-200"
+              className="w-full border-[#136047] text-[#136047] hover:bg-[#136047] hover:text-white focus:bg-[#136047] focus:text-white active:bg-[#136047] active:text-white transition-all duration-200 ease-in-out no-tap-highlight"
               style={{
-                WebkitTapHighlightColor: 'transparent',
-                outline: 'none',
-                boxShadow: 'none',
+                WebkitTapHighlightColor: 'transparent !important',
+                WebkitAppearance: 'none !important',
+                MozAppearance: 'none !important',
+                appearance: 'none !important',
+                outline: 'none !important',
+                boxShadow: 'none !important',
+                userSelect: 'none',
+                WebkitUserSelect: 'none',
+                MozUserSelect: 'none',
+                msUserSelect: 'none',
+                WebkitTouchCallout: 'none',
               }}
             >
               <User className="w-4 h-4 mr-2" />
