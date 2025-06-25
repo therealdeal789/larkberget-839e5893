@@ -18,10 +18,9 @@ const DesktopNavigation = ({ navItems }: DesktopNavigationProps) => {
         <div key={item.label} className="relative group">
           {item.hasDropdown ? (
             <>
-              <Link 
-                to={item.path}
+              <div 
                 className={cn(
-                  "flex items-center space-x-1 py-2 transition-all duration-300 ease-out font-medium text-sm uppercase tracking-wide group",
+                  "flex items-center space-x-1 py-2 transition-all duration-300 ease-out font-medium text-sm uppercase tracking-wide group cursor-default",
                   location.pathname === item.path 
                     ? "text-green-300" 
                     : "text-white hover:text-green-300"
@@ -30,7 +29,7 @@ const DesktopNavigation = ({ navItems }: DesktopNavigationProps) => {
                 <span>{item.label}</span>
                 <ChevronDown className="w-4 h-4" />
                 <ArrowRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-              </Link>
+              </div>
               <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
                   {item.submenu?.map((subItem) => (

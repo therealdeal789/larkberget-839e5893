@@ -44,14 +44,20 @@ const MobileNavigation = ({ navItems, isMenuOpen, closeMenu }: MobileNavigationP
           <nav className="flex flex-col space-y-1">
             {navItems.map((item) => (
               <div key={item.label}>
-                <Link 
-                  to={item.path}
-                  className="flex items-center justify-between text-xl font-medium py-4 text-larkberget-800 hover:text-trust-600 transition-colors border-b border-larkberget-100"
-                  onClick={closeMenu}
-                >
-                  <span>{item.label}</span>
-                  {item.hasDropdown && <ChevronDown className="w-5 h-5" />}
-                </Link>
+                {item.hasDropdown ? (
+                  <div className="flex items-center justify-between text-xl font-medium py-4 text-larkberget-800 border-b border-larkberget-100">
+                    <span>{item.label}</span>
+                    <ChevronDown className="w-5 h-5" />
+                  </div>
+                ) : (
+                  <Link 
+                    to={item.path}
+                    className="flex items-center justify-between text-xl font-medium py-4 text-larkberget-800 hover:text-trust-600 transition-colors border-b border-larkberget-100"
+                    onClick={closeMenu}
+                  >
+                    <span>{item.label}</span>
+                  </Link>
+                )}
                 {item.hasDropdown && (
                   <div className="ml-6 space-y-1 mt-2 pb-4">
                     {item.submenu?.map((subItem) => (
