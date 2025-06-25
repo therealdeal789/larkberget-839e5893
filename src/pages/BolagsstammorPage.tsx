@@ -1,3 +1,4 @@
+
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -22,15 +23,6 @@ const BolagsstammorPage = () => {
       { name: "CombiGene Fullmaktsförslag EBS 2025", url: "https://drive.google.com/file/d/1E2-vdo3tdoM8evnnqYtLbBnVANvicR-h/view?usp=drive_link" },
       { name: "Kallelse extra bolagsstämma i CombiGene AB", url: "https://drive.google.com/file/d/1IvjDLj4_f8Kvh5PmjamTACZmrvAJ0A-W/view?usp=drive_link" }
     ],
-    2024: [
-      { name: "Årsredovisning 2023", url: "https://drive.google.com/file/d/1a_D1cgwfcEzEJM1u87dQqvZgEvpFvGi2/view?usp=drive_link" },
-      { name: "Förslag till ny bolagsordning 2024", url: "https://drive.google.com/file/d/1dW_wnknB210ShsM-oFKDIMVmDUdtLzQE/view?usp=drive_link" },
-      { name: "Fullmaktsformulär 2024", url: "https://drive.google.com/file/d/1EnwtjXIzoA7F4AMeH08xQ4cjZGAouA3-/view?usp=drive_link" },
-      { name: "Kallelse årsstämma 2024", url: "https://drive.google.com/file/d/1lKCe9FHZsa53pbONG852C2eEPDULqcKh/view?usp=drive_link" },
-      { name: "Kommunike årsstämma 2024", url: "https://drive.google.com/file/d/16FsvgxKgkpZFv1Pw5hX6twfQd6Lum8md/view?usp=drive_link" },
-      { name: "Proxy formulär 2024", url: "https://drive.google.com/file/d/1aoavKJllZzrm0GHkVITEye1BuX7MEjDX/view?usp=drive_link" },
-      { name: "Valberedningens förslag 2024", url: "https://drive.google.com/file/d/190zHonuNDBM9nNOoV6Q79guHBoE-m7WH/view?usp=drive_link" }
-    ],
     "2024 Extra bolagsstämma": [
       { name: "Aktieägarens förslag till ny bolagsordning", url: "https://drive.google.com/file/d/1qwgH3JeamHTbLL632eOfr0iQLadqLl_s/view?usp=drive_link" },
       { name: "Aktieägarens förslag styrelse", url: "https://drive.google.com/file/d/1A3cKBYAJ-95VXfE0LSdr-QKuK6iK6iLg/view?usp=drive_link" },
@@ -40,6 +32,15 @@ const BolagsstammorPage = () => {
       { name: "Proxy form EGM 2024", url: "https://drive.google.com/file/d/1K861mlJd_ns_MLLVvwUgsejoE-yBz0ww/view?usp=drive_link" },
       { name: "Shareholders proposal board", url: "https://drive.google.com/file/d/1tW_syWsYynYEfOp-rOhofBkBoUfVQbn3/view?usp=drive_link" },
       { name: "Styrelsens förslag till ny bolagsordning", url: "https://drive.google.com/file/d/1lCZAt2C9l-XmNiGAtE6YTXkhjKyzwSdu/view?usp=drive_link" }
+    ],
+    2024: [
+      { name: "Årsredovisning 2023", url: "https://drive.google.com/file/d/1a_D1cgwfcEzEJM1u87dQqvZgEvpFvGi2/view?usp=drive_link" },
+      { name: "Förslag till ny bolagsordning 2024", url: "https://drive.google.com/file/d/1dW_wnknB210ShsM-oFKDIMVmDUdtLzQE/view?usp=drive_link" },
+      { name: "Fullmaktsformulär 2024", url: "https://drive.google.com/file/d/1EnwtjXIzoA7F4AMeH08xQ4cjZGAouA3-/view?usp=drive_link" },
+      { name: "Kallelse årsstämma 2024", url: "https://drive.google.com/file/d/1lKCe9FHZsa53pbONG852C2eEPDULqcKh/view?usp=drive_link" },
+      { name: "Kommunike årsstämma 2024", url: "https://drive.google.com/file/d/16FsvgxKgkpZFv1Pw5hX6twfQd6Lum8md/view?usp=drive_link" },
+      { name: "Proxy formulär 2024", url: "https://drive.google.com/file/d/1aoavKJllZzrm0GHkVITEye1BuX7MEjDX/view?usp=drive_link" },
+      { name: "Valberedningens förslag 2024", url: "https://drive.google.com/file/d/190zHonuNDBM9nNOoV6Q79guHBoE-m7WH/view?usp=drive_link" }
     ],
     2023: [
       { name: "Årsredovisning 2022", url: "https://drive.google.com/file/d/1iE3RbS_ouKjvnyhQB_1IxFf15zG6ioAQ/view?usp=drive_link" },
