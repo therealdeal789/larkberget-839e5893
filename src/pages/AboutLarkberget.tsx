@@ -2,7 +2,8 @@
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
-import { Target, TrendingUp, Building, Zap } from "lucide-react";
+import { Target, TrendingUp, Building, Zap, Users, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const AboutLarkberget = () => {
   return (
@@ -90,6 +91,32 @@ const AboutLarkberget = () => {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Link Section */}
+      <section className="py-12 bg-larkberget-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white rounded-lg shadow-sm border border-larkberget-200 p-8">
+              <div className="flex items-center justify-center mb-4">
+                <Users className="w-8 h-8 text-larkberget-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-larkberget-900 mb-4">
+                Ledning och Styrelse
+              </h3>
+              <p className="text-larkberget-600 mb-6">
+                Läs mer om vårt team och styrelse som leder Lärkberget framåt.
+              </p>
+              <Link 
+                to="/kontakt"
+                className="inline-flex items-center space-x-2 bg-larkberget-600 text-white px-6 py-3 rounded-lg hover:bg-larkberget-700 transition-colors font-medium"
+              >
+                <span>Ledning och Styrelse</span>
+                <ChevronRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
