@@ -4,7 +4,7 @@ export const contactPersons = [
     name: "Luca Di Stefano",
     title: "TF VD sedan 2025",
     phone: "+46 708 556 723",
-    email: "luca@larkberget.se",
+    email: "luca at larkberget.se",
     image: "/lovable-uploads/b4de0013-5df7-4bf2-9bcb-550116f27be6.png",
     bio: `Styrelseordförande sedan 2024, TF VD sedan 2025
     
@@ -24,7 +24,7 @@ Oberoende i förhållande till bolaget och bolagsledningen men inte till bolaget
     name: "Robert Klatzkow",
     title: "Styrelseordförande sedan 2025",
     phone: "+46 735 303 798",
-    email: "robert@larkberget.se",
+    email: "robert at larkberget.se",
     image: "/lovable-uploads/972dc6f6-bd3f-44df-a3a0-20bcd99067e9.png",
     bio: "Styrelseordförande sedan 2025. Mer information kommer inom kort."
   },
@@ -32,7 +32,7 @@ Oberoende i förhållande till bolaget och bolagsledningen men inte till bolaget
     name: "Marcus Isaksson",
     title: "Styrelseledamot sedan 2024",
     phone: "",
-    email: "marcus@larkberget.se",
+    email: "marcus at larkberget.se",
     image: "/lovable-uploads/b0caefa3-4b86-4997-876e-b49a4af912c4.png",
     bio: `Styrelseledamot sedan 2024
 
@@ -54,7 +54,7 @@ Oberoende i förhållande till bolaget och bolagsledningen och till bolagets st�
     name: "Alexander Gradin",
     title: "Styrelseledamot sedan 2025",
     phone: "",
-    email: "alexander@larkberget.se",
+    email: "alexander at larkberget.se",
     image: "/lovable-uploads/42a58b84-8829-45d3-aa26-38b0a28bc250.png",
     bio: `Styrelseledamot sedan 2025
 
@@ -74,7 +74,7 @@ Oberoende i förhållande till bolaget och bolagsledningen men inte i förhålla
     name: "Lars Thunberg",
     title: "Styrelsesuppleant sedan 2024",
     phone: "",
-    email: "lars@larkberget.se",
+    email: "lars at larkberget.se",
     image: "/lovable-uploads/8e2f8ba2-ca17-4fe9-bbac-6c6e069fb2cb.png",
     bio: `Styrelsesuppleant sedan 2024
 

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Mail, Phone, User } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -53,9 +54,9 @@ const ContactPersonCard = ({ person }: ContactPersonCardProps) => {
             )}
             <div className="flex items-center justify-center space-x-2">
               <Mail className="w-4 h-4 text-gray-600" />
-              <a href={`mailto:${person.email}`} className="text-gray-600 hover:text-larkberget-600 text-sm">
+              <span className="text-gray-600 text-sm">
                 {person.email}
-              </a>
+              </span>
             </div>
           </div>
           
@@ -72,7 +73,7 @@ const ContactPersonCard = ({ person }: ContactPersonCardProps) => {
               userSelect: 'none',
               WebkitUserSelect: 'none',
               MozUserSelect: 'none',
-              msUserSelect: 'none',
+              msUserSelect: 'none',  
               WebkitTouchCallout: 'none',
             }}
           >
