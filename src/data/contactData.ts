@@ -1,3 +1,4 @@
+
 export const contactPersons = [
   {
     name: "Luca Di Stefano",
@@ -15,7 +16,7 @@ Utbildning och erfarenhet: Luca Di Stefano har en marknadsekonomutbildning från
 
 Tidigare styrelseuppdrag/övriga befattningar: Storage 365, Spacett och Brandson.
 
-Innehav i CombiGene AB: Innehar inga aktier eller teckningsoptioner.
+Innehav i Lärkberget AB: Innehar inga aktier eller teckningsoptioner.
 
 Oberoende i förhållande till bolaget och bolagsledningen men inte till bolagets större aktieägare.`
   },
@@ -35,7 +36,7 @@ Utbildning och erfarenhet: Robert Klatzkow har gedigen erfarenhet inom försälj
 
 Tidigare styrelseuppdrag/övriga befattningar: Arbetat som VD, Försäljningschef, Rekryteringschef, Regionschef, Affärsområdeschef och Säljare
 
-Innehav i CombiGene AB: Innehar inga aktier eller teckningsoptioner.
+Innehav i Lärkberget AB: Innehar inga aktier eller teckningsoptioner.
 
 Oberoende i förhållande till bolaget och bolagsledningen men inte till bolagets större aktieägare.`
   },
@@ -57,7 +58,7 @@ Från 2010 till 2016 arbetade Marcus som investment manager på Partnerinvest, d
 
 Tidigare styrelseuppdrag/övriga befattningar: Styrelseledamot i Tanomed AB (förvärvat av Karo Bio) och Evosport AB (förvärvat av WeSport).
 
-Innehav i CombiGene AB: Indirekt innehav genom Thoren Tillväxt AB 494 894 aktier.
+Innehav i Lärkberget AB: Indirekt innehav genom Thoren Tillväxt AB 494 894 aktier.
 
 Oberoende i förhållande till bolaget och bolagsledningen och till bolagets större aktieägare.`
   },
@@ -77,7 +78,7 @@ Utbildning och erfarenhet: Alexander har en examen i data- och systemvetenskap o
 
 Tidigare styrelseuppdrag/övriga befattningar: VD för Beatly AB, VD The Skincare Revolution AB
 
-Innehav i CombiGene AB: Innehar inga aktier eller teckningsoptioner.
+Innehav i Lärkberget AB: Innehar inga aktier eller teckningsoptioner.
 
 Oberoende i förhållande till bolaget och bolagsledningen men inte i förhållande till större aktieägare.`
   },
@@ -97,7 +98,7 @@ Utbildning och erfarenhet: Lars innehar en examen i företagsekonomi från Lunds
 
 Tidigare styrelseuppdrag/övriga befattningar: Styrelseordförande, Styrelseledamot och vd för CombiGene, aXimed, aXichem, VA Automotive Groupe och Panion Animal Health. Styrelseledamot för Kristianstad University Holding och Kristianstad University Uppdrag. Samt flera andra mindre bolag.
 
-Innehav i CombiGene AB: Innehar via det närstående bolaget M & L Industriförvaltning AB 650 000 aktier i CombiGene.
+Innehav i Lärkberget AB: Innehar via det närstående bolaget M & L Industriförvaltning AB 650 000 aktier i CombiGene.
 
 Oberoende i förhållande till bolaget och bolagsledningen och till bolagets större aktieägare.`
   }
