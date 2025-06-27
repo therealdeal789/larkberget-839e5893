@@ -1,4 +1,3 @@
-
 export const contactPersons = [
   {
     name: "Luca Di Stefano",
@@ -26,7 +25,19 @@ Oberoende i förhållande till bolaget och bolagsledningen men inte till bolaget
     phone: "+46 735 303 798",
     email: "robert at larkberget.se",
     image: "/lovable-uploads/972dc6f6-bd3f-44df-a3a0-20bcd99067e9.png",
-    bio: "Styrelseordförande sedan 2025. Mer information kommer inom kort."
+    bio: `Styrelseordförande sedan 2024, TF VD sedan 2025
+
+Födelseår: 1969
+
+Utbildning och erfarenhet: Robert Klatzkow har gedigen erfarenhet inom försäljning, rekrytering och företagsutveckling och har sedan mitten av 1980-talet byggt upp en stark kompetens inom försäljning, strategiskt arbete och ledarskap. Han har startat, drivit och sålt flera framgångsrika företag. Robert bidrar med dokumenterad erfarenhet av att skapa lönsam tillväxt, både i egna och externa företag, och har en djup förståelse för entreprenörsdrivna bolags möjligheter och utmaningar. Med erfarenhet från styrelsearbete och utbildning från Styrelseakademin har Robert förmåga att skapa struktur och driva styrelsearbetet framåt.
+
+Övriga styrelseuppdrag: Egna företag samt Brunna Industripartner (ägarbolag till G-Tek)
+
+Tidigare styrelseuppdrag/övriga befattningar: Arbetat som VD, Försäljningschef, Rekryteringschef, Regionschef, Affärsområdeschef och Säljare
+
+Innehav i CombiGene AB: Innehar inga aktier eller teckningsoptioner.
+
+Oberoende i förhållande till bolaget och bolagsledningen men inte till bolagets större aktieägare.`
   },
   {
     name: "Marcus Isaksson",
