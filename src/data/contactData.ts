@@ -1,4 +1,3 @@
-
 export const contactPersons = [
   {
     name: "Luca Di Stefano",
@@ -26,7 +25,7 @@ Oberoende i förhållande till bolaget och bolagsledningen men inte till bolaget
     phone: "+46 735 303 798",
     email: "robert at larkberget.se",
     image: "/lovable-uploads/972dc6f6-bd3f-44df-a3a0-20bcd99067e9.png",
-    bio: `Styrelseordförande sedan 2024, TF VD sedan 2025
+    bio: `Styrelseordförande sedan 2024
 
 Födelseår: 1969
 
@@ -98,7 +97,7 @@ Utbildning och erfarenhet: Lars innehar en examen i företagsekonomi från Lunds
 
 Tidigare styrelseuppdrag/övriga befattningar: Styrelseordförande, Styrelseledamot och vd för CombiGene, aXimed, aXichem, VA Automotive Groupe och Panion Animal Health. Styrelseledamot för Kristianstad University Holding och Kristianstad University Uppdrag. Samt flera andra mindre bolag.
 
-Innehav i Lärkberget AB: Innehar via det närstående bolaget M & L Industriförvaltning AB 650 000 aktier i CombiGene.
+Innehav i Lärkberget AB: Innehar via det närstående bolaget M & L Industriförvaltning AB 650 000 aktier i Lärkberget.
 
 Oberoende i förhållande till bolaget och bolagsledningen och till bolagets större aktieägare.`
   }
