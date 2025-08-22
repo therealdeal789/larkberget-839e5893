@@ -36,10 +36,10 @@ const KalendariumPage = () => {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
                     <div>
-                      <h4 className="font-medium text-gray-900">Delårsrapport januari-juni 2025</h4>
+                      <h4 className="font-medium text-gray-900">Halvårsrapport jan–jun 2025</h4>
                       <p className="text-sm text-gray-600">Halvårsrapport för första halvåret 2025</p>
                     </div>
-                    <span className="text-sm font-medium text-larkberget-600">22 augusti, 2025</span>
+                    <span className="text-sm font-medium text-larkberget-600">21 augusti 2025</span>
                   </div>
                   
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
@@ -47,7 +47,39 @@ const KalendariumPage = () => {
                       <h4 className="font-medium text-gray-900">Bokslutskommuniké 2025</h4>
                       <p className="text-sm text-gray-600">Årsbokslut och kommuniké för 2025</p>
                     </div>
-                    <span className="text-sm font-medium text-larkberget-600">13 februari, 2026</span>
+                    <span className="text-sm font-medium text-larkberget-600">12 februari 2026</span>
+                  </div>
+
+                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                    <div>
+                      <h4 className="font-medium text-gray-900">Årsredovisning 2025</h4>
+                      <p className="text-sm text-gray-600">Fullständig årsredovisning för 2025</p>
+                    </div>
+                    <span className="text-sm font-medium text-larkberget-600">2 april 2026</span>
+                  </div>
+
+                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                    <div>
+                      <h4 className="font-medium text-gray-900">Årsstämma 2026</h4>
+                      <p className="text-sm text-gray-600">Ordinarie bolagsstämma för 2026</p>
+                    </div>
+                    <span className="text-sm font-medium text-larkberget-600">7 maj 2026</span>
+                  </div>
+
+                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                    <div>
+                      <h4 className="font-medium text-gray-900">Halvårsrapport jan–jun 2026</h4>
+                      <p className="text-sm text-gray-600">Halvårsrapport för första halvåret 2026</p>
+                    </div>
+                    <span className="text-sm font-medium text-larkberget-600">20 augusti 2026</span>
+                  </div>
+
+                  <div className="flex justify-between items-center py-3">
+                    <div>
+                      <h4 className="font-medium text-gray-900">Bokslutskommuniké 2026</h4>
+                      <p className="text-sm text-gray-600">Årsbokslut och kommuniké för 2026</p>
+                    </div>
+                    <span className="text-sm font-medium text-larkberget-600">11 februari 2027</span>
                   </div>
                 </div>
               </div>
