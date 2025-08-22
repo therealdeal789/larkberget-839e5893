@@ -36,14 +36,6 @@ const KalendariumPage = () => {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
                     <div>
-                      <h4 className="font-medium text-gray-900">Halvårsrapport jan–jun 2025</h4>
-                      <p className="text-sm text-gray-600">Halvårsrapport för första halvåret 2025</p>
-                    </div>
-                    <span className="text-sm font-medium text-larkberget-600">21 augusti 2025</span>
-                  </div>
-                  
-                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                    <div>
                       <h4 className="font-medium text-gray-900">Bokslutskommuniké 2025</h4>
                       <p className="text-sm text-gray-600">Årsbokslut och kommuniké för 2025</p>
                     </div>
