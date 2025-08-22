@@ -22,7 +22,7 @@ const LarkbergetHero = () => {
 
           {/* Description */}
           <p className="text-xl md:text-2xl text-larkberget-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Ett börsnoterat investmentbolag med fokus på långsiktiga investeringar 
+            Ett börsnoterat investeringsbolag med fokus på långsiktiga investeringar 
             och hållbar värdetillväxt för våra aktieägare.
           </p>
 

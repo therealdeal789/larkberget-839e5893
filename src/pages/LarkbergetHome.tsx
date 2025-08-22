@@ -22,7 +22,7 @@ const LarkbergetHome = () => {
               <span className="block text-larkberget-200 mt-2">investeringsbolag</span>
             </h1>
             <p className="text-xl text-white/80 dark:text-neutral-200 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Ett börsnoterat investmentbolag med fokus på långsiktiga investeringar 
+              Ett börsnoterat investeringsbolag med fokus på långsiktiga investeringar 
               och hållbar värdetillväxt för våra aktieägare.
             </p>
 
