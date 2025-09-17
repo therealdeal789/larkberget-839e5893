@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Leave empty and the MFN Loader will dynamically -->
+    <!-- fill in the title and description -->
+    <title></title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" type="text/css" href="themes/default/single.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- The container where the content will end up -->
+      <div id="container"></div>
+    </div>
+  </body>
+  <script type="application/javascript">
+    // Implements the MFN Loader javascript file
+    if (!window._MFN) {
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.src = "https://widget.mfn.se/v1/serve/assets/js/mfn-loader-v0.3.3.js";
+        s.async = true;
+        document.getElementsByTagName("body")[0].appendChild(s);
+    }
+
+    window._MFN = {
+
+        // The selector of the element where the content of the
+        // single news item should end up
+        outlet: '#container',
+
+        // The type of view
+        type: 'singleview',
+
+        // Default language of the news item shown
+        lang: 'all',
+
+        // 'selected' uses locale from lang, other options are 'en', 'sv' eg.
+        // and so on
+        l10nLang: 'sv',
+
+        // Feed ID, provided by MFN
+        feed_id: 'b64b654a-26ab-45a5-bf5e-78064331219e',
+
+        // Show timestamp and edit format
+        show_date: true,
+        hide_date_field: false,
+        hide_time_field: false,
+        date_time_separator: ' ',
+
+        // Show primary image
+        show_primary_image: true,
+
+        // Optionally add a prefix to the tab title (Meta description)
+        title_prefix: 'Press release / ',
+
+        // // Example of configuring locale and time zone,
+        // time_setting: {
+        //     // eg. for US: 'en-US',
+        //     locale: 'sv-SE',
+        //     option: {
+        //         hour: "2-digit",
+        //         minute: "2-digit",
+        //         // 12-hour clock format
+        //         hour12: true,
+        //         // eg. 'America/New_York'
+        //         timeZone: 'Europe/Stockholm'
+        //     }
+        // },
+        // date_setting: {
+        //     // eg. for US: 'en-US',
+        //     locale: 'sv-SE',
+        //      option: {
+        //         // or 'long', 'short',
+        //         month: 'numeric',
+        //         // or '2-digit',
+        //         year: 'numeric',
+        //         // or '2-digit',
+        //         day: 'numeric',
+        //         // eg. 'America/New_York'
+        //         timeZone: 'Europe/Stockholm'
+        //     }
+        // },
+
+        // If you want to implement your own custom date formatter
+        // you can add your own function
+        // format_date: function(date) {
+        //     return date.toLocaleTimeString('sv-SE', {
+        //         month: 'long',
+        //         year: 'numeric',
+        //         day: 'numeric',
+        //         timeZone: 'Europe/Stockholm'
+        //     });
+        // },
+
+        // Example of implementing your own HTML for a news item
+        // post_processor: function(current, item) {
+        //  console.log(item)
+        //     return '<div>' + item.content.title + '</div>'
+        // },
+
+        // 'default' or eg [{tag: ':regulatory'}]
+        show_tags: [{tag: ':regulatory'},{tag: 'sub:report:interim'},{tag: 'sub:report:annual'}],
+
+        // Should most likely be true
+        use_proxied_attachment_urls: true,
+
+        // Show attachments from API & hides attachments footer
+        show_attachments: false,
+
+        // if attachments should be displayed as thumbnails (Default as links)
+        // (To ensure high quality thumbnails on high resolution devices, we recommend using max size using CSS)
+        show_attachment_thumbnail: true,
+
+        // Enable if you want block the 'singleview' and instead to forward to the 'disclaimer' page
+        // when the user tries to visit the 'singleview' page without first approving the disclaimer
+        //disclaimer_redirect_tag: 'cus:disclaimer',
+        //disclaimer_redirect_url: 'disclaimer.html',
+
+    }
+  </script>
+</html>
