@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>MFN Loader</title>
+    </head>
+    <body>
+        <div id="disclaimer-step-one">
+          <h1>Disclaimer</h1>
+          <p>Your disclaimer text goes here</p>
+          <select id="disclaimer-country">
+            <option selected="" disabled="" value="">Choose</option>
+            <option value="AU">Australia</option>
+            <option value="CA">Canada</option>
+            <option value="NZ">New Zealand</option>
+            <option value="EEAQI">EEA (Qualified Investor)</option>
+            <option value="EEANQI">EEA (not a Qualified Investor)</option>
+            <option value="HK">Hong Kong</option>
+            <option value="JP">Japan</option>
+            <option value="UKQIRP">United Kingdom (Qualified Investor and Relevant Person)</option>
+            <option value="UKNQIRP">United Kingdom (not a Qualified Investor or not a Relevant Person)</option>
+            <option value="US">United States of America</option>
+            <option value="SE">Sweden</option>
+            <option value="OTHER">Other countries</option>
+          </select>
+          <button id="mfn-submit-step-one" type="submit" disabled>Continue</button>
+        </div>
+        <div id="disclaimer-step-error" style="display: none">
+          <h1>Disclaimer – Important</h1>
+          <p>Due to applicable legal restrictions, the information contained in this section of the website is restricted and is not for release,
+            publication or distribution, directly or indirectly, in whole or in part, in or into the United States of America
+            (including its territories and possessions, any state of the United States and the District of Columbia), Australia,
+            Canada, New Zealand, Hong Kong or Japan, or any other jurisdiction in which such release, publication or distribution might constitute
+            a violation of the local securities laws or regulations of such jurisdiction.</p>
+        </div>
+        <div id="disclaimer-step-two" style="display: none">
+          <h1>Disclaimer part 2</h1>
+          <p>Your disclaimer text goes here</p>
+          <div id="wrapper">
+            <!-- The container where the content will end up -->
+            <div id="container" class="content"></div>
+          </div>
+        </div>
+    </body>
+    <script type="application/javascript">
+        var country = document.getElementById("disclaimer-country");
+        var btn1 = document.getElementById("mfn-submit-step-one");
+        country.addEventListener('click', () => {
+          if (country.value !== "") {
+            btn1.removeAttribute('disabled')
+          }
+        })
+        btn1.onclick = function() {
+          if (["US","AU","CA","HK","JP","NZ","EEANQI","UKNQIRP"].filter(function (x) {return x === country.value}).length === 0) {
+            document.getElementById("disclaimer-step-one").style.display = 'none';
+            document.getElementById("disclaimer-step-two").style.display = 'block';
+          } else {
+            document.getElementById("disclaimer-step-one").style.display = 'none';
+            document.getElementById("disclaimer-step-error").style.display = 'block';
+          }
+        };
+
+        // Implements the MFN  Loader javascript file
+        if(!window._MFN) {
+            var s =  document.createElement("script");
+            s.type = "text/javascript";
+            s.src = "https://widget.mfn.se/v1/serve/assets/js/mfn-loader-v0.3.3.js";
+            s.async = true;
+            document.getElementsByTagName("body")[0].appendChild(s);
+        }
+        window._MFN = {
+            // The selector of the element where the content of the
+            // single news item should end up
+            outlet: '#container',
+
+            // The type of view
+            type: 'disclaimer',
+
+            // Default language of the news item shown
+            lang: 'all',
+
+            // 'selected' uses locale from lang, other options are 'en', 'sv' eg.
+            // and so on
+            l10nLang: 'selected',
+
+            single_view_url: 'single.html',
+        }
+    </script>
+</html>
