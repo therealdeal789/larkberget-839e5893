@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Example: MFN Loader (Default theme - Multi)</title>
+    <link rel="stylesheet" type="text/css" href="themes/default/list.css" />
+  </head>
+  <body>
+    <style>
+      .mfn-theme-menu {
+        font-family: Inter, sans-serif;
+      }
+
+      .mfn-theme-menu a {
+        text-decoration: none;
+        color: #1d7e6b;
+        font-weight: 500;
+      }
+
+      .mfn-theme-menu a:hover {
+        text-decoration: none;
+        color: #1d7e6b;
+        font-weight: 500;
+      }
+    </style>
+    <div class="mfn-theme-menu">
+      Theme/View: <a href="list.html">Default</a>
+      &middot;
+      <a href="list_flat.html">Flat</a>
+      &middot;
+      <a href="list_grid.html">Grid</a>
+      &middot;
+      <a href="list_multi.html" style="font-weight: 600">Multi</a>
+    </div>
+    <div id="wrapper">
+      <!-- The container(s) where the content will end up -->
+      <div id="container"></div>
+      <div id="container2"></div>
+    </div>
+  </body>
+  <script type="application/javascript">
+    // Implements the MFN-JS Loader javascript file
+    if (!window._MFN) {
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.src = "https://widget.mfn.se/v1/serve/assets/js/mfn-loader-v0.3.3.js";
+        s.async = true;
+        document.getElementsByTagName("body")[0].appendChild(s);
+    }
+
+    window._MFN = [{
+        // Element where the news feed should end up
+        outlet: '#container',
+
+        // Default language of the news items shown
+        lang: 'all',
+
+        // Filter feed on type: "all",  ir", "pr"
+        type_filter: "all",
+
+        // 'selected' uses locale from lang, other options are 'en', 'sv' eg.
+        // and so on
+        l10nLang: 'sv',
+
+        // The type of view
+        type: 'listview',
+
+        // Feed ID, provided by MFN
+        feed_id: 'b64b654a-26ab-45a5-bf5e-78064331219e',
+
+        // Path to the page where a single view version has been implemented
+        single_view_url: 'single.html',
+
+        // Enable if you want to activate a disclaimer page for news items
+        // of a specific tag
+        
+        //disclaimer_redirect_tag: 'cus:disclaimer',
+        //disclaimer_redirect_url: 'disclaimer.html',
+        
+
+        // Default limit of items shown
+        limit: 2,
+
+        // Adds a summary of the article
+        show_summary: true,
+
+        // Set preferred length of the summary, default: 250
+        // summary_len: 100,
+
+        // Cut length of summary to 'summary_len'
+        // good if you want to prevent long text, eg Disclaimer
+        summary_cut: true,
+
+        // 'default' (:regulatory, sub:report:interim, sub:report:annual)
+        // or add your own eg [{tag: ':regulatory'}]
+        show_tags: [{tag: ':regulatory'},{tag: 'sub:report:interim'},{tag: 'sub:report:annual'}],
+
+        // Show attachments
+        show_attachments: true,
+
+        // Enable clickable tags
+        clickable_tags: true,
+
+        // Toolbar
+        // Note: you can hide the toolbar by uncommenting it, and instead perhaps use 'tags' below for a default filter
+        toolbar: [
+            {
+                // show search
+                item: 'search',
+                // if true an Ajax search is added to the search bar
+                live_search: true,
+                // the debounce time for the ajax search if enabled
+                live_search_delay: 300,
+                // save space by combining search field, search button and clear button
+                slim_mode: false,
+                // auto hides the clear button
+                auto_hide_clear_button: true
+            },
+            // 'default' or [{tag: ':regulatory'}, {type: 'pr'}] etc.
+            {item: 'category', items: 'default' },
+            {item: 'year', start: 2010},
+            {
+                item: 'lang',
+                languages: ['sv', 'en']
+            },
+            {item: 'clear'}
+        ],
+
+        // Shows for example 'All (Categories)' in select inputs (Default)
+        show_select_info: true,
+
+        // Filter feed by the following tags
+        // Typical use cases:
+        // * Setting the default filtering in the toolbar
+        // * For custom 'listview' without a toolbar where you want to choose what to filter by in code
+        // tags: [':regulatory'],
+
+        // Your own local to override text selection or add for
+        // other l10n languages (For the toolbar text and tags)
+        l10n: {
+            'Search': {
+                sv: 'Sök',
+                
+                en: 'Search'
+            },
+            'Search placeholder': {
+                sv: 'Sök',
+                
+                en: 'Search'
+            },
+        },
+
+        // Show additional filter info, default: false
+        show_info: true,
+
+        // Show not found element, default: false
+        show_notfound: true,
+
+        // Override default 'not found' element
+        // notfound_tmpl: {
+        //  sv: '<div class="mfn-notfound"><span>Kunde inte hitta några nyhetsartiklar.</span></div>',//  en: '<div class="mfn-notfound"><span>Couldn\'t find any news articles.</span></div>',
+        // },
+
+        // Should most likely be true (Enables proxy attachments)
+        use_proxied_attachment_urls: true,
+
+        // Show current page in pagination
+        show_current_page: false,
+
+        // Show timestamp
+        show_date: true,
+        hide_date_field: false,
+        hide_time_field: false,
+        date_time_separator: "&nbsp;",
+
+        // Show read more link
+        show_read_more: true,
+
+        // // Example of configuring locale and time zone,
+        // time_setting: {
+        //     // eg. for US: 'en-US',
+        //     locale: 'sv-SE',
+        //     option: {
+        //         hour: "2-digit",
+        //         minute: "2-digit",
+        //         // 12-hour clock format
+        //         hour12: true,
+        //         // eg. 'America/New_York'
+        //         timeZone: 'Europe/Stockholm'
+        //     }
+        // },
+        // date_setting: {
+        //     // eg. for US: 'en-US',
+        //     locale: 'sv-SE',
+        //      option: {
+        //         // or 'long', 'short',
+        //         month: 'numeric',
+        //         // or '2-digit',
+        //         year: 'numeric',
+        //         // or '2-digit',
+        //         day: 'numeric',
+        //         // eg. 'America/New_York'
+        //         timeZone: 'Europe/Stockholm'
+        //     }
+        // },
+
+        // If you want to implement your own custom date formatter
+        // you can add your own function
+        // format_date: function(date) {
+        //     return date.toLocaleTimeString('sv-SE', {
+        //         month: 'long',
+        //         year: 'numeric',
+        //         day: 'numeric',
+        //         timeZone: 'Europe/Stockholm'
+        //     });
+        // },
+
+        // Example of implementing your own HTML for a news item
+        // post_processor: function(current, item) {
+        //  console.log(item);
+        //     return '<div>' + item.content.title + '</div>';
+        // }
+
+    },
+    {
+        // Element where the news feed should end up
+        outlet: '#container2',
+
+        // Default language of the news items shown
+        lang: 'en',
+
+        // 'selected' uses locale from lang, other options are 'en', 'sv' eg.
+        // and so on
+        l10nLang: 'sv',
+
+        // The type of view
+        type: 'listview',
+
+        // Feed ID, provided by MFN
+        feed_id: 'b64b654a-26ab-45a5-bf5e-78064331219e',
+
+        // Path to the page where a single view version has been implemented
+        single_view_url: 'single.html',
+
+        // Enable if you want to activate a disclaimer page for news items
+        // of a specific tag
+        
+        //disclaimer_redirect_tag: 'cus:disclaimer',
+        //disclaimer_redirect_url: 'disclaimer.html',
+        
+
+        // Default limit of items shown
+        limit: 4,
+
+        // Adds a summary of the article
+        show_summary: true,
+
+        // Set preferred length of the summary, default: 250
+        // summary_len: 100,
+
+        // Cut length of summary to 'summary_len'
+        // good if you want to prevent long text, eg Disclaimer
+        summary_cut: true,
+
+        // 'default' (:regulatory, sub:report:interim, sub:report:annual)
+        // or add your own eg [{tag: ':regulatory'}]
+        show_tags: [{tag: ':regulatory'},{tag: 'sub:report:interim'},{tag: 'sub:report:annual'}],
+
+        // Show attachments
+        show_attachments: true,
+
+        // Enable clickable tags
+        clickable_tags: true,
+
+        // Toolbar
+        // Note: you can hide the toolbar by uncommenting it, and instead perhaps use 'tags' below for a default filter
+        toolbar: [
+            {
+                // show search
+                item: 'search',
+                // if true an Ajax search is added to the search bar
+                live_search: true,
+                // the debounce time for the ajax search if enabled
+                live_search_delay: 300,
+                // save space by combining search field, search button and clear button
+                slim_mode: false,
+                // auto hides the clear button
+                auto_hide_clear_button: true
+            },
+            // 'default' or [{tag: ':regulatory'}, {type: 'pr'}] etc.
+            {item: 'category', items: [{tag: ':regulatory'}, {type: 'pr'}]},
+            {item: 'year', start: 2010},
+            {
+                item: 'lang',
+                languages: ['sv', 'en']
+            },
+            {item: 'clear'}
+        ],
+
+        // Shows for example 'All (Categories)' in select inputs (Default)
+        show_select_info: true,
+
+        // Filter feed by the following tags
+        // Typical use cases:
+        // * Setting the default filtering in the toolbar
+        // * For custom 'listview' without a toolbar where you want to choose what to filter by in code
+        // tags: [':regulatory'],
+
+        // Your own local to override text selection or add for
+        // other l10n languages (For the toolbar text and tags)
+        l10n: {
+            'Search': {
+                sv: 'Sök',
+                
+                en: 'Search'
+            },
+            'Search placeholder': {
+                sv: 'Sök',
+                
+                en: 'Search'
+            },
+        },
+
+        // Show additional filter info, default: false
+        show_info: true,
+
+        // Show not found element, default: false
+        show_notfound: true,
+
+        // Override default 'not found' element
+        // notfound_tmpl: {
+        //  sv: '<div class="mfn-notfound"><span>Kunde inte hitta några nyhetsartiklar.</span></div>',//  en: '<div class="mfn-notfound"><span>Couldn\'t find any news articles.</span></div>',
+        // },
+
+        // Should most likely be true (Enables proxy attachments)
+        use_proxied_attachment_urls: true,
+
+        // Show current page in pagination
+        show_current_page: false,
+
+        // Show timestamp
+        show_date: true,
+        hide_date_field: false,
+        hide_time_field: false,
+        date_time_separator: "&nbsp;",
+
+        // Filter feed on type: "all",  ir", "pr"
+        type_filter: "all",
+
+        // Show read more link
+        show_read_more: true,
+
+        // Example of configuring locale and time zone,
+        // Swedish timezone is default if date_setting is not set
+        
+        // date_setting: {
+        //     // eg. for US: 'en-US',
+        //     locale: 'sv-SE',
+        //      option: {
+        //         // or 'long', 'short',
+        //         month: 'numeric',
+        //         // or '2-digit',
+        //         year: 'numeric',
+        //         // or '2-digit',
+        //         day: 'numeric',
+        //         // eg. 'America/New_York'
+        //         timeZone: 'Europe/Stockholm'
+        //     }
+        // },
+        
+
+        // If you want to implement your own custom date formatter
+        // you can add your own function
+        // format_date: function(date) {
+        //     return date.toLocaleTimeString('sv-SE', {
+        //         month: 'long',
+        //         year: 'numeric',
+        //         day: 'numeric',
+        //         timeZone: 'Europe/Stockholm'
+        //     });
+        // },
+
+        // Example of implementing your own HTML for a news item
+        // post_processor: function(current, item) {
+        //  console.log(item);
+        //     return '<div>' + item.content.title + '</div>';
+        // }
+
+    }]
+  </script>
+</html>

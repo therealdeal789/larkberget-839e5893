@@ -1,0 +1,9 @@
+.mfn-report-item a {
+  text-decoration: none;
+  color: #1d1d1b;
+}
+
+.mfn-archive-container ul {
+  list-style: none;
+  padding-left: 0;
+}
