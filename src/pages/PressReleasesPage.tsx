@@ -18,16 +18,39 @@ const PressReleasesPage = () => {
     link.href = '/mfn-loader/themes/default/list.css';
     document.head.appendChild(link);
 
-    // Load MFN Loader script
-    if (!window._MFN) {
+    // Add error handling for the script loading
+    const loadMFNScript = () => {
+      console.log('Loading MFN script...');
+      
+      if (!window._MFN) {
         const s = document.createElement("script");
         s.type = "text/javascript";
         s.src = "https://widget.mfn.se/v1/serve/assets/js/mfn-loader-v0.3.3.js";
         s.async = true;
+        
+        s.onload = () => {
+          console.log('MFN script loaded successfully');
+          initializeMFN();
+        };
+        
+        s.onerror = (error) => {
+          console.error('Failed to load MFN script:', error);
+          console.log('Retrying with alternative approach...');
+          // Try direct initialization as fallback
+          initializeMFN();
+        };
+        
         document.getElementsByTagName("body")[0].appendChild(s);
-    }
+      } else {
+        initializeMFN();
+      }
+    };
 
-    window._MFN = {
+    const initializeMFN = () => {
+      console.log('Initializing MFN configuration...');
+      
+      // Set configuration directly on window
+      (window as any)._MFN = {
         outlet: '#container',
         lang: 'all',
         type_filter: "all",
@@ -42,28 +65,28 @@ const PressReleasesPage = () => {
         show_attachments: true,
         clickable_tags: true,
         toolbar: [
-            {
-                item: 'search',
-                live_search: true,
-                live_search_delay: 300,
-                slim_mode: false,
-                auto_hide_clear_button: true
-            },
-            {item: 'category', items: 'default'},
-            {item: 'year', start: 2010},
-            {item: 'lang', languages: ['sv', 'en']},
-            {item: 'clear'}
+          {
+            item: 'search',
+            live_search: true,
+            live_search_delay: 300,
+            slim_mode: false,
+            auto_hide_clear_button: true
+          },
+          {item: 'category', items: 'default'},
+          {item: 'year', start: 2010},
+          {item: 'lang', languages: ['sv', 'en']},
+          {item: 'clear'}
         ],
         show_select_info: true,
         l10n: {
-            'Search': {
-                sv: 'Sök',
-                en: 'Search'
-            },
-            'Search placeholder': {
-                sv: 'Sök',
-                en: 'Search'
-            }
+          'Search': {
+            sv: 'Sök',
+            en: 'Search'
+          },
+          'Search placeholder': {
+            sv: 'Sök',
+            en: 'Search'
+          }
         },
         show_info: true,
         show_notfound: true,
@@ -74,7 +97,13 @@ const PressReleasesPage = () => {
         hide_time_field: false,
         date_time_separator: "&nbsp;",
         show_read_more: true
+      };
+      
+      console.log('MFN configuration set:', (window as any)._MFN);
     };
+
+    // Start loading process
+    loadMFNScript();
 
     // Cleanup function
     return () => {
