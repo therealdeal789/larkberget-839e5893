@@ -21,9 +21,12 @@ const PressReleasesPage = () => {
     // Load MFN script
     const script = document.createElement('script');
     script.src = 'https://mfn.se/e/2/mfn.js';
-    script.onload = () => {
-      // Initialize MFN widget
+    script.async = true;
+    
+    const initWidget = () => {
+      console.log('MFN script loaded, initializing widget...');
       if (window._MFN) {
+        console.log('_MFN available, starting widget');
         window._MFN.start({
           'customer': '2475', 
           'container': 'mfn-list-widget',
@@ -37,14 +40,26 @@ const PressReleasesPage = () => {
           'view': 'titles',
           'theme': 'default'
         });
+      } else {
+        console.error('_MFN not available');
       }
     };
+
+    script.onload = initWidget;
+    script.onerror = (e) => {
+      console.error('Failed to load MFN script:', e);
+    };
+    
     document.head.appendChild(script);
 
     // Cleanup function
     return () => {
-      document.head.removeChild(link);
-      document.head.removeChild(script);
+      if (document.head.contains(link)) {
+        document.head.removeChild(link);
+      }
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
     };
   }, []);
 
