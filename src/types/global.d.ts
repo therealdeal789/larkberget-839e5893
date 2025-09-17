@@ -1,6 +1,13 @@
+
 declare global {
   interface Window {
-    _MFN: any;
+    _MF?: {
+      data: any[];
+      url: string;
+      ready: boolean;
+      render: () => void;
+      push: (w: any[]) => void;
+    };
   }
 }
 
