@@ -11,6 +11,7 @@ import FinancialReports from "./pages/FinancialReports";
 import ShareholdersPage from "./pages/ShareholdersPage";
 import ProspektPage from "./pages/ProspektPage";
 import PressReleasesPage from "./pages/PressReleasesPage";
+import PressReleaseSinglePage from "./pages/PressReleaseSinglePage";
 import ContactPage from "./pages/ContactPage";
 import CertifiedAdviserPage from "./pages/CertifiedAdviserPage";
 import BolagsstammorPage from "./pages/BolagsstammorPage";
@@ -48,6 +49,7 @@ const App = () => (
         <Route path="/investerare/bolagsstyrning/bolagsordning" element={<BolagsordningPage />} />
         <Route path="/investerare/bolagsstyrning/bolagsbeskrivning" element={<BolagsbeskrivningPage />} />
         <Route path="/pressmeddelanden" element={<PressReleasesPage />} />
+        <Route path="/pressmeddelanden/:id" element={<PressReleaseSinglePage />} />
         <Route path="/kontakt" element={<ContactPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

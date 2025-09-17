@@ -1,10 +1,9 @@
-
 import React, { useEffect } from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
-import MFNPressList from "@/components/MFNPressList";
+import MFNPressSingle from "@/components/MFNPressSingle";
 
-const PressReleasesPage = () => {
+const PressReleaseSinglePage = () => {
   // Load MFN CSS files
   useEffect(() => {
     const loadCSS = (href: string) => {
@@ -17,7 +16,7 @@ const PressReleasesPage = () => {
 
     const cssFiles = [
       '/css/general.css',
-      '/css/list.css',
+      '/css/single.css',
       '/css/archive.css'
     ];
 
@@ -37,25 +36,21 @@ const PressReleasesPage = () => {
       <LarkbergetNavbar />
       
       {/* Hero Section with matching styling */}
-      <section className="bg-gradient-to-br from-larkberget-500 via-trust-700 to-larkberget-900 text-white pt-48 pb-32">
+      <section className="bg-gradient-to-br from-larkberget-500 via-trust-700 to-larkberget-900 text-white pt-48 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Pressmeddelanden
+              Pressmeddelande
             </h1>
           </div>
         </div>
       </section>
 
-      {/* Press Releases Section */}
+      {/* Press Release Content */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-semibold text-larkberget-900 mb-8 text-center">
-              Pressmeddelanden & Nyheter
-            </h2>
-            
-            <MFNPressList limit={20} />
+            <MFNPressSingle />
           </div>
         </div>
       </section>
@@ -65,4 +60,4 @@ const PressReleasesPage = () => {
   );
 };
 
-export default PressReleasesPage;
+export default PressReleaseSinglePage;
