@@ -1,6 +1,7 @@
 
 import React from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
+import NewsAlert from "@/components/NewsAlert";
 import LarkbergetAboutOverview from "@/components/LarkbergetAboutOverview";
 import LarkbergetInvestorHighlights from "@/components/LarkbergetInvestorHighlights";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
@@ -12,6 +13,7 @@ const LarkbergetHome = () => {
   return (
     <div className="min-h-screen">
       <LarkbergetNavbar />
+      <NewsAlert />
       
       {/* Hero Section with Aurora Background */}
       <AuroraBackground className="pt-24 pb-20 h-[70vh]">
