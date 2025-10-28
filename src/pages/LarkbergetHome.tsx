@@ -13,7 +13,6 @@ const LarkbergetHome = () => {
   return (
     <div className="min-h-screen">
       <LarkbergetNavbar />
-      <NewsAlert />
       
       {/* Hero Section with Aurora Background */}
       <AuroraBackground className="pt-24 pb-20 h-[70vh]">
@@ -49,6 +48,8 @@ const LarkbergetHome = () => {
           </div>
         </div>
       </AuroraBackground>
+
+      <NewsAlert />
 
       <main>
         <LarkbergetAboutOverview />
