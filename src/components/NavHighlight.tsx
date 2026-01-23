@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import {
@@ -16,11 +16,70 @@ const navData = [
   { date: "2026-01-15", nav: 3.08, label: "15 jan 2026" },
 ];
 
+// Animated counter hook
+const useCountUp = (end: number, duration: number = 1500, startOnView: boolean = true) => {
+  const [count, setCount] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!startOnView) {
+      setHasStarted(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasStarted) {
+          setHasStarted(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasStarted, startOnView]);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    let startTime: number;
+    let animationFrame: number;
+
+    const animate = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      
+      // Easing function for smooth animation
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      setCount(easeOutQuart * end);
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [end, duration, hasStarted]);
+
+  return { count, ref };
+};
+
 const NavHighlight = () => {
   const latestNav = navData[navData.length - 1].nav;
   const previousNav = navData[0].nav;
   const change = latestNav - previousNav;
-  const changePercent = ((change / previousNav) * 100).toFixed(2);
+  const changePercent = ((change / previousNav) * 100);
+
+  const { count: animatedNav, ref: navRef } = useCountUp(latestNav, 1500);
+  const { count: animatedChange, ref: changeRef } = useCountUp(change, 1500);
+  const { count: animatedPercent, ref: percentRef } = useCountUp(changePercent, 1500);
 
   return (
     <section className="py-16 bg-gradient-to-br from-larkberget-50 to-white">
@@ -35,9 +94,9 @@ const NavHighlight = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
             {/* Left: Current NAV info */}
-            <div className="bg-white rounded-2xl shadow-lg border border-earth-200 p-8">
+            <div ref={navRef} className="bg-white rounded-2xl shadow-lg border border-earth-200 p-8 flex flex-col">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-larkberget-100 rounded-full flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 text-larkberget-600" />
@@ -49,19 +108,21 @@ const NavHighlight = () => {
               </div>
               
               <div className="mb-6">
-                <p className="text-5xl font-bold text-larkberget-700">{latestNav.toFixed(2)} <span className="text-2xl">SEK</span></p>
-                <div className="flex items-center gap-2 mt-2">
+                <p className="text-5xl font-bold text-larkberget-700">
+                  {animatedNav.toFixed(2)} <span className="text-2xl">SEK</span>
+                </p>
+                <div ref={changeRef} className="flex items-center gap-2 mt-2">
                   <span className={`text-lg font-medium ${change >= 0 ? 'text-larkberget-600' : 'text-red-600'}`}>
-                    {change >= 0 ? '+' : ''}{change.toFixed(2)} SEK
+                    {change >= 0 ? '+' : ''}{animatedChange.toFixed(2)} SEK
                   </span>
-                  <span className={`text-sm px-2 py-1 rounded-full ${change >= 0 ? 'bg-larkberget-100 text-larkberget-700' : 'bg-red-100 text-red-700'}`}>
-                    {change >= 0 ? '+' : ''}{changePercent}%
+                  <span ref={percentRef} className={`text-sm px-2 py-1 rounded-full ${change >= 0 ? 'bg-larkberget-100 text-larkberget-700' : 'bg-red-100 text-red-700'}`}>
+                    {change >= 0 ? '+' : ''}{animatedPercent.toFixed(2)}%
                   </span>
                 </div>
               </div>
 
               {/* Mini table */}
-              <div className="border-t border-earth-200 pt-4">
+              <div className="border-t border-earth-200 pt-4 flex-grow">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="text-trust-500">
@@ -90,9 +151,9 @@ const NavHighlight = () => {
             </div>
 
             {/* Right: Chart */}
-            <div className="bg-white rounded-2xl shadow-lg border border-earth-200 p-6">
+            <div className="bg-white rounded-2xl shadow-lg border border-earth-200 p-8 flex flex-col">
               <h3 className="text-lg font-semibold text-larkberget-900 mb-4">NAV-utveckling</h3>
-              <div className="h-64">
+              <div className="flex-grow min-h-[280px]">
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart
                     data={navData}
