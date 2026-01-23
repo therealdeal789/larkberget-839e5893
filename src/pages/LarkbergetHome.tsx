@@ -4,6 +4,7 @@ import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import NewsAlert from "@/components/NewsAlert";
 import LarkbergetAboutOverview from "@/components/LarkbergetAboutOverview";
 import LarkbergetInvestorHighlights from "@/components/LarkbergetInvestorHighlights";
+import NavHighlight from "@/components/NavHighlight";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { ArrowRight } from "lucide-react";
@@ -53,6 +54,7 @@ const LarkbergetHome = () => {
 
       <main>
         <LarkbergetAboutOverview />
+        <NavHighlight />
         <LarkbergetInvestorHighlights />
       </main>
       <LarkbergetFooter />
