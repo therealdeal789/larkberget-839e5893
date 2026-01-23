@@ -16,6 +16,7 @@ import CertifiedAdviserPage from "./pages/CertifiedAdviserPage";
 import BolagsstammorPage from "./pages/BolagsstammorPage";
 import BolagsordningPage from "./pages/BolagsordningPage";
 import BolagsbeskrivningPage from "./pages/BolagsbeskrivningPage";
+import NavPage from "./pages/NavPage";
 import NotFound from "./pages/NotFound";
 
 // Component to handle scroll to top on route change
@@ -42,8 +43,8 @@ const App = () => (
         <Route path="/investerare/kalendarium" element={<KalendariumPage />} />
         <Route path="/investerare/finansiella-rapporter" element={<FinancialReports />} />
         <Route path="/investerare/aktieagare" element={<ShareholdersPage />} />
+        <Route path="/investerare/nav" element={<NavPage />} />
         <Route path="/investerare/prospekt-im" element={<ProspektPage />} />
-        <Route path="/investerare/radgivare" element={<CertifiedAdviserPage />} />
         <Route path="/investerare/bolagsstyrning/bolagsstammor" element={<BolagsstammorPage />} />
         <Route path="/investerare/bolagsstyrning/bolagsordning" element={<BolagsordningPage />} />
         <Route path="/investerare/bolagsstyrning/bolagsbeskrivning" element={<BolagsbeskrivningPage />} />
