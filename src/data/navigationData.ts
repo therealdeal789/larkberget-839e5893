@@ -13,6 +13,7 @@ export const navItems: NavItem[] = [
       { label: "Kalendarium", path: "/investerare/kalendarium" },
       { label: "Finansiella rapporter", path: "/investerare/finansiella-rapporter" },
       { label: "Bolags- och aktieinformation", path: "/investerare/aktieagare" },
+      { label: "NAV", path: "/investerare/nav" },
       { label: "Prospekt/IM", path: "/investerare/prospekt-im" },
       { 
         label: "Bolagsstyrning", 
