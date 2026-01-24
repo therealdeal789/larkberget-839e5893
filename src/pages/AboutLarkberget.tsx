@@ -31,7 +31,7 @@ const AboutLarkberget = () => {
                 Lärkberget AB (tidigare CombiGene AB) är ett svenskt publikt bolag med en lång börshistorik. Bolaget noterades ursprungligen under namnet CombiGene AB på Aktietorget (nuvarande Spotlight Stock Market) den 25 maj 2015. Den 19 december 2018 bytte bolaget handelsplats till Nasdaq First North Growth Market i syfte att stärka sin tillgång till kapitalmarknaden.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Under 2025 har ett strategiskt skifte genomförts där bolaget transformerats till ett investeringsbolag, och i samband med detta har namnbytet till Lärkberget AB genomförts. Den nya inriktningen innebär ett brett men selektivt investeringsmandat, uppdelat i fyra huvudsakliga verksamhetsområden:
+                Under 2025 har ett strategiskt skifte genomförts där bolaget transformerats till ett investeringsbolag, och i samband med detta har namnbytet till Lärkberget AB genomförts. Den nya inriktningen innebär ett brett men selektivt investeringsmandat, uppdelat i tre huvudsakliga verksamhetsområden:
               </p>
             </div>
 
@@ -45,7 +45,7 @@ const AboutLarkberget = () => {
                     <Target className="w-6 h-6 text-trust-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Direktinvesteringar i lågriskinstrument</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Investeringar i lågriskinstrument</h3>
                     <p className="text-gray-600 leading-relaxed">
                       Lärkberget placerar delar av sina likvida medel i räntebärande värdepapper och andra instrument med låg risk och förutsägbar avkastning. Detta utgör en aktiv del av kassaförvaltningen och syftar till att säkerställa en stabil finansiell grund.
                     </p>
@@ -69,24 +69,13 @@ const AboutLarkberget = () => {
                     <Building className="w-6 h-6 text-trust-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Direktinvesteringar i onoterade lönsamma bolag</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Investeringar i onoterade lönsamma bolag</h3>
                     <p className="text-gray-600 leading-relaxed">
                       Lärkberget investerar i noggrant utvalda, kassaflödesgenererande onoterade företag med bevisade affärsmodeller och hållbar lönsamhet. Genom aktivt ägande bidrar bolaget till fortsatt tillväxt och värdeskapande i dessa verksamheter.
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-earth-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Zap className="w-6 h-6 text-earth-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Plattform för omvänt förvärv</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      Bolaget etablerar en strukturell bas för att möjliggöra ett eller flera omvända förvärv. Genom att nyttja Lärkbergets publika struktur och kapitalbas erbjuds målbolag en effektiv väg till kapitalmarknaden.
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
 
