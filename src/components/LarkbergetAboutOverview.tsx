@@ -13,7 +13,7 @@ const LarkbergetAboutOverview = () => {
               Om Lärkberget
             </h2>
             <p className="section-subtitle mb-8 mx-auto text-center">
-              Fyra huvudinriktningar för investeringsverksamheten
+              Tre huvudinriktningar för investeringsverksamheten
             </p>
           </div>
           
@@ -54,17 +54,6 @@ const LarkbergetAboutOverview = () => {
               </div>
             </div>
             
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-earth-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Zap className="w-6 h-6 text-earth-600" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-larkberget-900 mb-3">Plattform för omvänt förvärv</h3>
-                <p className="text-larkberget-600">
-                  Vi utvecklar en plattform som gör det möjligt att genomföra omvända förvärv. Genom vår publika struktur och kapitalbas kan vi hjälpa tillväxtbolag att nå börsen snabbare och mer kostnadseffektivt, samtidigt som vi skapar affärsmöjligheter med långsiktig avkastningspotential.
-                </p>
-              </div>
-            </div>
           </div>
 
           <div className="text-center">
