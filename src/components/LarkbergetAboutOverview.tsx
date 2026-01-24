@@ -23,7 +23,7 @@ const LarkbergetAboutOverview = () => {
                 <Target className="w-7 h-7 text-trust-600" />
               </div>
               <div>
-                <h3 className="font-semibold text-larkberget-900 mb-3">Direktinvesteringar i lågriskinstrument</h3>
+                <h3 className="font-semibold text-larkberget-900 mb-3">Investeringar i lågriskinstrument</h3>
                 <p className="text-larkberget-600 text-sm">
                   Vi placerar bolagets likvida medel i räntebärande värdepapper och andra stabila instrument med låg risk. Syftet är att säkerställa en förutsägbar avkastning och en trygg kassaförvaltning som utgör en viktig del i bolagets finansiella strategi och kapitalbevarande över tid.
                 </p>
@@ -47,7 +47,7 @@ const LarkbergetAboutOverview = () => {
                 <Building className="w-7 h-7 text-trust-600" />
               </div>
               <div>
-                <h3 className="font-semibold text-larkberget-900 mb-3">Direktinvesteringar i onoterade lönsamma bolag</h3>
+                <h3 className="font-semibold text-larkberget-900 mb-3">Investeringar i onoterade lönsamma bolag</h3>
                 <p className="text-larkberget-600 text-sm">
                   Vi investerar i utvalda onoterade bolag med bevisad affärsmodell, hållbar lönsamhet och positivt kassaflöde. Genom aktivt ägande och nära samarbete skapar vi förutsättningar för värdetillväxt och bidrar till bolagens fortsatta utveckling på ett långsiktigt och strukturerat sätt.
                 </p>
