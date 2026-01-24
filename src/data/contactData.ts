@@ -62,26 +62,6 @@ Innehav i Lärkberget AB: Indirekt innehav genom Thoren Tillväxt AB 494 894 akt
 Oberoende i förhållande till bolaget och bolagsledningen och till bolagets större aktieägare.`
   },
   {
-    name: "Alexander Gradin",
-    title: "Styrelseledamot sedan 2025",
-    phone: "",
-    email: "alexander at larkberget.se",
-    image: "/lovable-uploads/42a58b84-8829-45d3-aa26-38b0a28bc250.png",
-    bio: `Styrelseledamot sedan 2025
-
-Födelseår: 1989
-
-Utbildning och erfarenhet: Alexander har en examen i data- och systemvetenskap och har en bred erfarenhet inom entreprenörskap, tech och finans. Han grundade marketing tech-bolaget Beatly AB år 2015, där han var VD med ansvar för produktutveckling till 2020, för att därefter vara försäljningschef till 2022. Mellan 2020 och 2022 arbetade Alexander med kapitalresning åt privata bolag, samt grundade ett e-handelsbolag, The Skincare Revolution AB, som avyttrades till Lyko 2023. Utöver detta har Alexander varit IT-konsult med fokus på IT-säkerhet, webbutveckling och cloudmiljö, primärt för bolag inom den finansiella sektorn. Sedan 2024 är han VD på AG Equity Research AB.
-
-Övriga styrelseuppdrag: VD och styrelseledamot i AG Equity Research AB, Styrelseledamot i Vestona AB, Styrelseledamot i Vibe Ventures AB, Suppleant i The Socials 29660 AB, Suppleant i Ran Invest AB
-
-Tidigare styrelseuppdrag/övriga befattningar: VD för Beatly AB, VD The Skincare Revolution AB
-
-Innehav i Lärkberget AB: Innehar inga aktier eller teckningsoptioner.
-
-Oberoende i förhållande till bolaget och bolagsledningen men inte i förhållande till större aktieägare.`
-  },
-  {
     name: "Lars Thunberg",
     title: "Styrelsesuppleant sedan 2024",
     phone: "",
