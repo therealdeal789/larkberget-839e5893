@@ -17,43 +17,42 @@ const LarkbergetAboutOverview = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-trust-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Target className="w-6 h-6 text-trust-600" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="flex flex-col items-center text-center space-y-4">
+              <div className="w-14 h-14 bg-trust-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Target className="w-7 h-7 text-trust-600" />
               </div>
               <div>
                 <h3 className="font-semibold text-larkberget-900 mb-3">Direktinvesteringar i lågriskinstrument</h3>
-                <p className="text-larkberget-600">
+                <p className="text-larkberget-600 text-sm">
                   Vi placerar bolagets likvida medel i räntebärande värdepapper och andra stabila instrument med låg risk. Syftet är att säkerställa en förutsägbar avkastning och en trygg kassaförvaltning som utgör en viktig del i bolagets finansiella strategi och kapitalbevarande över tid.
                 </p>
               </div>
             </div>
             
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-earth-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <TrendingUp className="w-6 h-6 text-earth-600" />
+            <div className="flex flex-col items-center text-center space-y-4">
+              <div className="w-14 h-14 bg-earth-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <TrendingUp className="w-7 h-7 text-earth-600" />
               </div>
               <div>
                 <h3 className="font-semibold text-larkberget-900 mb-3">Finansiella placeringar</h3>
-                <p className="text-larkberget-600">
+                <p className="text-larkberget-600 text-sm">
                   En del av kapitalet används för investeringar i noterade aktier, fonder och andra likvida tillgångar. Vi deltar även i brygglån och kan ställa ut garantiåtaganden. Samtliga investeringar görs med fokus på likviditet, riskspridning och möjligheten till god riskjusterad avkastning.
                 </p>
               </div>
             </div>
             
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-trust-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Building className="w-6 h-6 text-trust-600" />
+            <div className="flex flex-col items-center text-center space-y-4">
+              <div className="w-14 h-14 bg-trust-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Building className="w-7 h-7 text-trust-600" />
               </div>
               <div>
                 <h3 className="font-semibold text-larkberget-900 mb-3">Direktinvesteringar i onoterade lönsamma bolag</h3>
-                <p className="text-larkberget-600">
+                <p className="text-larkberget-600 text-sm">
                   Vi investerar i utvalda onoterade bolag med bevisad affärsmodell, hållbar lönsamhet och positivt kassaflöde. Genom aktivt ägande och nära samarbete skapar vi förutsättningar för värdetillväxt och bidrar till bolagens fortsatta utveckling på ett långsiktigt och strukturerat sätt.
                 </p>
               </div>
             </div>
-            
           </div>
 
           <div className="text-center">
