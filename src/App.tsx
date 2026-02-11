@@ -48,6 +48,7 @@ const App = () => (
         <Route path="/investerare/bolagsstyrning/bolagsstammor" element={<BolagsstammorPage />} />
         <Route path="/investerare/bolagsstyrning/bolagsordning" element={<BolagsordningPage />} />
         <Route path="/investerare/bolagsstyrning/bolagsbeskrivning" element={<BolagsbeskrivningPage />} />
+        <Route path="/investerare/radgivare" element={<CertifiedAdviserPage />} />
         <Route path="/pressmeddelanden" element={<PressReleasesPage />} />
         <Route path="/kontakt" element={<ContactPage />} />
         <Route path="*" element={<NotFound />} />
