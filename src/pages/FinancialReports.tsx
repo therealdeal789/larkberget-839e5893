@@ -78,45 +78,60 @@ const FinancialReports = () => {
             Här hittar du Lärkbergets delårsrapporter och årsredovisningar.
           </p>
 
-          {/* 2026 Reports */}
+          {/* 2026 Reports - Collapsible */}
           <div
             style={{
               maxWidth: "900px",
               marginInline: "auto",
               marginBottom: "2rem",
               backgroundColor: "#ffffff",
-              padding: "32px",
               borderRadius: "12px",
               boxShadow: "0 2px 10px rgba(0, 0, 0, 0.04)",
+              overflow: "hidden",
             }}
           >
-            <h3 style={{ fontSize: "1.25rem", fontWeight: 600, color: "#1f3b57", marginBottom: "1rem" }}>
-              2026
-            </h3>
-            <a
-              href="/reports/Larkberget_Bokslutskommunike_2025.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "12px",
-                padding: "12px 16px",
-                borderRadius: "8px",
-                border: "1px solid #e5e7eb",
-                textDecoration: "none",
-                color: "#1f3b57",
-                transition: "background-color 0.2s",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#f9fafb")}
-              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
-            >
-              <img src="/png/file-pdf.png" alt="PDF" style={{ width: "32px", height: "32px" }} />
-              <div>
-                <div style={{ fontWeight: 500 }}>Bokslutskommuniké 2025</div>
-                <div style={{ fontSize: "0.875rem", color: "#6b7280" }}>Publicerad 2026-02-12</div>
+            <details open>
+              <summary
+                style={{
+                  fontSize: "1.1rem",
+                  fontWeight: 600,
+                  color: "#1f3b57",
+                  padding: "20px 32px",
+                  cursor: "pointer",
+                  listStyle: "none",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  userSelect: "none",
+                }}
+              >
+                2026
+                <span style={{ fontSize: "0.75rem", color: "#9ca3af" }}>▼</span>
+              </summary>
+              <div style={{ padding: "8px 32px 24px" }}>
+                <a
+                  href="/reports/Larkberget_Bokslutskommunike_2025.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    padding: "10px 12px",
+                    borderRadius: "6px",
+                    textDecoration: "none",
+                    color: "#1f3b57",
+                    fontSize: "0.9rem",
+                    transition: "background-color 0.2s",
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#f3f4f6")}
+                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
+                >
+                  <span style={{ fontSize: "1rem" }}>📄</span>
+                  Bokslutskommuniké 2025
+                </a>
               </div>
-            </a>
+            </details>
           </div>
 
           <div
