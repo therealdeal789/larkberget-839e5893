@@ -78,6 +78,47 @@ const FinancialReports = () => {
             Här hittar du Lärkbergets delårsrapporter och årsredovisningar.
           </p>
 
+          {/* 2026 Reports */}
+          <div
+            style={{
+              maxWidth: "900px",
+              marginInline: "auto",
+              marginBottom: "2rem",
+              backgroundColor: "#ffffff",
+              padding: "32px",
+              borderRadius: "12px",
+              boxShadow: "0 2px 10px rgba(0, 0, 0, 0.04)",
+            }}
+          >
+            <h3 style={{ fontSize: "1.25rem", fontWeight: 600, color: "#1f3b57", marginBottom: "1rem" }}>
+              2026
+            </h3>
+            <a
+              href="/reports/Larkberget_Bokslutskommunike_2025.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "12px",
+                padding: "12px 16px",
+                borderRadius: "8px",
+                border: "1px solid #e5e7eb",
+                textDecoration: "none",
+                color: "#1f3b57",
+                transition: "background-color 0.2s",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#f9fafb")}
+              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
+            >
+              <img src="/png/file-pdf.png" alt="PDF" style={{ width: "32px", height: "32px" }} />
+              <div>
+                <div style={{ fontWeight: 500 }}>Bokslutskommuniké 2025</div>
+                <div style={{ fontSize: "0.875rem", color: "#6b7280" }}>Publicerad 2026-02-12</div>
+              </div>
+            </a>
+          </div>
+
           <div
             id="rapportarkiv"
             style={{
