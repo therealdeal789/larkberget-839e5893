@@ -7,16 +7,14 @@ const NewsAlert = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
           <p className="text-sm sm:text-base font-medium text-gray-900">
-            Lärkberget investerar 50 miljoner kronor för en andel om 12,9 % i NAXS AB.
+            Lärkberget har offentliggjort bokslutskommunikén för 2025.
           </p>
           
           <a
-            href="https://www.mfn.se/a/larkberget/larkberget-ab-publ-investerar-50-msek-i-naxs-ab-publ"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/investerare/finansiella-rapporter"
             className="inline-flex items-center gap-2 bg-larkberget-600 hover:bg-larkberget-700 text-white font-medium px-4 py-2 rounded-lg transition-all duration-300 shadow-sm hover:shadow-md text-sm whitespace-nowrap"
           >
-            Läs pressmeddelande
+            Läs rapporten
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
