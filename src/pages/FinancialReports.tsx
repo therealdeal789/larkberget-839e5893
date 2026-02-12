@@ -128,7 +128,7 @@ const FinancialReports = () => {
                   onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
                 >
                   <span style={{ fontSize: "1rem" }}>📄</span>
-                  Bokslutskommuniké 2025
+                  <span>Bokslutskommuniké 2025 <span style={{ color: "#9ca3af", fontSize: "0.8rem" }}>– 12 februari 2026</span></span>
                 </a>
               </div>
             </details>
