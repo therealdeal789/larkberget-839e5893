@@ -104,63 +104,51 @@ const FinancialReports = () => {
                   userSelect: "none",
                 }}
               >
-                <span style={{ fontSize: "0.7rem", transition: "transform 0.2s" }}>▼</span>
+                <span style={{ fontSize: "0.75rem", transition: "transform 0.2s" }}>▶</span>
                 2026
               </summary>
               <div style={{ paddingBottom: "16px" }}>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    padding: "8px 0",
-                    borderBottom: "1px solid #e5e7eb",
-                    marginBottom: "8px",
-                  }}
-                >
-                  <span style={{ fontWeight: 500, color: "#6b7280", fontSize: "14px" }}></span>
-                  <span style={{ fontWeight: 500, color: "#6b7280", fontSize: "14px" }}>Rapport</span>
-                </div>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    padding: "12px 0",
-                  }}
-                >
-                  <div>
-                    <a
-                      href="/reports/Larkberget_Bokslutskommunike_2025.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        textDecoration: "none",
-                        color: "#1f3b57",
-                        fontWeight: 500,
-                      }}
-                      onMouseEnter={(e) => (e.currentTarget.style.textDecoration = "underline")}
-                      onMouseLeave={(e) => (e.currentTarget.style.textDecoration = "none")}
-                    >
-                      Bokslutskommuniké Q4 2025
-                    </a>
-                    <time style={{ display: "block", color: "#6b7280", fontSize: "13px", marginTop: "2px" }}>
-                      2026-02-12
-                    </time>
-                  </div>
-                  <a
-                    href="/reports/Larkberget_Bokslutskommunike_2025.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Ladda ner PDF"
-                  >
-                    <img
-                      src="/png/file-pdf.png"
-                      alt="PDF"
-                      style={{ width: "28px", height: "28px", opacity: 0.7 }}
-                    />
-                  </a>
-                </div>
+                <table style={{ width: "auto", borderCollapse: "collapse" }}>
+                  <thead>
+                    <tr>
+                      <th style={{ textAlign: "left", padding: "8px 40px 8px 0", fontWeight: 500, color: "#6b7280", fontSize: "14px", borderBottom: "1px solid #e5e7eb" }}></th>
+                      <th style={{ textAlign: "center", padding: "8px 0", fontWeight: 500, color: "#6b7280", fontSize: "14px", borderBottom: "1px solid #e5e7eb" }}>Rapport</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style={{ padding: "12px 40px 12px 0", verticalAlign: "top" }}>
+                        <a
+                          href="/reports/Larkberget_Bokslutskommunike_2025.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ textDecoration: "none", color: "#1f3b57", fontWeight: 500 }}
+                          onMouseEnter={(e) => (e.currentTarget.style.textDecoration = "underline")}
+                          onMouseLeave={(e) => (e.currentTarget.style.textDecoration = "none")}
+                        >
+                          Bokslutskommuniké Q4 2025
+                        </a>
+                        <time style={{ display: "block", color: "#6b7280", fontSize: "13px", marginTop: "2px" }}>
+                          2026-02-12
+                        </time>
+                      </td>
+                      <td style={{ padding: "12px 0", textAlign: "center", verticalAlign: "middle" }}>
+                        <a
+                          href="/reports/Larkberget_Bokslutskommunike_2025.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="Ladda ner PDF"
+                        >
+                          <svg width="28" height="32" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "inline-block" }}>
+                            <path d="M14 1H4C2.9 1 2 1.9 2 3V25C2 26.1 2.9 27 4 27H20C21.1 27 22 26.1 22 25V9L14 1Z" stroke="#555" strokeWidth="1.5" fill="none"/>
+                            <path d="M14 1V9H22" stroke="#555" strokeWidth="1.5" fill="none"/>
+                            <text x="12" y="21" textAnchor="middle" fontSize="7" fontWeight="600" fill="#c0392b" fontFamily="sans-serif">PDF</text>
+                          </svg>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </details>
 
