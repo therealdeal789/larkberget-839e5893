@@ -78,64 +78,7 @@ const FinancialReports = () => {
             Här hittar du Lärkbergets delårsrapporter och årsredovisningar.
           </p>
 
-          {/* 2026 Reports - Collapsible */}
           <div
-            style={{
-              maxWidth: "900px",
-              marginInline: "auto",
-              marginBottom: "2rem",
-              backgroundColor: "#ffffff",
-              borderRadius: "12px",
-              boxShadow: "0 2px 10px rgba(0, 0, 0, 0.04)",
-              overflow: "hidden",
-            }}
-          >
-            <details open>
-              <summary
-                style={{
-                  fontSize: "1.1rem",
-                  fontWeight: 600,
-                  color: "#1f3b57",
-                  padding: "20px 32px",
-                  cursor: "pointer",
-                  listStyle: "none",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  userSelect: "none",
-                }}
-              >
-                2026
-                <span style={{ fontSize: "0.75rem", color: "#9ca3af" }}>▼</span>
-              </summary>
-              <div style={{ padding: "8px 32px 24px" }}>
-                <a
-                  href="/reports/Larkberget_Bokslutskommunike_2025.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    padding: "10px 12px",
-                    borderRadius: "6px",
-                    textDecoration: "none",
-                    color: "#1f3b57",
-                    fontSize: "0.9rem",
-                    transition: "background-color 0.2s",
-                  }}
-                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#f3f4f6")}
-                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
-                >
-                  <span style={{ fontSize: "1rem" }}>📄</span>
-                  <span>Bokslutskommuniké 2025 <span style={{ color: "#9ca3af", fontSize: "0.8rem" }}>– 12 februari 2026</span></span>
-                </a>
-              </div>
-            </details>
-          </div>
-
-          <div
-            id="rapportarkiv"
             style={{
               maxWidth: "900px",
               marginInline: "auto",
@@ -144,7 +87,33 @@ const FinancialReports = () => {
               borderRadius: "12px",
               boxShadow: "0 2px 10px rgba(0, 0, 0, 0.04)",
             }}
-          />
+          >
+            {/* 2026 - Manual entry */}
+            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+              <li style={{ borderBottom: "1px solid #e5e7eb", padding: "16px 0" }}>
+                <a
+                  href="/reports/Larkberget_Bokslutskommunike_2025.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    textDecoration: "none",
+                    color: "#1f3b57",
+                    fontWeight: 500,
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.textDecoration = "underline")}
+                  onMouseLeave={(e) => (e.currentTarget.style.textDecoration = "none")}
+                >
+                  Bokslutskommuniké 2025
+                </a>
+                <time style={{ display: "block", color: "#6b7280", fontSize: "14px", marginTop: "4px" }}>
+                  12 februari 2026
+                </time>
+              </li>
+            </ul>
+
+            {/* Datablocks archive widget */}
+            <div id="rapportarkiv" />
+          </div>
         </section>
       </main>
       
