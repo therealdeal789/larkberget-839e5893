@@ -88,28 +88,81 @@ const FinancialReports = () => {
               boxShadow: "0 2px 10px rgba(0, 0, 0, 0.04)",
             }}
           >
-            {/* 2026 - Manual entry */}
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              <li style={{ borderBottom: "1px solid #e5e7eb", padding: "16px 0" }}>
-                <a
-                  href="/reports/Larkberget_Bokslutskommunike_2025.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+            {/* 2026 - Manual entry styled to match Datablocks widget */}
+            <details open style={{ borderBottom: "1px solid #e5e7eb" }}>
+              <summary
+                style={{
+                  fontSize: "1.25rem",
+                  fontWeight: 700,
+                  color: "#1f3b57",
+                  padding: "16px 0",
+                  cursor: "pointer",
+                  listStyle: "none",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  userSelect: "none",
+                }}
+              >
+                <span style={{ fontSize: "0.7rem", transition: "transform 0.2s" }}>▼</span>
+                2026
+              </summary>
+              <div style={{ paddingBottom: "16px" }}>
+                <div
                   style={{
-                    textDecoration: "none",
-                    color: "#1f3b57",
-                    fontWeight: 500,
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    padding: "8px 0",
+                    borderBottom: "1px solid #e5e7eb",
+                    marginBottom: "8px",
                   }}
-                  onMouseEnter={(e) => (e.currentTarget.style.textDecoration = "underline")}
-                  onMouseLeave={(e) => (e.currentTarget.style.textDecoration = "none")}
                 >
-                  Bokslutskommuniké 2025
-                </a>
-                <time style={{ display: "block", color: "#6b7280", fontSize: "14px", marginTop: "4px" }}>
-                  12 februari 2026
-                </time>
-              </li>
-            </ul>
+                  <span style={{ fontWeight: 500, color: "#6b7280", fontSize: "14px" }}></span>
+                  <span style={{ fontWeight: 500, color: "#6b7280", fontSize: "14px" }}>Rapport</span>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    padding: "12px 0",
+                  }}
+                >
+                  <div>
+                    <a
+                      href="/reports/Larkberget_Bokslutskommunike_2025.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        textDecoration: "none",
+                        color: "#1f3b57",
+                        fontWeight: 500,
+                      }}
+                      onMouseEnter={(e) => (e.currentTarget.style.textDecoration = "underline")}
+                      onMouseLeave={(e) => (e.currentTarget.style.textDecoration = "none")}
+                    >
+                      Bokslutskommuniké Q4 2025
+                    </a>
+                    <time style={{ display: "block", color: "#6b7280", fontSize: "13px", marginTop: "2px" }}>
+                      2026-02-12
+                    </time>
+                  </div>
+                  <a
+                    href="/reports/Larkberget_Bokslutskommunike_2025.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Ladda ner PDF"
+                  >
+                    <img
+                      src="/png/file-pdf.png"
+                      alt="PDF"
+                      style={{ width: "28px", height: "28px", opacity: 0.7 }}
+                    />
+                  </a>
+                </div>
+              </div>
+            </details>
 
             {/* Datablocks archive widget */}
             <div id="rapportarkiv" />
