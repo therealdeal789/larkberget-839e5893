@@ -1,0 +1,283 @@
+/* =============================================
+   Financial Reports Page — Unified Styling
+   Covers both manual entries and Datablocks widget
+   ============================================= */
+
+.financial-reports-section {
+  padding: 60px 20px;
+}
+
+.financial-reports-intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.financial-reports-intro h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1f3b57;
+  margin-bottom: 0.75rem;
+}
+
+.financial-reports-intro p {
+  color: #4b5563;
+  max-width: 700px;
+  margin-inline: auto;
+  line-height: 1.6;
+}
+
+.financial-reports-container {
+  max-width: 900px;
+  margin-inline: auto;
+  background-color: #ffffff;
+  padding: 24px 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ---- Manual Year Groups (details/summary) ---- */
+
+.report-year-group {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.report-year-group:last-of-type {
+  border-bottom: none;
+}
+
+.report-year-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 0;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.report-year-header::-webkit-details-marker {
+  display: none;
+}
+
+.report-year-chevron {
+  font-size: 1rem;
+  color: #1f3b57;
+  transition: transform 0.2s ease;
+  display: inline-block;
+  width: 16px;
+  text-align: center;
+}
+
+details[open] > .report-year-header .report-year-chevron {
+  transform: rotate(90deg);
+}
+
+.report-year-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1f3b57;
+}
+
+.report-year-content {
+  padding-bottom: 16px;
+}
+
+.report-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.report-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.report-row:last-child {
+  border-bottom: none;
+}
+
+.report-info {
+  flex: 1;
+}
+
+.report-name {
+  text-decoration: none;
+  color: #1f3b57;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.15s;
+}
+
+.report-name:hover {
+  text-decoration: underline;
+  color: #2d5a8e;
+}
+
+.report-date {
+  display: block;
+  color: #9ca3af;
+  font-size: 0.8rem;
+  margin-top: 3px;
+}
+
+.report-download {
+  flex-shrink: 0;
+  margin-left: 24px;
+}
+
+.report-download a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.15s;
+}
+
+.report-download a:hover {
+  background-color: #f3f4f6;
+}
+
+/* ---- Datablocks Widget Overrides ---- */
+
+#rapportarkiv {
+  /* Reset any default widget styles */
+}
+
+#rapportarkiv table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Year header rows */
+#rapportarkiv table tr td > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+#rapportarkiv table tr td > div > span:first-child {
+  font-size: 1rem;
+  color: #1f3b57;
+  display: inline-block;
+  width: 16px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+#rapportarkiv table tr td > div > span:last-child {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1f3b57;
+}
+
+/* Column headers (Rapport) */
+#rapportarkiv table tr td:last-child:not(:first-child) {
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* General table cells */
+#rapportarkiv table td {
+  padding: 14px 0;
+  vertical-align: middle;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+/* Year divider rows */
+#rapportarkiv table tr:has(> td > div > span) td {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Report name links */
+#rapportarkiv table a {
+  text-decoration: none;
+  color: #1f3b57;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.15s;
+}
+
+#rapportarkiv table a:hover {
+  text-decoration: underline;
+  color: #2d5a8e;
+}
+
+/* Date elements */
+#rapportarkiv table time,
+#rapportarkiv table .mfn-date {
+  display: block;
+  color: #9ca3af;
+  font-size: 0.8rem;
+  margin-top: 3px;
+}
+
+/* PDF icons */
+#rapportarkiv table img {
+  width: 24px;
+  height: auto;
+  opacity: 0.75;
+  transition: opacity 0.15s;
+}
+
+#rapportarkiv table img:hover {
+  opacity: 1;
+}
+
+/* Remove widget list defaults */
+#rapportarkiv ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#rapportarkiv li {
+  border-bottom: 1px solid #f3f4f6;
+  padding: 14px 0;
+}
+
+#rapportarkiv li:last-child {
+  border-bottom: none;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 640px) {
+  .financial-reports-container {
+    padding: 16px 20px;
+    border-radius: 8px;
+  }
+
+  .financial-reports-intro h2 {
+    font-size: 1.35rem;
+  }
+
+  .report-year-label,
+  #rapportarkiv table tr td > div > span:last-child {
+    font-size: 1.05rem;
+  }
+
+  .report-name,
+  #rapportarkiv table a {
+    font-size: 0.875rem;
+  }
+
+  .report-download {
+    margin-left: 12px;
+  }
+}

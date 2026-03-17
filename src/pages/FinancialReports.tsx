@@ -2,6 +2,29 @@
 import React, { useEffect } from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
+import "@/styles/financial-reports.css";
+
+const PdfIcon = () => (
+  <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M14.5 1H4C2.9 1 2 1.9 2 3V25C2 26.1 2.9 27 4 27H20C21.1 27 22 26.1 22 25V8.5L14.5 1Z" stroke="#6b7280" strokeWidth="1.2" fill="#fff"/>
+    <path d="M14.5 1V8.5H22" stroke="#6b7280" strokeWidth="1.2" fill="none"/>
+    <rect x="4" y="14" width="16" height="9" rx="1" fill="#dc2626" opacity="0.9"/>
+    <text x="12" y="21" textAnchor="middle" fontSize="6.5" fontWeight="700" fill="#fff" fontFamily="system-ui, sans-serif">PDF</text>
+  </svg>
+);
+
+const manualReports = [
+  {
+    year: 2026,
+    reports: [
+      {
+        name: "Bokslutskommuniké Q4 2025",
+        date: "2026-02-12",
+        pdfUrl: "/reports/Larkberget_Bokslutskommunike_2025.pdf",
+      },
+    ],
+  },
+];
 
 const FinancialReports = () => {
   useEffect(() => {
@@ -40,9 +63,8 @@ const FinancialReports = () => {
   return (
     <div className="min-h-screen">
       <LarkbergetNavbar />
-      
+
       <main>
-        {/* Hero section with matching styling */}
         <section className="bg-gradient-to-br from-larkberget-500 via-trust-700 to-larkberget-900 text-white pt-48 pb-32">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
@@ -53,111 +75,60 @@ const FinancialReports = () => {
           </div>
         </section>
 
-        {/* Datablocks Content */}
-        <section style={{ padding: "60px 20px" }}>
-          <h2
-            style={{
-              fontSize: "1.75rem",
-              marginBottom: "1rem",
-              color: "#1f3b57",
-              fontWeight: 600,
-              textAlign: "center",
-            }}
-          >
-            Finansiella rapporter
-          </h2>
-          <p
-            style={{
-              marginBottom: "2rem",
-              color: "#4b5563",
-              textAlign: "center",
-              maxWidth: "700px",
-              marginInline: "auto",
-            }}
-          >
-            Här hittar du Lärkbergets delårsrapporter och årsredovisningar.
-          </p>
+        <section className="financial-reports-section">
+          <div className="financial-reports-intro">
+            <h2>Rapportarkiv</h2>
+            <p>Här hittar du Lärkbergets delårsrapporter och årsredovisningar.</p>
+          </div>
 
-          <div
-            style={{
-              maxWidth: "900px",
-              marginInline: "auto",
-              backgroundColor: "#ffffff",
-              padding: "32px",
-              borderRadius: "12px",
-              boxShadow: "0 2px 10px rgba(0, 0, 0, 0.04)",
-            }}
-          >
-            {/* 2026 - Manual entry styled to match Datablocks widget */}
-            <details open style={{ borderBottom: "1px solid #e5e7eb" }}>
-              <summary
-                style={{
-                  fontSize: "1.25rem",
-                  fontWeight: 700,
-                  color: "#1f3b57",
-                  padding: "16px 0",
-                  cursor: "pointer",
-                  listStyle: "none",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  userSelect: "none",
-                }}
-              >
-                <span style={{ fontSize: "0.75rem", transition: "transform 0.2s" }}>▶</span>
-                2026
-              </summary>
-              <div style={{ paddingBottom: "16px" }}>
-                <table style={{ width: "auto", borderCollapse: "collapse" }}>
-                  <thead>
-                    <tr>
-                      <th style={{ textAlign: "left", padding: "8px 40px 8px 0", fontWeight: 500, color: "#6b7280", fontSize: "14px", borderBottom: "1px solid #e5e7eb" }}></th>
-                      <th style={{ textAlign: "center", padding: "8px 0", fontWeight: 500, color: "#6b7280", fontSize: "14px", borderBottom: "1px solid #e5e7eb" }}>Rapport</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td style={{ padding: "12px 40px 12px 0", verticalAlign: "top" }}>
+          <div className="financial-reports-container">
+            {/* Manual reports (2026+) */}
+            {manualReports.map((yearGroup) => (
+              <details key={yearGroup.year} open className="report-year-group">
+                <summary className="report-year-header">
+                  <span className="report-year-chevron">›</span>
+                  <span className="report-year-label">{yearGroup.year}</span>
+                </summary>
+                <div className="report-year-content">
+                  <div className="report-table-header">
+                    <span></span>
+                    <span>Rapport</span>
+                  </div>
+                  {yearGroup.reports.map((report, idx) => (
+                    <div key={idx} className="report-row">
+                      <div className="report-info">
                         <a
-                          href="/reports/Larkberget_Bokslutskommunike_2025.pdf"
+                          href={report.pdfUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          style={{ textDecoration: "none", color: "#1f3b57", fontWeight: 500 }}
-                          onMouseEnter={(e) => (e.currentTarget.style.textDecoration = "underline")}
-                          onMouseLeave={(e) => (e.currentTarget.style.textDecoration = "none")}
+                          className="report-name"
                         >
-                          Bokslutskommuniké Q4 2025
+                          {report.name}
                         </a>
-                        <time style={{ display: "block", color: "#6b7280", fontSize: "13px", marginTop: "2px" }}>
-                          2026-02-12
-                        </time>
-                      </td>
-                      <td style={{ padding: "12px 0", textAlign: "center", verticalAlign: "middle" }}>
+                        <time className="report-date">{report.date}</time>
+                      </div>
+                      <div className="report-download">
                         <a
-                          href="/reports/Larkberget_Bokslutskommunike_2025.pdf"
+                          href={report.pdfUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           title="Ladda ner PDF"
                         >
-                          <svg width="28" height="32" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: "inline-block" }}>
-                            <path d="M14 1H4C2.9 1 2 1.9 2 3V25C2 26.1 2.9 27 4 27H20C21.1 27 22 26.1 22 25V9L14 1Z" stroke="#555" strokeWidth="1.5" fill="none"/>
-                            <path d="M14 1V9H22" stroke="#555" strokeWidth="1.5" fill="none"/>
-                            <text x="12" y="21" textAnchor="middle" fontSize="7" fontWeight="600" fill="#c0392b" fontFamily="sans-serif">PDF</text>
-                          </svg>
+                          <PdfIcon />
                         </a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </details>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </details>
+            ))}
 
             {/* Datablocks archive widget */}
             <div id="rapportarkiv" />
           </div>
         </section>
       </main>
-      
+
       <LarkbergetFooter />
     </div>
   );
