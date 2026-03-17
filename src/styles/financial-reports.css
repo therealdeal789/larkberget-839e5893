@@ -30,12 +30,14 @@
   max-width: 900px;
   margin-inline: auto;
   background-color: #ffffff;
-  padding: 24px 32px;
+  padding: 8px 32px;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* ---- Manual Year Groups (details/summary) ---- */
+/* ===========================================
+   Manual Year Groups (details/summary)
+   =========================================== */
 
 .report-year-group {
   border-bottom: 1px solid #e5e7eb;
@@ -49,7 +51,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 18px 0;
+  padding: 20px 0;
   cursor: pointer;
   list-style: none;
   user-select: none;
@@ -66,6 +68,7 @@
   display: inline-block;
   width: 16px;
   text-align: center;
+  line-height: 1;
 }
 
 details[open] > .report-year-header .report-year-chevron {
@@ -79,14 +82,13 @@ details[open] > .report-year-header .report-year-chevron {
 }
 
 .report-year-content {
-  padding-bottom: 16px;
+  padding-bottom: 12px;
 }
 
 .report-table-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px 0;
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  padding: 8px 0;
   border-bottom: 1px solid #e5e7eb;
   margin-bottom: 4px;
   font-size: 13px;
@@ -94,9 +96,13 @@ details[open] > .report-year-header .report-year-chevron {
   color: #6b7280;
 }
 
+.report-table-header span:last-child {
+  text-align: center;
+}
+
 .report-row {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 80px;
   align-items: center;
   padding: 14px 0;
   border-bottom: 1px solid #f3f4f6;
@@ -107,7 +113,7 @@ details[open] > .report-year-header .report-year-chevron {
 }
 
 .report-info {
-  flex: 1;
+  min-width: 0;
 }
 
 .report-name {
@@ -131,8 +137,9 @@ details[open] > .report-year-header .report-year-chevron {
 }
 
 .report-download {
-  flex-shrink: 0;
-  margin-left: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .report-download a {
@@ -148,10 +155,13 @@ details[open] > .report-year-header .report-year-chevron {
   background-color: #f3f4f6;
 }
 
-/* ---- Datablocks Widget Overrides ---- */
+/* ===========================================
+   Datablocks Widget Overrides
+   Match exact same look as manual entries
+   =========================================== */
 
 #rapportarkiv {
-  /* Reset any default widget styles */
+  font-family: inherit;
 }
 
 #rapportarkiv table {
@@ -159,49 +169,68 @@ details[open] > .report-year-header .report-year-chevron {
   border-collapse: collapse;
 }
 
-/* Year header rows */
-#rapportarkiv table tr td > div {
+/* Each tbody is a year group */
+#rapportarkiv table tbody {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+#rapportarkiv table tbody:last-child {
+  border-bottom: none;
+}
+
+/* Year header rows — the row containing the year number */
+#rapportarkiv table tbody tr:first-child td {
+  padding: 20px 0;
+  border-bottom: none;
+}
+
+#rapportarkiv table tbody tr:first-child td > div {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 18px 0;
   cursor: pointer;
   user-select: none;
 }
 
-#rapportarkiv table tr td > div > span:first-child {
+#rapportarkiv table tbody tr:first-child td > div > span:first-child {
   font-size: 1rem;
   color: #1f3b57;
   display: inline-block;
   width: 16px;
   text-align: center;
   transition: transform 0.2s ease;
+  line-height: 1;
 }
 
-#rapportarkiv table tr td > div > span:last-child {
+#rapportarkiv table tbody tr:first-child td > div > span:last-child {
   font-size: 1.2rem;
   font-weight: 700;
   color: #1f3b57;
 }
 
-/* Column headers (Rapport) */
-#rapportarkiv table tr td:last-child:not(:first-child) {
-  text-align: center;
+/* "Rapport" column header row */
+#rapportarkiv table tbody tr:nth-child(2) td {
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
   font-size: 13px;
-  color: #6b7280;
   font-weight: 500;
+  color: #6b7280;
 }
 
-/* General table cells */
-#rapportarkiv table td {
+#rapportarkiv table tbody tr:nth-child(2) td:last-child {
+  text-align: center;
+  width: 80px;
+}
+
+/* Report data rows */
+#rapportarkiv table tbody tr:nth-child(n+3) td {
   padding: 14px 0;
   vertical-align: middle;
   border-bottom: 1px solid #f3f4f6;
 }
 
-/* Year divider rows */
-#rapportarkiv table tr:has(> td > div > span) td {
-  border-bottom: 1px solid #e5e7eb;
+#rapportarkiv table tbody tr:last-child td {
+  border-bottom: none;
 }
 
 /* Report name links */
@@ -219,27 +248,46 @@ details[open] > .report-year-header .report-year-chevron {
 }
 
 /* Date elements */
-#rapportarkiv table time,
-#rapportarkiv table .mfn-date {
+#rapportarkiv table time {
   display: block;
   color: #9ca3af;
   font-size: 0.8rem;
   margin-top: 3px;
 }
 
-/* PDF icons */
+/* PDF icon cells */
+#rapportarkiv table tbody tr:nth-child(n+3) td:last-child {
+  text-align: center;
+  width: 80px;
+}
+
+/* PDF icons — size to match manual entries */
 #rapportarkiv table img {
   width: 24px;
   height: auto;
-  opacity: 0.75;
+  opacity: 0.7;
   transition: opacity 0.15s;
+  display: inline-block;
+}
+
+#rapportarkiv table a:has(img) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.15s;
+}
+
+#rapportarkiv table a:has(img):hover {
+  background-color: #f3f4f6;
 }
 
 #rapportarkiv table img:hover {
   opacity: 1;
 }
 
-/* Remove widget list defaults */
+/* Remove any widget default list styles */
 #rapportarkiv ul {
   list-style: none;
   padding: 0;
@@ -255,11 +303,13 @@ details[open] > .report-year-header .report-year-chevron {
   border-bottom: none;
 }
 
-/* ---- Responsive ---- */
+/* ===========================================
+   Responsive
+   =========================================== */
 
 @media (max-width: 640px) {
   .financial-reports-container {
-    padding: 16px 20px;
+    padding: 8px 20px;
     border-radius: 8px;
   }
 
@@ -268,7 +318,7 @@ details[open] > .report-year-header .report-year-chevron {
   }
 
   .report-year-label,
-  #rapportarkiv table tr td > div > span:last-child {
+  #rapportarkiv table tbody tr:first-child td > div > span:last-child {
     font-size: 1.05rem;
   }
 
@@ -277,7 +327,13 @@ details[open] > .report-year-header .report-year-chevron {
     font-size: 0.875rem;
   }
 
-  .report-download {
-    margin-left: 12px;
+  .report-table-header,
+  .report-row {
+    grid-template-columns: 1fr 60px;
+  }
+
+  #rapportarkiv table tbody tr:nth-child(2) td:last-child,
+  #rapportarkiv table tbody tr:nth-child(n+3) td:last-child {
+    width: 60px;
   }
 }
