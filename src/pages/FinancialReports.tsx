@@ -5,11 +5,10 @@ import LarkbergetFooter from "@/components/LarkbergetFooter";
 import "@/styles/financial-reports.css";
 
 const PdfIcon = () => (
-  <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M14.5 1H4C2.9 1 2 1.9 2 3V25C2 26.1 2.9 27 4 27H20C21.1 27 22 26.1 22 25V8.5L14.5 1Z" stroke="#6b7280" strokeWidth="1.2" fill="#fff"/>
-    <path d="M14.5 1V8.5H22" stroke="#6b7280" strokeWidth="1.2" fill="none"/>
-    <rect x="4" y="14" width="16" height="9" rx="1" fill="#dc2626" opacity="0.9"/>
-    <text x="12" y="21" textAnchor="middle" fontSize="6.5" fontWeight="700" fill="#fff" fontFamily="system-ui, sans-serif">PDF</text>
+  <svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ opacity: 0.65 }}>
+    <path d="M15 1H4C2.9 1 2 1.9 2 3V27C2 28.1 2.9 29 4 29H20C21.1 29 22 28.1 22 27V8L15 1Z" stroke="#444" strokeWidth="1.3" fill="none"/>
+    <path d="M15 1V8H22" stroke="#444" strokeWidth="1.3" fill="none"/>
+    <text x="12" y="22" textAnchor="middle" fontSize="7" fontWeight="600" fill="#444" fontFamily="system-ui, sans-serif">PDF</text>
   </svg>
 );
 
