@@ -15,7 +15,7 @@ const navData = [
   { date: "2025-11-30", nav: 2.94, label: "30 nov 2025" },
   { date: "2026-01-15", nav: 3.08, label: "15 jan 2026" },
   { date: "2026-02-16", nav: 3.00, label: "16 feb 2026" },
-  { date: "2026-02-17", nav: 3.04, label: "17 feb 2026" },
+  { date: "2026-03-17", nav: 3.04, label: "17 mar 2026" },
 ];
 
 // Animated counter hook
