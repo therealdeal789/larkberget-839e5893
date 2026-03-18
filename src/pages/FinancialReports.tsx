@@ -295,9 +295,9 @@ const FinancialReports = () => {
                 </tbody>
               </table>
 
-              {!widgetLoaded && (
+              {!widgetLoaded && reports.length <= manualReports.length && (
                 <div className="py-8 text-center text-trust-400 text-sm">
-                  Laddar rapporter...
+                  Laddar historiska rapporter...
                 </div>
               )}
             </div>
