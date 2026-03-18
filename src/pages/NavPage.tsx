@@ -13,9 +13,10 @@ import {
 } from "recharts";
 
 const navData = [
-  { date: "2025-11-30", nav: 2.94, label: "30 nov 2025" },
-  { date: "2026-01-15", nav: 3.08, label: "15 jan 2026" },
-  { date: "2026-02-16", nav: 3.00, label: "16 feb 2026" },
+  { date: "2025-11-30", nav: 2.94, totalNav: null, shares: null, label: "30 nov 2025" },
+  { date: "2026-01-15", nav: 3.08, totalNav: null, shares: null, label: "15 jan 2026" },
+  { date: "2026-02-16", nav: 3.00, totalNav: null, shares: null, label: "16 feb 2026" },
+  { date: "2026-02-17", nav: 3.04, totalNav: 60123457, shares: 19801197, label: "17 feb 2026" },
 ];
 
 const NavPage = () => {
@@ -133,6 +134,9 @@ const NavPage = () => {
                           Datum
                         </th>
                         <th className="text-right py-4 px-6 font-semibold text-larkberget-900 border-b border-earth-300">
+                          Substansvärde (SEK)
+                        </th>
+                        <th className="text-right py-4 px-6 font-semibold text-larkberget-900 border-b border-earth-300">
                           NAV per aktie
                         </th>
                         <th className="text-right py-4 px-6 font-semibold text-larkberget-900 border-b border-earth-300">
@@ -150,6 +154,12 @@ const NavPage = () => {
                           <tr key={item.date} className="hover:bg-larkberget-50/50 transition-colors">
                             <td className="py-4 px-6 text-trust-700 border-b border-earth-100">
                               {item.label}
+                            </td>
+                            <td className="py-4 px-6 text-right font-medium text-larkberget-800 border-b border-earth-100">
+                              {item.totalNav 
+                                ? item.totalNav.toLocaleString('sv-SE') + ' SEK'
+                                : '–'
+                              }
                             </td>
                             <td className="py-4 px-6 text-right font-medium text-larkberget-800 border-b border-earth-100">
                               {item.nav.toFixed(2)} SEK
