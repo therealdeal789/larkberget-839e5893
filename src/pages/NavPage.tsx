@@ -134,6 +134,9 @@ const NavPage = () => {
                           Datum
                         </th>
                         <th className="text-right py-4 px-6 font-semibold text-larkberget-900 border-b border-earth-300">
+                          Substansvärde (SEK)
+                        </th>
+                        <th className="text-right py-4 px-6 font-semibold text-larkberget-900 border-b border-earth-300">
                           NAV per aktie
                         </th>
                         <th className="text-right py-4 px-6 font-semibold text-larkberget-900 border-b border-earth-300">
@@ -151,6 +154,12 @@ const NavPage = () => {
                           <tr key={item.date} className="hover:bg-larkberget-50/50 transition-colors">
                             <td className="py-4 px-6 text-trust-700 border-b border-earth-100">
                               {item.label}
+                            </td>
+                            <td className="py-4 px-6 text-right font-medium text-larkberget-800 border-b border-earth-100">
+                              {item.totalNav 
+                                ? item.totalNav.toLocaleString('sv-SE') + ' SEK'
+                                : '–'
+                              }
                             </td>
                             <td className="py-4 px-6 text-right font-medium text-larkberget-800 border-b border-earth-100">
                               {item.nav.toFixed(2)} SEK
