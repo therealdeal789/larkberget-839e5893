@@ -57,7 +57,7 @@ const NavPage = () => {
                 <p className="text-sm text-trust-500 mt-2">{navData[navData.length - 1].label}</p>
               </div>
               <div className="bg-earth-50 rounded-xl p-6 text-center border border-earth-200">
-                <p className="text-sm text-trust-600 mb-2">Förändring</p>
+                <p className="text-sm text-trust-600 mb-2">Förändring sedan start</p>
                 <p className={`text-4xl font-bold ${change >= 0 ? 'text-larkberget-600' : 'text-red-600'}`}>
                   {change >= 0 ? '+' : ''}{change.toFixed(2)} SEK
                 </p>
