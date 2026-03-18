@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState, useRef } from "react";
+import { ChevronDown } from "lucide-react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
 import { FileText } from "lucide-react";
@@ -182,7 +183,24 @@ const FinancialReports = () => {
     return acc;
   }, {});
 
+  const currentYear = new Date().getFullYear().toString();
   const sortedYears = Object.keys(groupedByYear).sort((a, b) => Number(b) - Number(a));
+  const [expandedYears, setExpandedYears] = useState<Record<string, boolean>>({});
+
+  // Set current year expanded by default when years are available
+  useEffect(() => {
+    if (sortedYears.length > 0 && Object.keys(expandedYears).length === 0) {
+      const initial: Record<string, boolean> = {};
+      sortedYears.forEach((year) => {
+        initial[year] = year === currentYear;
+      });
+      setExpandedYears(initial);
+    }
+  }, [sortedYears.length]);
+
+  const toggleYear = (year: string) => {
+    setExpandedYears((prev) => ({ ...prev, [year]: !prev[year] }));
+  };
 
   return (
     <div className="min-h-screen">
@@ -218,41 +236,62 @@ const FinancialReports = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {sortedYears.map((year) =>
-                    groupedByYear[year].map((report, idx) => (
+                  {sortedYears.map((year) => (
+                    <React.Fragment key={year}>
+                      {/* Year header row - clickable */}
                       <tr
-                        key={`${year}-${idx}`}
-                        className="border-b border-earth-100 last:border-b-0 hover:bg-larkberget-50/30 transition-colors"
+                        className="border-b border-earth-200 cursor-pointer hover:bg-larkberget-50/30 transition-colors select-none"
+                        onClick={() => toggleYear(year)}
                       >
-                        <td className="py-4 px-6 text-sm font-semibold text-larkberget-900">
-                          {idx === 0 ? year : ""}
+                        <td className="py-4 px-6 text-sm font-bold text-larkberget-900 flex items-center gap-2">
+                          <ChevronDown
+                            className={`w-4 h-4 text-trust-500 transition-transform duration-200 ${
+                              expandedYears[year] ? "" : "-rotate-90"
+                            }`}
+                          />
+                          {year}
                         </td>
-                        <td className="py-4 px-6 text-sm text-trust-800">
-                          {report.name}
-                          <span className="sm:hidden block text-xs text-trust-400 mt-1">{report.date}</span>
+                        <td className="py-4 px-6 text-sm text-trust-400">
+                          {groupedByYear[year].length} {groupedByYear[year].length === 1 ? "rapport" : "rapporter"}
                         </td>
-                        <td className="py-4 px-6 text-sm text-trust-500 hidden sm:table-cell">
-                          {report.date}
-                        </td>
-                        <td className="py-4 px-6 text-right">
-                          {report.url ? (
-                            <a
-                              href={report.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1.5 text-sm font-medium text-larkberget-600 hover:text-larkberget-800 transition-colors"
-                            >
-                              <FileText className="w-4 h-4" />
-                              <span className="hidden sm:inline">Öppna PDF</span>
-                              <span className="sm:hidden">PDF</span>
-                            </a>
-                          ) : (
-                            <span className="text-sm text-trust-400">—</span>
-                          )}
-                        </td>
+                        <td className="py-4 px-6 hidden sm:table-cell" />
+                        <td className="py-4 px-6" />
                       </tr>
-                    ))
-                  )}
+                      {/* Report rows - shown/hidden based on expanded state */}
+                      {expandedYears[year] &&
+                        groupedByYear[year].map((report, idx) => (
+                          <tr
+                            key={`${year}-${idx}`}
+                            className="border-b border-earth-100 last:border-b-0 hover:bg-larkberget-50/30 transition-colors"
+                          >
+                            <td className="py-3 px-6" />
+                            <td className="py-3 px-6 text-sm text-trust-800">
+                              {report.name}
+                              <span className="sm:hidden block text-xs text-trust-400 mt-1">{report.date}</span>
+                            </td>
+                            <td className="py-3 px-6 text-sm text-trust-500 hidden sm:table-cell">
+                              {report.date}
+                            </td>
+                            <td className="py-3 px-6 text-right">
+                              {report.url ? (
+                                <a
+                                  href={report.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1.5 text-sm font-medium text-larkberget-600 hover:text-larkberget-800 transition-colors"
+                                >
+                                  <FileText className="w-4 h-4" />
+                                  <span className="hidden sm:inline">Öppna PDF</span>
+                                  <span className="sm:hidden">PDF</span>
+                                </a>
+                              ) : (
+                                <span className="text-sm text-trust-400">—</span>
+                              )}
+                            </td>
+                          </tr>
+                        ))}
+                    </React.Fragment>
+                  ))}
                 </tbody>
               </table>
 
