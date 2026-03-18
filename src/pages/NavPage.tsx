@@ -13,9 +13,10 @@ import {
 } from "recharts";
 
 const navData = [
-  { date: "2025-11-30", nav: 2.94, label: "30 nov 2025" },
-  { date: "2026-01-15", nav: 3.08, label: "15 jan 2026" },
-  { date: "2026-02-16", nav: 3.00, label: "16 feb 2026" },
+  { date: "2025-11-30", nav: 2.94, totalNav: null, shares: null, label: "30 nov 2025" },
+  { date: "2026-01-15", nav: 3.08, totalNav: null, shares: null, label: "15 jan 2026" },
+  { date: "2026-02-16", nav: 3.00, totalNav: null, shares: null, label: "16 feb 2026" },
+  { date: "2026-02-17", nav: 3.04, totalNav: 60123457, shares: 19801197, label: "17 feb 2026" },
 ];
 
 const NavPage = () => {
