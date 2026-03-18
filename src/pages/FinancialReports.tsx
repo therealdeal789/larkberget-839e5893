@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState, useRef } from "react";
+import { ChevronDown } from "lucide-react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
 import { FileText } from "lucide-react";
