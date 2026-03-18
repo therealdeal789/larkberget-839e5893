@@ -169,10 +169,16 @@ const FinancialReports = () => {
       }
     }, 1000);
 
+    // Timeout: stop showing loading after 5 seconds even if widget fails
+    const timeout = setTimeout(() => {
+      setWidgetLoaded(true);
+    }, 5000);
+
     return () => {
       observer.disconnect();
       clearInterval(checkContainer);
       clearInterval(expandInterval);
+      clearTimeout(timeout);
     };
   }, []);
 
@@ -295,9 +301,9 @@ const FinancialReports = () => {
                 </tbody>
               </table>
 
-              {!widgetLoaded && (
+              {!widgetLoaded && reports.length <= manualReports.length && (
                 <div className="py-8 text-center text-trust-400 text-sm">
-                  Laddar rapporter...
+                  Laddar historiska rapporter...
                 </div>
               )}
             </div>
