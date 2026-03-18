@@ -53,7 +53,7 @@ const FinancialReports = () => {
           </div>
         </section>
 
-        {/* Datablocks Content */}
+        {/* Reports Content - Single unified container */}
         <section style={{ padding: "60px 20px" }}>
           <h2
             style={{
@@ -78,73 +78,77 @@ const FinancialReports = () => {
             Här hittar du Lärkbergets delårsrapporter och årsredovisningar.
           </p>
 
-          {/* 2026 Reports - Collapsible */}
           <div
             style={{
               maxWidth: "900px",
               marginInline: "auto",
-              marginBottom: "2rem",
               backgroundColor: "#ffffff",
               borderRadius: "12px",
               boxShadow: "0 2px 10px rgba(0, 0, 0, 0.04)",
               overflow: "hidden",
             }}
           >
-            <details open>
-              <summary
+            {/* 2026 - Manual section styled to match Datablocks widget */}
+            <div className="manual-year-section">
+              <div
+                className="year-header"
+                onClick={(e) => {
+                  const content = e.currentTarget.nextElementSibling as HTMLElement;
+                  const chevron = e.currentTarget.querySelector('.chevron') as HTMLElement;
+                  if (content) {
+                    const isOpen = content.style.display !== 'none';
+                    content.style.display = isOpen ? 'none' : 'block';
+                    if (chevron) chevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(90deg)';
+                  }
+                }}
                 style={{
-                  fontSize: "1.1rem",
-                  fontWeight: 600,
-                  color: "#1f3b57",
-                  padding: "20px 32px",
+                  padding: "16px 32px",
                   cursor: "pointer",
-                  listStyle: "none",
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "space-between",
+                  gap: "8px",
+                  fontSize: "1.1rem",
+                  fontWeight: 700,
+                  color: "#1d1d1b",
                   userSelect: "none",
+                  borderBottom: "1px solid #e5e7eb",
                 }}
               >
+                <span className="chevron" style={{ fontSize: "0.8rem", transition: "transform 0.2s", transform: "rotate(90deg)" }}>❯</span>
                 2026
-                <span style={{ fontSize: "0.75rem", color: "#9ca3af" }}>▼</span>
-              </summary>
-              <div style={{ padding: "8px 32px 24px" }}>
-                <a
-                  href="/reports/Larkberget_Bokslutskommunike_2025.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    padding: "10px 12px",
-                    borderRadius: "6px",
-                    textDecoration: "none",
-                    color: "#1f3b57",
-                    fontSize: "0.9rem",
-                    transition: "background-color 0.2s",
-                  }}
-                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#f3f4f6")}
-                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "transparent")}
-                >
-                  <span style={{ fontSize: "1rem" }}>📄</span>
-                  <span>Bokslutskommuniké 2025 <span style={{ color: "#9ca3af", fontSize: "0.8rem" }}>– 12 februari 2026</span></span>
-                </a>
               </div>
-            </details>
-          </div>
+              <div style={{ padding: "8px 32px 16px" }}>
+                <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                  <tbody>
+                    <tr>
+                      <td style={{ padding: "8px 0", color: "#1d1d1b", fontSize: "0.9rem" }}>
+                        Bokslutskommuniké 2025
+                        <span style={{ color: "#9ca3af", marginLeft: "8px", fontSize: "0.85rem" }}>2026-02-12</span>
+                      </td>
+                      <td style={{ padding: "8px 0", textAlign: "right" }}>
+                        <a
+                          href="/reports/Larkberget_Bokslutskommunike_2025.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            textDecoration: "none",
+                            color: "#1d7e6b",
+                            fontWeight: 500,
+                            fontSize: "0.85rem",
+                          }}
+                        >
+                          Rapport Q4 2025
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
 
-          <div
-            id="rapportarkiv"
-            style={{
-              maxWidth: "900px",
-              marginInline: "auto",
-              backgroundColor: "#ffffff",
-              padding: "32px",
-              borderRadius: "12px",
-              boxShadow: "0 2px 10px rgba(0, 0, 0, 0.04)",
-            }}
-          />
+            {/* Datablocks widget renders here */}
+            <div id="rapportarkiv" />
+          </div>
         </section>
       </main>
       
