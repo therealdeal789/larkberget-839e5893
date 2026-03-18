@@ -1,9 +1,31 @@
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import LarkbergetNavbar from "@/components/LarkbergetNavbar";
 import LarkbergetFooter from "@/components/LarkbergetFooter";
+import { FileText } from "lucide-react";
+
+interface ReportItem {
+  year: string;
+  name: string;
+  date: string;
+  url: string;
+}
+
+// Manual 2026 report (not in the Datablocks widget yet)
+const manualReports: ReportItem[] = [
+  {
+    year: "2026",
+    name: "Bokslutskommuniké 2025",
+    date: "2026-02-12",
+    url: "/reports/Larkberget_Bokslutskommunike_2025.pdf",
+  },
+];
 
 const FinancialReports = () => {
+  const [reports, setReports] = useState<ReportItem[]>(manualReports);
+  const [widgetLoaded, setWidgetLoaded] = useState(false);
+  const hiddenRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const url = "https://widget.datablocks.se/api/rose";
 
@@ -31,18 +53,143 @@ const FinancialReports = () => {
       {
         widget: "archive",
         token: "88715d40-7d27-4616-8eb7-55d9922634cd",
-        query: "#rapportarkiv",
+        query: "#rapportarkiv-hidden",
         locale: "sv",
       },
     ]);
+
+    // Observe the hidden container for when the widget populates it
+    const observer = new MutationObserver(() => {
+      const container = hiddenRef.current;
+      if (!container) return;
+
+      // Wait for actual content
+      const tbodies = container.querySelectorAll("tbody");
+      if (tbodies.length === 0) return;
+
+      const extractedReports: ReportItem[] = [];
+
+      tbodies.forEach((tbody) => {
+        const rows = tbody.querySelectorAll("tr");
+        let currentYear = "";
+
+        rows.forEach((row) => {
+          const cells = row.querySelectorAll("td");
+          if (cells.length === 0) return;
+
+          // Year header row: has a single cell with ❯ YYYY
+          const firstCellText = cells[0]?.textContent?.trim() || "";
+          const yearMatch = firstCellText.match(/❯?\s*(\d{4})/);
+
+          if (yearMatch && cells.length === 1) {
+            currentYear = yearMatch[1];
+            return;
+          }
+
+          // Skip "Rapport" header row
+          if (firstCellText === "" || firstCellText === "Rapport") return;
+
+          // Report row: report name + date, and potentially a link
+          if (currentYear && cells.length >= 1) {
+            const nameEl = cells[0];
+            const reportName = nameEl?.childNodes?.[0]?.textContent?.trim() || firstCellText;
+            
+            // Extract date - look for date-like text
+            const dateText = nameEl?.querySelector("time")?.textContent?.trim() 
+              || nameEl?.querySelector("span")?.textContent?.trim()
+              || "";
+            
+            // Find the date in the cell text if not in a sub-element
+            let date = dateText;
+            if (!date) {
+              const fullText = nameEl?.textContent?.trim() || "";
+              const dateMatch = fullText.match(/(\d{4}-\d{2}-\d{2})/);
+              if (dateMatch) {
+                date = dateMatch[1];
+              }
+            }
+
+            // Clean report name (remove the date from it)
+            let cleanName = reportName.replace(/\d{4}-\d{2}-\d{2}/, "").trim();
+
+            // Find PDF link
+            let pdfUrl = "";
+            const link = row.querySelector("a[href]");
+            if (link) {
+              pdfUrl = link.getAttribute("href") || "";
+            }
+
+            if (cleanName && cleanName !== "Rapport") {
+              extractedReports.push({
+                year: currentYear,
+                name: cleanName,
+                date: date,
+                url: pdfUrl,
+              });
+            }
+          }
+        });
+      });
+
+      if (extractedReports.length > 0) {
+        setReports([...manualReports, ...extractedReports]);
+        setWidgetLoaded(true);
+        observer.disconnect();
+      }
+    });
+
+    // Start observing once the hidden div is ready
+    const checkContainer = setInterval(() => {
+      if (hiddenRef.current) {
+        observer.observe(hiddenRef.current, {
+          childList: true,
+          subtree: true,
+        });
+        clearInterval(checkContainer);
+      }
+    }, 100);
+
+    // Also try expanding all year sections after widget loads
+    const expandInterval = setInterval(() => {
+      const container = hiddenRef.current;
+      if (!container) return;
+
+      const yearRows = container.querySelectorAll("td");
+      let clicked = false;
+      yearRows.forEach((td) => {
+        const text = td.textContent?.trim() || "";
+        if (text.match(/^❯\s*\d{4}$/)) {
+          td.click();
+          clicked = true;
+        }
+      });
+      if (clicked) {
+        clearInterval(expandInterval);
+      }
+    }, 1000);
+
+    return () => {
+      observer.disconnect();
+      clearInterval(checkContainer);
+      clearInterval(expandInterval);
+    };
   }, []);
+
+  // Group reports by year for display
+  const groupedByYear = reports.reduce<Record<string, ReportItem[]>>((acc, report) => {
+    if (!acc[report.year]) acc[report.year] = [];
+    acc[report.year].push(report);
+    return acc;
+  }, {});
+
+  const sortedYears = Object.keys(groupedByYear).sort((a, b) => Number(b) - Number(a));
 
   return (
     <div className="min-h-screen">
       <LarkbergetNavbar />
-      
+
       <main>
-        {/* Hero section with matching styling */}
+        {/* Hero */}
         <section className="bg-gradient-to-br from-larkberget-500 via-trust-700 to-larkberget-900 text-white pt-48 pb-32">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
@@ -53,105 +200,79 @@ const FinancialReports = () => {
           </div>
         </section>
 
-        {/* Reports Content - Single unified container */}
-        <section style={{ padding: "60px 20px" }}>
-          <h2
-            style={{
-              fontSize: "1.75rem",
-              marginBottom: "1rem",
-              color: "#1f3b57",
-              fontWeight: 600,
-              textAlign: "center",
-            }}
-          >
-            Finansiella rapporter
-          </h2>
-          <p
-            style={{
-              marginBottom: "2rem",
-              color: "#4b5563",
-              textAlign: "center",
-              maxWidth: "700px",
-              marginInline: "auto",
-            }}
-          >
-            Här hittar du Lärkbergets delårsrapporter och årsredovisningar.
-          </p>
+        {/* Reports table */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <p className="text-center text-trust-600 mb-8 max-w-2xl mx-auto">
+              Här hittar du Lärkbergets delårsrapporter och årsredovisningar.
+            </p>
 
-          <div
-            style={{
-              maxWidth: "900px",
-              marginInline: "auto",
-              backgroundColor: "#ffffff",
-              borderRadius: "12px",
-              boxShadow: "0 2px 10px rgba(0, 0, 0, 0.04)",
-              overflow: "hidden",
-            }}
-          >
-            {/* 2026 - Manual section styled to match Datablocks widget */}
-            <div className="manual-year-section">
-              <div
-                className="year-header"
-                onClick={(e) => {
-                  const content = e.currentTarget.nextElementSibling as HTMLElement;
-                  const chevron = e.currentTarget.querySelector('.chevron') as HTMLElement;
-                  if (content) {
-                    const isOpen = content.style.display !== 'none';
-                    content.style.display = isOpen ? 'none' : 'block';
-                    if (chevron) chevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(90deg)';
-                  }
-                }}
-                style={{
-                  padding: "16px 32px",
-                  cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  fontSize: "1.1rem",
-                  fontWeight: 700,
-                  color: "#1d1d1b",
-                  userSelect: "none",
-                  borderBottom: "1px solid #e5e7eb",
-                }}
-              >
-                <span className="chevron" style={{ fontSize: "0.8rem", transition: "transform 0.2s", transform: "rotate(90deg)" }}>❯</span>
-                2026
-              </div>
-              <div style={{ padding: "8px 32px 16px" }}>
-                <table style={{ width: "100%", borderCollapse: "collapse" }}>
-                  <tbody>
-                    <tr>
-                      <td style={{ padding: "8px 0", color: "#1d1d1b", fontSize: "0.9rem" }}>
-                        Bokslutskommuniké 2025
-                        <span style={{ color: "#9ca3af", marginLeft: "8px", fontSize: "0.85rem" }}>2026-02-12</span>
-                      </td>
-                      <td style={{ padding: "8px 0", textAlign: "right" }}>
-                        <a
-                          href="/reports/Larkberget_Bokslutskommunike_2025.pdf"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{
-                            textDecoration: "none",
-                            color: "#1d7e6b",
-                            fontWeight: 500,
-                            fontSize: "0.85rem",
-                          }}
-                        >
-                          Rapport Q4 2025
-                        </a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            <div className="bg-white rounded-2xl shadow-sm border border-earth-200 overflow-hidden">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-earth-200 bg-larkberget-50/50">
+                    <th className="text-left py-4 px-6 text-sm font-semibold text-trust-700">År</th>
+                    <th className="text-left py-4 px-6 text-sm font-semibold text-trust-700">Rapport</th>
+                    <th className="text-left py-4 px-6 text-sm font-semibold text-trust-700 hidden sm:table-cell">Publiceringsdatum</th>
+                    <th className="text-right py-4 px-6 text-sm font-semibold text-trust-700">Visa</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sortedYears.map((year) =>
+                    groupedByYear[year].map((report, idx) => (
+                      <tr
+                        key={`${year}-${idx}`}
+                        className="border-b border-earth-100 last:border-b-0 hover:bg-larkberget-50/30 transition-colors"
+                      >
+                        <td className="py-4 px-6 text-sm font-semibold text-larkberget-900">
+                          {idx === 0 ? year : ""}
+                        </td>
+                        <td className="py-4 px-6 text-sm text-trust-800">
+                          {report.name}
+                          <span className="sm:hidden block text-xs text-trust-400 mt-1">{report.date}</span>
+                        </td>
+                        <td className="py-4 px-6 text-sm text-trust-500 hidden sm:table-cell">
+                          {report.date}
+                        </td>
+                        <td className="py-4 px-6 text-right">
+                          {report.url ? (
+                            <a
+                              href={report.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 text-sm font-medium text-larkberget-600 hover:text-larkberget-800 transition-colors"
+                            >
+                              <FileText className="w-4 h-4" />
+                              <span className="hidden sm:inline">Öppna PDF</span>
+                              <span className="sm:hidden">PDF</span>
+                            </a>
+                          ) : (
+                            <span className="text-sm text-trust-400">—</span>
+                          )}
+                        </td>
+                      </tr>
+                    ))
+                  )}
+                </tbody>
+              </table>
+
+              {!widgetLoaded && (
+                <div className="py-8 text-center text-trust-400 text-sm">
+                  Laddar rapporter...
+                </div>
+              )}
             </div>
-
-            {/* Datablocks widget renders here */}
-            <div id="rapportarkiv" />
           </div>
         </section>
+
+        {/* Hidden container for Datablocks widget */}
+        <div
+          ref={hiddenRef}
+          id="rapportarkiv-hidden"
+          style={{ position: "absolute", left: "-9999px", visibility: "hidden" }}
+        />
       </main>
-      
+
       <LarkbergetFooter />
     </div>
   );
