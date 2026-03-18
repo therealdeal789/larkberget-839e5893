@@ -508,3 +508,24 @@ input, textarea, select {
   background-size: 200px;
   animation: shimmer 1.5s infinite;
 }
+
+/* Financial Reports - Datablocks widget overrides */
+#rapportarkiv {
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+#rapportarkiv .mfn-archive-container {
+  padding: 0 !important;
+}
+
+#rapportarkiv table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#rapportarkiv td {
+  padding: 8px 32px;
+}
