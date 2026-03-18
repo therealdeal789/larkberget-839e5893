@@ -48,7 +48,7 @@ export const useStaggeredScrollAnimation = (itemCount: number, options: UseScrol
 
   useEffect(() => {
     if (isVisible) {
-      const timeouts: ReturnType<typeof setTimeout>[] = [];
+      const timeouts: NodeJS.Timeout[] = [];
       
       for (let i = 0; i < itemCount; i++) {
         const timeout = setTimeout(() => {
