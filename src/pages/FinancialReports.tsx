@@ -183,7 +183,24 @@ const FinancialReports = () => {
     return acc;
   }, {});
 
+  const currentYear = new Date().getFullYear().toString();
   const sortedYears = Object.keys(groupedByYear).sort((a, b) => Number(b) - Number(a));
+  const [expandedYears, setExpandedYears] = useState<Record<string, boolean>>({});
+
+  // Set current year expanded by default when years are available
+  useEffect(() => {
+    if (sortedYears.length > 0 && Object.keys(expandedYears).length === 0) {
+      const initial: Record<string, boolean> = {};
+      sortedYears.forEach((year) => {
+        initial[year] = year === currentYear;
+      });
+      setExpandedYears(initial);
+    }
+  }, [sortedYears.length]);
+
+  const toggleYear = (year: string) => {
+    setExpandedYears((prev) => ({ ...prev, [year]: !prev[year] }));
+  };
 
   return (
     <div className="min-h-screen">
