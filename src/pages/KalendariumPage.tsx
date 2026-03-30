@@ -48,7 +48,7 @@ const KalendariumPage = () => {
                       <h4 className="font-medium text-gray-900">Årsstämma 2026</h4>
                       <p className="text-sm text-gray-600">Ordinarie bolagsstämma för 2026</p>
                     </div>
-                    <span className="text-sm font-medium text-larkberget-600">7 maj 2026</span>
+                    <span className="text-sm font-medium text-larkberget-600">11 juni 2026</span>
                   </div>
 
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
