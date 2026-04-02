@@ -16,6 +16,12 @@ interface ReportItem {
 const manualReports: ReportItem[] = [
   {
     year: "2026",
+    name: "Årsredovisning 2025",
+    date: "2026-04-02",
+    url: "/reports/Larkberget_Arsredovisning_2025.pdf",
+  },
+  {
+    year: "2026",
     name: "Bokslutskommuniké 2025",
     date: "2026-02-12",
     url: "/reports/Larkberget_Bokslutskommunike_2025.pdf",
